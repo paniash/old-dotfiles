@@ -1,0 +1,146 @@
+snippet sign "Signature"
+Yours sincerely
+
+Ashish Panigrahi
+endsnippet
+
+snippet today "Date"
+'date +%F'
+endsnippet
+
+#begins a class in LaTeX
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}	
+endsnippet
+
+#fractions
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wr
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+
+#evaluation of expressions using sympy
+snippet sympy "sympy block " w
+sympy $1 sympy$0
+endsnippet
+
+priority 10000
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
+
+#inline math mode
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+#display math mode
+snippet dm "Math" wA
+\[
+$1
+\] $0
+endsnippet
+
+snippet enum "Enumerate" b
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet item "Itemize" b
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet dv "Derivative" w
+\dv[${1:${VISUAL}}]{${2}}{${3}}
+endsnippet
+
+snippet pdv "Partial Derivative" w
+\pdv[${1:${VISUAL}}]{${2}}{${3}}
+endsnippet
+
+snippet SI "SI-Unit" w
+\SI{${1:${VISUAL}}}{${2}}
+endsnippet
+
+snippet s "Section" b
+\section{$1}
+	$0
+endsnippet
+
+snippet s1 "Section*" b
+\section*{$1}
+	$0
+endsnippet
+
+snippet ss "Subsection" b
+\subsection{$1}
+	$0
+endsnippet
+
+snippet ss1 "Subsection*" b
+\subsection*{$1}
+	$0
+endsnippet
+
+snippet sss "Subsubsection" b
+\subsubsection{$1}
+	$0
+endsnippet
+
+snippet sss1 "Subsubsection*" b
+\subsubsection*{$1}
+	$0
+endsnippet
+
+# renders bold text
+snippet bf "Bold" 
+\textbf{$1} $0
+endsnippet
+
+# renders italic text
+snippet it "Italic"
+\textit{$1} $0
+endsnippet
+
+# citing!
+snippet ci "Cite" 
+\cite{$1} $0
+endsnippet
+
+# adding equations
+snippet eq "Equation" bA
+\begin{equation}
+	$1
+\end{equation}	
+$0
+endsnippet
+
+# adding \label 
+snippet lb "Label" 
+\label{$1} $0
+endsnippet
+
+# adding \ref
+snippet rf "Reference"
+\ref{$1} $0
+endsnippet
