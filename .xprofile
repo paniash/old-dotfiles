@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# This file runs when a DM logs into a graphical session
+# If you use startx/xinit like a Chad, this file will also be source
+
+picom &		# starts compositor
+dunst &		# starts notification daemon
+mpd &		# starts music player daemon
+mpd-notification &	# starts mpd-notification
+xfce4-power-manager &	# starts power-manager
+dwmblocks &        # status bar
+sxhkd &		# bind keys with sxhkd
+# feh --bg-scale /home/ashish/.config/wall.png & 	# sets wallpaper
+xwallpaper --zoom /home/ashish/.config/wall.png & 	# sets wallpaper
+nm-applet & 	# starts nm-applet
+unclutter &	# removes mouse cursor when not in use

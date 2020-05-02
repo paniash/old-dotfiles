@@ -1,0 +1,4 @@
+#!/bin/sh
+# Outputs the amount of memory consumed
+
+free -h | sed -n '2{p;q}' | awk '{print "", $3 "/" $2}'

@@ -1,0 +1,6 @@
+set default-bg "#1d1f21"
+set statusbar-bg "#1d1f21"
+set inputbar-bg "#1d1f21"
+set recolor-lightcolor "#1d1f21"
+map i recolor
+map presentation p

@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# if refreshing bspwm, remove all previous rules to prevent doubling up
+bspc rule -r "*"
+
+~/.config/bspwm/autostart
+
+bspc monitor -d 一 二 三 四 五 六 七 八 九 
+# bspc monitor -d 一 二 三 四 五 六 七 八 九 十
+# bspc monitor -d  壱 弐 参 肆 伍 陸 漆 捌 玖 拾
+# bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2.5
+# default gap
+# bspc config window_gap          4
+bspc config window_gap           10
+# bspc config window_gap		2	
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true 
+bspc config gapless_monocle      true
+bspc config single_monocle	false	
+# bspc config focused_border_color \#eb8c00
+bspc config focused_border_color \#9f9ea8
+bspc config pointer_follows_focus false 
+bspc config top_padding   	-4	
+bspc config top_monocle_padding	-1
+
+bspc rule -a Gimp desktop='^8' state=monocle follow=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled 
+bspc rule -a gnuplot_qt state=pseudo-tiled
+bspc rule -a Gnuplot state=pseudo-tiled
+bspc rule -a Qalculate-gtk state=floating
+bspc rule -a Slack desktop='^8' follow=on 
+bspc rule -a Matplotlib state=pseudo-tiled
+
+
+# scratchpad
+bspc rule -a dropdown sticky=on state=floating hidden=on
+st -c dropdown -e "zsh -i" &
+
+# Sets wallpaper to bspwm
+feh --bg-scale /home/ashish/.config/wall.png
+

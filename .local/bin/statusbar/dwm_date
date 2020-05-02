@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Outputs the date and time
+
+date '+%b %d (%a)'

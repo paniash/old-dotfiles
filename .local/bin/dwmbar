@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# statusbar for dwm (to be updated)
+while true; do
+	xsetroot -name "BAT:$(cat /sys/class/power_supply/BAT0/capacity)% | $(date '+%b %d (%a) %H:%M')"
+	sleep 1m		# update time every minute
+done &

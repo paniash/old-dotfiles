@@ -1,0 +1,82 @@
+# Basic settings
+set shell sh
+set previewer ~/.scripts/lf/preview
+set color256 true
+# set drawbox true
+set ignorecase true
+
+set shellopts '-eu'
+
+set ifs "\n"
+
+# leave some space at the top and the bottom of the screen
+set scrolloff 10
+
+# dedicated keys for file opener actions
+map o &mimeopen $f
+map O $mimeopen --ask $f
+
+# define a custom 'open' command
+# This command is called when current file is not a directory. You may want to
+# use either file extensions and/or mime types here. Below uses an editor for
+# text files and a file opener for the rest.
+cmd open ${{
+    case $(file --mime-type $f -b) in
+        text/*) $EDITOR $fx;;
+        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+# Bindings
+# Remove some defaults
+map e
+map m
+map n
+map "'"
+map '"'
+map d
+map c
+
+# File openers
+map ee $$EDITOR "$f"
+map es $sudo $EDITOR "$f"
+map z $$READER "$f"
+map a $$PAGER "$f"
+
+# Basic Functions
+map dd delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map r rename
+map H top
+map L bottom
+map R reload
+map C clear
+map U unselect
+
+# Move to folders
+map gc cd ~/.config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

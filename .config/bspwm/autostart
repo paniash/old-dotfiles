@@ -1,0 +1,10 @@
+#!/bin/sh
+# Script to autostart programs when logging into bspwm
+
+sxhkd &
+xfce4-power-manager &
+dunst &
+mpd &
+picom &
+~/.config/polybar/launch.sh &
+nm-applet &

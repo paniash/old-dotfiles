@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Displays the current song being played on mpd
+
+msc="$(mpc current)"
+if [ ! $msc ]; then
+	echo ""
+else
+	echo " $msc "
+fi
