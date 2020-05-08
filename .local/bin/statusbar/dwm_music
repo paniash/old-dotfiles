@@ -3,6 +3,9 @@
 # Displays the current song being played on mpd
 
 msc="$(mpc current)"
+# music="$(mpc | sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸/g;/\\[playing\\].*/d" | tr '\n'
+# ' ' | sed 's/ $//')"
+
 if [ ! $msc ]; then
 	echo ""
 else

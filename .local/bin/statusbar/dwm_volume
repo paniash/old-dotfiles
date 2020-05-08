@@ -9,7 +9,7 @@ echo "$volstat" | grep -q "Mute: yes" && printf "\\n" && exit
 
 vol="$(echo "$volstat" | grep '[0-9]\+%' | sed "s,.* \([0-9]\+\)%.*,\1,;1q")"
 
-if [ "$vol" -gt "60" ]; then
+if [ "$vol" -gt "50" ]; then
 	# icon=""
 	icon=""
 elif [ "$vol" -lt "30" ]; then
@@ -20,5 +20,5 @@ else
 	icon=""
 fi
 
-printf "%s %s%%\\n" "$icon" "$vol"
+printf "%s %s%% \\n" "$icon" "$vol"
 

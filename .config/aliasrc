@@ -7,8 +7,8 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 # To eliminate verbosity
 alias \
 	cvim="nvim ~/.config/nvim/init.vim" \
-	mb="mbsync -a" \
 	cw="fortune | cowsay | lolcat" \
+	mb="mbsync -a" \
 	uf="ufetch" \
 	corona="curl https://corona-stats.online/" \
 	bat="cat /sys/class/power_supply/BAT0/capacity" \
@@ -18,9 +18,9 @@ alias \
 	gs="git status" \
 	untar="tar -xzvf" \
 	gnu="gnuplot" \
-	scr="cd ~/.local/bin/statusbar" \
+	scr="cd ~/.local/bin/" \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
-	wth="pkill -RTMIN+5 dwmblocks" \  # updates weather module of dwmblocks
+	# wth="pkill -RTMIN+5 dwmblocks" \  # updates weather module of dwmblocks
 
 
 # Colorize commands when possible and increase verbosity
@@ -29,9 +29,9 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	mv="mv -iv" \
+	mv="mv -v" \
 	rm="rm -v" \
-	cp="cp -iv" \
+	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
 	
@@ -39,7 +39,6 @@ alias \
 # Common commands to abbreviate
 alias \
 	vim="nvim" \
-	vi="nvim" \
 	pu="sudo pacman -Syu --color always" \
 	pi="sudo pacman -S" \
 	pr="sudo pacman -Rs" \
