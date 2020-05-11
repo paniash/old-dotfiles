@@ -6,7 +6,7 @@
 picom &		# starts compositor
 dunst &		# starts notification daemon
 mpd &		# starts music player daemon
-mpd-notification &	# starts mpd-notification
+# mpd-notification &	# starts mpd-notification
 xfce4-power-manager &	# starts power-manager
 dwmblocks &        # status bar
 sxhkd &		# bind keys with sxhkd

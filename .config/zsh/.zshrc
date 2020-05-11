@@ -62,6 +62,9 @@ setopt NO_NOMATCH
 # Git bare repository
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+# minimal nvim
+alias vi='nvim --cmd "let vim_minimal=1" '
+
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 # source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.zsh 2>/dev/null

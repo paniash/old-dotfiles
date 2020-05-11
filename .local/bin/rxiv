@@ -16,7 +16,7 @@
 # is slow. Second, we need to append a file list to sxiv, which can only be done
 # properly in two ways: arrays (which are not POSIX) or \0 sperated
 # strings. Unfortunately, assigning \0 to a variable is not POSIX either (will
-# not work in dash and others), so we cannot store theresult of listfiles to a
+# not work in dash and others), so we cannot store the result of listfiles to a
 # variable.
 
 if [ $# -eq 0 ]; then
@@ -45,4 +45,4 @@ if [ -n "$count" ]; then
     listfiles | xargs -0 sxiv -n "$count" --
 else
     sxiv -- "$@" # fallback
-fi 
+fi

@@ -9,6 +9,7 @@ export TERMINAL="st"
 export BROWSER="brave"
 export READER="zathura"
 export FILE="lf"
+export BIB="~/Documents/uni.bib"
 
 # ~/ Clean-up:
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.

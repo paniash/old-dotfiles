@@ -23,7 +23,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-" Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-rmarkdown'
 " Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " Plug 'numirias/semshi'
 Plug 'morhetz/gruvbox'
@@ -89,8 +89,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Ignore case when searching
 set ignorecase
 
-""Highlight search results
-":set hlsearch
+"Highlight search results
+:set hlsearch
 
 "Add a bit extra margin to the left
 set foldcolumn=0
@@ -117,7 +117,8 @@ let g:vimtex_compiler_method = "latexmk"
 "set conceallevel = 1
 "let g:tex_conceal='abdmg'
 
-set smarttab
+" set smarttab
+set tabstop=4
 
 "" Airline settings
 " Airline theme
@@ -185,13 +186,19 @@ let python_highlight_all=1
 " Adds curly braces around a word
 :map \c bi{<Esc>ea}<Esc>
 
+" Adds italics in markdown files
+:map \i bi*<Esc>ea*<Esc>
+
+" Adds bold in markdown files
+:map \b bi**<Esc>ea**<Esc>
+
 set wrapmargin=1
 
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
 
-" " Compiles R markdown files to pdf (Luke's script)
-" autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+" Compiles R markdown files to pdf (Luke's script)
+autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
 " " Compiles R markdown files to pdf using rmarkdown plugin
 " autocmd Filetype rmarkdown nnoremap <leader>c :RMarkdown pdf<cr>
