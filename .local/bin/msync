@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Script to automatically download emails from all accounts
+mbsync -a &
+
