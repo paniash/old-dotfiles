@@ -20,6 +20,7 @@ alias \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin/" \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
+	nc="ncmpcpp" \
 	# wth="pkill -RTMIN+5 dwmblocks" \  # updates weather module of dwmblocks
 
 

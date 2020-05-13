@@ -2,12 +2,19 @@
 
 # Displays the current song being played on mpd
 
-msc="$(mpc current)"
-# music="$(mpc | sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸/g;/\\[playing\\].*/d" | tr '\n'
-# ' ' | sed 's/ $//')"
+ARTIST=$(mpc current -f %artist%)
+SONG=$(mpc current -f %title%)
+STATUS=$(mpc status | sed -n 2p | awk '{print $1}')
+# FRESH=$(pkill -RTMIN+11 dwmblocks)
 
-if [ ! $msc ]; then
+if [ ! $SONG ]; then
 	echo ""
 else
-	echo " $msc "
+    if [ "$STATUS" == "[playing]" ]; then
+			ICON=""
+    else
+			ICON=""
+    fi
+			
+	echo "$ICON $ARTIST - $SONG "
 fi

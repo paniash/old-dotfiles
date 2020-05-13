@@ -1,0 +1,5 @@
+#!/bin/sh
+# Just a one-liner to display the name of the network connected to
+
+NET=$(nmcli -a | awk '/^wlo1/' | awk '{print $4}')
+echo " $NET "
