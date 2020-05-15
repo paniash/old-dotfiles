@@ -10,7 +10,7 @@ STATUS=$(mpc status | sed -n 2p | awk '{print $1}')
 if [ ! $SONG ]; then
 	echo ""
 else
-    if [ "$STATUS" == "[playing]" ]; then
+    if [ "$STATUS" = "[playing]" ]; then
 			ICON=""
     else
 			ICON=""
@@ -18,3 +18,4 @@ else
 			
 	echo "$ICON $ARTIST - $SONG "
 fi
+

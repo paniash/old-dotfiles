@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Script to provide battery information to dwm statusbar
 
 dwm_battery() {

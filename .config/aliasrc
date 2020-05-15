@@ -27,11 +27,12 @@ alias \
 # Colorize commands when possible and increase verbosity
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
+	la="ls -A" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	mv="mv -v" \
-	rm="rm -v" \
+	mv="mv -iv" \
+	rm="rm -iv" \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
