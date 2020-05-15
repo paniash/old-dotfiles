@@ -1,4 +1,7 @@
 #!/bin/sh
 # Outputs the amount of memory consumed
 
-free -h | sed -n '2{p;q}' | awk '{print " ", $3 "/" $2" "}'
+MEM=$(free | sed -n '2p' | awk '{print $3/$2 * 100" "}' | sed 's/\(^.\{1,5\}\).*/\1/')
+# echo "  $MEM% "
+echo "  $MEM% "
+# echo "  $MEM% "
