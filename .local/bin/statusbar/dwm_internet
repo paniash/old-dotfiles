@@ -1,5 +1,19 @@
 #!/bin/sh
-# Just a one-liner to display the name of the network connected to
+# Just a one-liner to display the name of the network connected to and if no internet, then displays the appropriate icon
 
-NET=$(nmcli -a | awk '/^wlo1/' | awk '{print $4}')
-echo " $NET "
+WIFINAME=$(nmcli -a | awk '/^wlo1/' | awk '{print $4}') # displays wifi name
+ETHNAME=$(nmcli -a | awk '/^eno1/' | awk '{print $4}') # displays ethernet name
+WIFI=$(nmcli -a | awk '/^wlo1/' | awk '{print $2}') # shows connectivity to wifi
+ETH=$(nmcli -a | awk '/^eno1/' | awk '{print $2}') # shows connectivity to ethernet
+
+# Icons for WiFi and ethernet
+# WiFi:  
+# Ethernet:  
+# Alternet ethernet: 
+# No internet:  
+
+if [ "$WIFI" = "connected" ]; then
+		echo "  $WIFINAME "
+else
+		echo "  "
+fi	

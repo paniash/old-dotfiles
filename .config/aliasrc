@@ -31,8 +31,8 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	mv="mv -iv" \
-	rm="rm -iv" \
+	mv="mv -v" \
+	rm="rm -v" \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
@@ -43,7 +43,7 @@ alias \
 	vim="nvim" \
 	pu="sudo pacman -Syu --color always" \
 	pi="sudo pacman -S" \
-	pr="sudo pacman -Rs" \
+	prs="sudo pacman -Rs" \
 	sc="sc-im" \
 
 

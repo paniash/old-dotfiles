@@ -13,7 +13,8 @@ else
     if [ "$STATUS" = "[playing]" ]; then
 			ICON=""
     else
-			ICON=""
+			# ICON=""
+			ICON=""
     fi
 			
 	echo "$ICON $ARTIST - $SONG "
