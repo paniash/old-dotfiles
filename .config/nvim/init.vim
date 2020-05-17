@@ -1,6 +1,6 @@
 ""*************************************
- " _ __   ___  _____   _(_)_ __ ___  
-" | '_ \ / _ \/ _ \ \ / / | '_ ` _ \ 
+ " _ __   ___  _____   _(_)_ __ ___
+" | '_ \ / _ \/ _ \ \ / / | '_ ` _ \
 " | | | |  __/ (_) \ V /| | | | | | |
 " |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 
@@ -24,10 +24,12 @@ Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'tpope/vim-surround'
+Plug 'ap/vim-css-color'
 " Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " Plug 'numirias/semshi'
 Plug 'morhetz/gruvbox'
-Plug 'Krasjet/auto.pairs'
+" Plug 'Krasjet/auto.pairs'
 call plug#end()
 
 let g:sneak#label = 1
@@ -39,7 +41,7 @@ set termguicolors
 let mapleader=","
 let maplocalleader=","
 
-"Fast saving 
+"Fast saving
 nmap <leader>w :w!<cr>
 
 "Settings for UltiSnips
@@ -64,14 +66,14 @@ set nocompatible
 " enables syntax colours
 syntax on
 
-" enabling utf-8 
+" enabling utf-8
 set encoding=utf-8
 
 " enables bold text
 let g:gruvbox_bold = 1
 
-"enables italics
-" let g:gruvbox_italic = 1
+""enables italics
+"let g:gruvbox_italic = 1
 
 " changes dark mode contrast
 let g:gruvbox_contrast_dark = 'hard'
@@ -181,7 +183,7 @@ let python_highlight_all=1
 :noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 " Adds parentheses around a word
-:map \p bi(<Esc>ea)<Esc>  
+:map \p bi(<Esc>ea)<Esc>
 
 " Adds curly braces around a word
 :map \c bi{<Esc>ea}<Esc>
@@ -218,3 +220,10 @@ autocmd VimLeave *.tex !texclear %
 " Disables automatic folding in markdown documents
 let g:pandoc#folding#level = 0
 let g:pandoc#folding#fdc = 0
+
+" Automatically deletes all trailing whitespace and newlines at end of file on save.
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
+
+" Replace ex mode with gq
+map Q gq
