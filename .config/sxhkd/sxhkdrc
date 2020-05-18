@@ -7,19 +7,19 @@ super + Return
  	st
 
 # program launcher
-super + d 
+super + d
 	dmenu_run
 
 # launches firefox browser
 super + z
-	brave
+	firefox
 
 # launches file manager
 super + n
 	st -e lf
 
 # # locks session
-# super + shift + x 
+# super + shift + x
 # 	betterlockscreen -l dimblur
 
 # launches calculator
@@ -38,15 +38,19 @@ super + shift + n
 super + shift + m
 	st -e neomutt
 
+# launches buku-dmenu
+super + shift + b
+    buku-dmenu
+
 # et cetera
 
 # change volume
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume
-   	pactl set-sink-volume @DEFAULT_SINK@ -5% 
+   	pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioMute
-   	pactl set-sink-mute @DEFAULT_SINK@ toggle 
+   	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # change brightness
 XF86MonBrightnessUp
@@ -57,7 +61,7 @@ XF86MonBrightnessDown
 # volume media controls
 
 ## Defaults
-# XF86AudioPlay 
+# XF86AudioPlay
 # 	playerctl play-pause
 # XF86AudioNext
 # 	playerctl next
@@ -65,7 +69,7 @@ XF86MonBrightnessDown
 # 	playerctl previous
 
 ## For mpd
-XF86AudioPlay 
+XF86AudioPlay
 	mpc toggle
 XF86AudioNext
 	mpc next
@@ -73,10 +77,10 @@ XF86AudioPrev
 	mpc prev
 
 # make sxhkd and bspwm reload its configuration files:
-super + Escape 
+super + Escape
 	pkill -USR1 -x sxhkd
 
-super + shift + Escape 
+super + shift + Escape
 	shutdown.sh
 
 #####################################################################################################
@@ -87,8 +91,8 @@ super + shift + Escape
 #super + shift + r
 #	bspc wm -r
 
-### close 
-#super + q 
+### close
+#super + q
 #	bspc node -c
 
 ### kill application
@@ -196,4 +200,3 @@ super + shift + Escape
 ### rotate node
 ##super + shift + {o, i}
 ##	bspc node @/ -R {90, -90}
-
