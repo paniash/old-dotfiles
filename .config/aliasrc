@@ -21,6 +21,7 @@ alias \
 	scr="cd ~/.local/bin/" \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
 	nc="ncmpcpp" \
+	b="buku --suggest" \
 	# wth="pkill -RTMIN+5 dwmblocks" \  # updates weather module of dwmblocks
 
 
@@ -36,7 +37,7 @@ alias \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
-	
+
 
 # Common commands to abbreviate
 alias \
@@ -48,4 +49,3 @@ alias \
 
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-
