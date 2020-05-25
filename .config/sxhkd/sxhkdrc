@@ -11,7 +11,7 @@ super + d
 	dmenu_run
 
 # launches firefox browser
-super + z
+super + w
 	firefox
 
 # launches file manager

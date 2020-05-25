@@ -44,10 +44,9 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# Add colors to man pages
+## Add colors to man pages
 # man() {
 #     LESS_TERMCAP_md=$'\e[01;31m' \
 #     LESS_TERMCAP_me=$'\e[0m' \
@@ -58,7 +57,7 @@ bindkey '^e' edit-command-line
 #     command man "$@"
 # }
 
-# Disable globing on zsh
+# Disable globing on zsh (useful when downloading using youtube-dl)
 setopt NO_NOMATCH
 
 # Git bare repository
@@ -69,4 +68,3 @@ alias vi='nvim --cmd "let vim_minimal=1" '
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.zsh 2>/dev/null
