@@ -195,6 +195,9 @@ set wrapmargin=1
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
 
+" " Make a copy of resume.pdf into website/ after updating it 
+" autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf !cp resume.pdf ~/website/static/files/cv.pdf
+
 " Compiles R markdown files to pdf (Luke's script)
 autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
