@@ -39,6 +39,10 @@ lfcd () {
 	}
 bindkey -s '^o' 'lfcd\n'
 
+bindkey -s '^a' 'bc -l\n'
+
+bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line

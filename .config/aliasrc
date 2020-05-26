@@ -32,8 +32,8 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	mv="mv -v" \
-	rm="rm -v" \
+	mv="mv -vi" \
+	rm="rm -vI" \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
