@@ -2,7 +2,7 @@
 set shell sh
 set previewer ~/.scripts/lf/preview
 set color256 true
-# set drawbox true
+set drawbox true
 set ignorecase true
 
 set shellopts '-eu'
@@ -20,6 +20,7 @@ map O $mimeopen --ask $f
 # This command is called when current file is not a directory. You may want to
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
+# cmds/functions
 cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx;;
@@ -27,56 +28,67 @@ cmd open ${{
     esac
 }}
 
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+
+cmd delete ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf $fx
+}}
+
+cmd moveto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Move to where?"
+	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)" &&
+	eval mv -iv $fx $dest &&
+	notify-send "File(s) moved." "File(s) moved to $dest."
+}}
+
+cmd copyto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Copy to where?"
+	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)" &&
+	eval cp -ivr $fx $dest &&
+	notify-send "File(s) copied." "File(s) copies to $dest."
+}}
+
+cmd bulkrename ${{
+		vimv
+}}
+
 # Bindings
-# Remove some defaults
-map e
-map m
-map n
-map "'"
-map '"'
-map d
-map c
+map <c-f> $lf -remote "send $id select '$(fzf)'"
+map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
+map gh
+map g top
+map D delete
+map C copyto
+map M moveto
+map <c-n> push :mkdir<space>
+map <c-r> reload
+map <enter> shell
+map x $$f
+map X !$f
+map o &mimeopen $f
+map O $mimeopen --ask $f
+
+map A rename # at the very end
+map c push A<c-u> # new rename
+map I push A<c-a> # at the very beginning
+map i push A<a-b><a-b><a-f> # before extention
+map a push A<a-b>	# after extension
+map b bulkrename
+
+map <c-e> down
+map <c-y> up
+map V push :!nvim<space>
 
 # File openers
 map ee $$EDITOR "$f"
 map es $sudo $EDITOR "$f"
 map z $$READER "$f"
-map a $$PAGER "$f"
-
-# Basic Functions
-map dd delete
-map p paste
-map x cut
-map y copy
-map <enter> open
-map r rename
-map H top
-map L bottom
-map R reload
-map C clear
-map U unselect
-
-# Move to folders
-map gc cd ~/.config
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
