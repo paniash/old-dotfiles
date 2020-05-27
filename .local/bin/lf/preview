@@ -1,0 +1,16 @@
+#!/bin/sh
+#LINES=30
+case "$1" in
+	*.png|*.jpg|*.jpeg|*.mkv|*mp4) mediainfo "$1";;
+	*.md|*.wiki) glow -s dark "$1";;
+	*.pdf) pdftotext "$1" -;;
+	*.zip) zipinfor "$1";;
+	*.tar.gz) tar -ztvf "$1";;
+	*.tar.bz2) tar -jtvf "$1";;
+	*.tar) tar -tvf "$1";;
+	*.rar) unrar l "$1";;
+	*.7z) 7z l "$1";;
+	*.zsh*|*.bash*|*.git*|*.tex) pistol "$1";;
+	*.py|*.cpp|*.txt|*.csv|*.wiki|*.md|*.sh|*.log) pistol "$1";;
+	*) highlight "$1" -0 ansi --force;;
+esac

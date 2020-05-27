@@ -18,10 +18,6 @@ super + w
 super + n
 	st -e lf
 
-# # locks session
-# super + shift + x
-# 	betterlockscreen -l dimblur
-
 # launches calculator
 super + c
 	qalculate-gtk
@@ -46,17 +42,17 @@ super + shift + b
 
 # change volume
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
+	pactl set-sink-volume @DEFAULT_SINK@ +5%; pkill -RTMIN+10 dwmblocks
 XF86AudioLowerVolume
-   	pactl set-sink-volume @DEFAULT_SINK@ -5%
+   	pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks
 XF86AudioMute
-   	pactl set-sink-mute @DEFAULT_SINK@ toggle
+   	pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 dwmblocks
 
 # change brightness
 XF86MonBrightnessUp
-	xbacklight -inc 5
+	xbacklight -inc 5; pkill -RTMIN+9 dwmblocks
 XF86MonBrightnessDown
-	xbacklight -dec 5
+	xbacklight -dec 5; pkill -RTMIN+9 dwmblocks
 
 # volume media controls
 
@@ -70,11 +66,11 @@ XF86MonBrightnessDown
 
 ## For mpd
 XF86AudioPlay
-	mpc toggle
+	mpc toggle; pkill -RTMIN+11 dwmblocks
 XF86AudioNext
-	mpc next
+	mpc next; pkill -RTMIN+11 dwmblocks
 XF86AudioPrev
-	mpc prev
+	mpc prev; pkill -RTMIN+11 dwmblocks
 
 # make sxhkd and bspwm reload its configuration files:
 super + Escape

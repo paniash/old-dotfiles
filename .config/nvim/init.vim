@@ -26,6 +26,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
 
 let g:sneak#label = 1
@@ -198,8 +199,8 @@ autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
 
-" " Make a copy of resume.pdf into website/ after updating it 
-" autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf !cp resume.pdf ~/website/static/files/cv.pdf
+" Make a copy of resume.pdf into website/ after updating it 
+autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf; cp resume.pdf ~/website/static/files/cv.pdf
 
 " Compiles R markdown files to pdf (Luke's script)
 autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

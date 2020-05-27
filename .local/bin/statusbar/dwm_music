@@ -2,6 +2,8 @@
 
 # Displays the current song being played on mpd
 
+pidof -x mpdup >/dev/null 2>&1 || mpdup &
+
 ARTIST=$(mpc current -f %artist%)
 SONG=$(mpc current -f %title%)
 STATUS=$(mpc status | sed -n 2p | awk '{print $1}')

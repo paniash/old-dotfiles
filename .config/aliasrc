@@ -18,12 +18,10 @@ alias \
 	gs="git status" \
 	untar="tar -xzvf" \
 	gnu="gnuplot" \
-	scr="cd ~/.local/bin/" \
+	scr="cd ~/.local/bin; ls ./" \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
 	nc="ncmpcpp" \
 	b="buku --suggest" \
-	# wth="pkill -RTMIN+5 dwmblocks" \  # updates weather module of dwmblocks
-
 
 # Colorize commands when possible and increase verbosity
 alias \
