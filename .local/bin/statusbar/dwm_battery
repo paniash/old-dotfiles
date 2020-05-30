@@ -9,11 +9,11 @@ dwm_battery() {
       	echo " $CHARGE% "
 	elif [[ $CHARGE -gt 90 ]]; then
 		echo " $CHARGE% "
-	elif [[ $CHARGE -gt 70 ]]; then
+	elif [[ $CHARGE -gt 65 ]]; then
         echo " $CHARGE% "
-    elif [[ $CHARGE -gt 40 ]]; then
+    elif [[ $CHARGE -gt 35 ]]; then
   	    echo " $CHARGE% "
-    elif [[ $CHARGE -gt 20 ]]; then
+    elif [[ $CHARGE -gt 15 ]]; then
         echo " $CHARGE% " 
     else
         echo " $CHARGE% "
