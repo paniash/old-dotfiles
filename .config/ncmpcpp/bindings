@@ -213,7 +213,7 @@ def_key "b"
 #def_key "#"
 #  toggle_bitrate_visibility
 #
-def_key "Z"
+def_key "z"
   shuffle
 #
 #def_key "x"
