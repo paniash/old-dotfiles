@@ -3,7 +3,6 @@
 # Use neovim for vim if present.
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
-
 # To eliminate verbosity
 alias \
 	cvim="nvim ~/.config/nvim/init.vim" \
@@ -13,7 +12,7 @@ alias \
 	corona="curl https://corona-stats.online/" \
 	bat="cat /sys/class/power_supply/BAT0/capacity" \
 	yt="youtube-dl -i --add-metadata -i" \
-	ytm="youtube-dl -i --add-metadata -f bestaudio" \
+	ytm="youtube-dl -i -x --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
 	gs="git status" \
 	untar="tar -xzvf" \
@@ -36,7 +35,6 @@ alias \
 	..="cd .." \
 	:q="exit" \
 
-
 # Common commands to abbreviate
 alias \
 	vim="nvim" \
@@ -45,5 +43,4 @@ alias \
 	prs="sudo pacman -Rs" \
 	sc="sc-im" \
 
-
-se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf --layout=default | xargs -r $EDITOR ;}
