@@ -96,25 +96,18 @@ set foldcolumn=0
 
 set lazyredraw
 
-"Status line
 "Always show the status line
 set laststatus=2
 
 "Gets rid of default mode display
 set noshowmode
 
-""Vim-auto-save options
-"let g:auto_save = 1  "To enable auto-save on Vim startup
-"let g:auto_save_silent = 1 "do not display the auto-save notification
-
 let g:vimtex_view_method = "zathura"
 let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
-" let g:vimtex_compiler_progname = 'nvr'
-"set conceallevel = 1
-"let g:tex_conceal='abdmg'
+" let g:vimtex_compiler_latexmk_engines = "xelatex"
 
 " set smarttab
 set tabstop=4
