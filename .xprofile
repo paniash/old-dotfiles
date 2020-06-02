@@ -9,6 +9,7 @@ mpd &		# starts music player daemon
 # mpd-notification &	# starts mpd-notification
 xfce4-power-manager &	# starts power-manager
 dwmblocks &        # status bar
+remaps &	# maps caplock to escape
 # feh --bg-scale /home/ashish/.config/wall.png & 	# sets wallpaper
 xwallpaper --zoom /home/ashish/.config/wall.png & 	# sets wallpaper
 nm-applet & 	# starts nm-applet
