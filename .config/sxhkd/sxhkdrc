@@ -38,6 +38,10 @@ super + shift + m
 super + shift + b
     buku-dmenu
 
+# launches ytop
+super + p
+    st -e ytop
+
 # et cetera
 
 # change volume
