@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # Script to automatically download emails from all accounts
-mbsync -a; notify-send "Updating mailbox..." 
+mbsync -a; notify-send "Mutt-wizard" "Updating mailbox..." 
 

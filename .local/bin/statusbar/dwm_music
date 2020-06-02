@@ -7,7 +7,6 @@ pidof -x mpdup >/dev/null 2>&1 || mpdup &
 ARTIST=$(mpc current -f %artist%)
 SONG=$(mpc current -f %title%)
 STATUS=$(mpc status | sed -n 2p | awk '{print $1}')
-# FRESH=$(pkill -RTMIN+11 dwmblocks)
 
 if [ ! $SONG ]; then
 	echo ""

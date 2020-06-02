@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # Shows the current time
-date '+%H:%M'
+date '+%H:%M |'
