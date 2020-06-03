@@ -5,7 +5,7 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # To eliminate verbosity
 alias \
-	cvim="nvim ~/.config/nvim/init.vim" \
+	cim="nvim ~/.config/nvim/init.vim" \
 	cw="fortune | cowsay | lolcat" \
 	mb="mbsync -a" \
 	uf="ufetch" \
