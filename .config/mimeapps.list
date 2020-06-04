@@ -1,0 +1,34 @@
+[Default Applications]
+x-scheme-handler/magnet=torrent.desktop
+application/x-bittorrent=torrent.desktop
+application/pdf=org.pwmt.zathura.desktop
+image/jpeg=sxiv.desktop
+x-scheme-handler/mailto=firefox.desktop
+image/png=sxiv.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
+[Added Associations]
+application/pdf=mupdf.desktop;org.pwmt.zathura.desktop;
+image/jpeg=sxiv.desktop;
+text/plain=org.gnome.gedit.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
