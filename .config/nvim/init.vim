@@ -39,7 +39,10 @@ let mapleader=","
 let maplocalleader=","
 
 "Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
+
+"Saving and (not) force quiting
+nnoremap <leader>x :x<cr>
 
 "Settings for UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
