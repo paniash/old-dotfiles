@@ -1,0 +1,10 @@
+#!/bin/sh
+# To display an icon on statusbar if redshift is running
+
+var=$(pidof redshift)
+
+if [ ! $var ]; then
+	echo ""
+else
+		echo "  "
+fi
