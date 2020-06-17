@@ -1,19 +1,19 @@
-#!/bin/bash
+#!/bin/sh
 # Script to provide battery information to dwm statusbar
 
 dwm_battery() {
 	CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
 	STATUS=$(cat /sys/class/power_supply/BAT0/status)
 	
-	if [[ "$STATUS" == "Charging" ]]; then
+	if [ "$STATUS" = "Charging" ]; then
       	echo " $CHARGE% "
-	elif [[ $CHARGE -gt 90 ]]; then
+	elif [ $CHARGE -gt 90 ]; then
 		echo " $CHARGE% "
-	elif [[ $CHARGE -gt 65 ]]; then
+	elif [ $CHARGE -gt 65 ]; then
         echo " $CHARGE% "
-    elif [[ $CHARGE -gt 35 ]]; then
+    elif [ $CHARGE -gt 35 ]; then
   	    echo " $CHARGE% "
-    elif [[ $CHARGE -gt 15 ]]; then
+    elif [ $CHARGE -gt 15 ]; then
         echo " $CHARGE% " 
     else
         echo " $CHARGE% "
