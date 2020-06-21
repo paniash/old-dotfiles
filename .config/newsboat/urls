@@ -1,8 +1,62 @@
-https://www.lukesmith.xyz/rss.xml
-https://notrelated.xyz/rss
+---SOFTWARE_UPDATES---
+https://www.shellscript.sh/rss.xml
 https://www.archlinux.org/feeds/news/
-https://www.noendcomic.com/rss.php
+https://artixlinux.org/feed.php
+https://github.com/LukeSmithxyz/voidrice/commits/master.atom "~Luke's voidrice"
+https://github.com/LukeSmithxyz/dwm/commits/master.atom "~Luke's dwm"
+
+" "
+---PEOPLE---
+https://www.lukesmith.xyz/rss.xml
+https://k1ss.org/blog/blog.xml
+https://paniash.now.sh/posts/index.xml "~My blog"
+https://peterwittek.com/feeds/all.atom.xml
+https://nitter.net/Snowden/rss
+https://nitter.net/narendramodi/rss
+
+" "
+---PHYSICS_NEWS---
+https://www.physicsforums.com/insights/feed/
 https://phys.org/rss-feed/breaking/physics-news/quantum-physics/
 https://phys.org/rss-feed/breaking/physics-news/physics/
 https://phys.org/rss-feed/breaking/physics-news/materials/
-https://feeds.feedburner.com/codinghorror
+
+" "
+---COMICS---
+https://www.noendcomic.com/rss.php
+https://xkcd.com/atom.xml
+
+" "
+---YOUTUBE-EDUCATIONAL---
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA "~Veritasium"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvBqzzvUBLCs8Y7Axb-jZew "~Sixty Symbols"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A "~Numberphile"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A "~Tom Scott"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q "~Kurzgesagt"
+https://www.youtube.com/feeds/videos.xml?channel_id=UClBNq7mCMf5xm8baE_VMl3A "~Qiskit"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-2knDbf4kzT3uzWo7iTJyw "~Quantum Intuition"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJ0-OtVpF0wOKEqT2Z1HEtA "~Electroboom"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvjgXvBlbQiydffZU7m1_aw "~The Coding Train"
+
+" "
+---YOUTUBE-TECH---
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distrotube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg "~Wolfgang's Channel"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCf93fPKwotph47H3_KDcRyg "~Kris Occhipinti"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMZxtiWIdrXUUbWMAe6D-Iw "~msjche"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~Linus Tech Tips"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0vBXGSyV14uvJ4hECDOl0Q "~Techquickie"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkHN7h7CFeYL6Y1N5JcEZug "~Sun Knudsen"
+
+" "
+---PODCASTS---
+https://notrelated.xyz/rss
+
+" "
+---MUSIC---
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSeJA6az0GrNM4_-pl3HQSQ "~Adrian von Ziegler"
