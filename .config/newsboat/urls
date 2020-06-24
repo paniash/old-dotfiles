@@ -4,6 +4,13 @@ https://www.archlinux.org/feeds/news/
 https://artixlinux.org/feed.php
 https://github.com/LukeSmithxyz/voidrice/commits/master.atom "~Luke's voidrice"
 https://github.com/LukeSmithxyz/dwm/commits/master.atom "~Luke's dwm"
+https://github.com/qiskit-community/qiskit-textbook/commits/master.atom "~Qiskit textbook"
+
+" "
+---RESEARCH_BLOG---
+https://www.ibm.com/blogs/research/feed/atom/ 
+https://cloudblogs.microsoft.com/quantum?feed=rss2
+https://medium.com/feed/qiskit
 
 " "
 ---PEOPLE---
@@ -53,9 +60,14 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC0vBXGSyV14uvJ4hECDOl0Q "~T
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkHN7h7CFeYL6Y1N5JcEZug "~Sun Knudsen"
 
+
 " "
 ---PODCASTS---
-https://notrelated.xyz/rss
+https://notrelated.xyz/rss "~Not Related!"
+http://minutephysics.libsyn.com/rss "~MinutePhysics"
+https://feeds.megaphone.fm/sciencevs "~Science VS"
+https://feeds.mozilla-podcasts.org/irl "~Mozilla IRL"
+http://joeroganexp.joerogan.libsynpro.com/rss "~Joe Rogan"
 
 " "
 ---MUSIC---

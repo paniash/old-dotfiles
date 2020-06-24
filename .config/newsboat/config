@@ -1,5 +1,5 @@
 #show-read-feeds no
-auto-reload yes
+auto-reload no
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -27,17 +27,17 @@ color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
-color article cyan default
+color article cyan default bold
 
 browser linkhandler
 macro , open-in-browser
-macro t set browser "qndl"; open-in-browser ; set browser linkhandler
-macro m set browser "youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
-macro s set browser "youtube-dl --add-metadata -ic -f 247+251"; open-in-browser ; set browser linkhandler
-macro d set browser "youtube-dl --add-metadata -ic -f 248+251"; open-in-browser ; set browser linkhandler
-macro v set browser "setsid -f mpv --ytdl-format=247+251"; open-in-browser ; set browser linkhandler
-macro w set browser "lynx"; open-in-browser ; set browser linkhandler
-macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler
+macro t set browser "qndl" ; open-in-browser ; set browser linkhandler
+macro m set browser "youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
+macro s set browser "youtube-dl -ic --add-metadata -f 247+251" ; open-in-browser ; set browser linkhandler
+macro d set browser "youtube-dl -ic --add-metadata -f 248+251" ; open-in-browser ; set browser linkhandler
+macro v set browser "setsid -f mpv --ytdl-format=247+251" ; open-in-browser ; set browser linkhandler
+macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
+macro p set browser "dmenuhandler" ; open-in-browser ; set browser linkhandler
 macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" yellow
