@@ -1,0 +1,9 @@
+#!/bin/sh
+# Script to choose physics books to open in zathura using dmenu as a wrapper
+
+# #Choose which directory to use
+# ls ~/Documents/Books | dmenu -i -p "Choose directory" | read var
+# cd ~/Documents/Books/$var
+
+cd ~/Documents/Books/Physics
+zathura "$(ls | dmenu -i -l 20)"

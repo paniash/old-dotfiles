@@ -6,5 +6,5 @@ var=$(pidof redshift)
 if [ ! $var ]; then
 	echo ""
 else
-		echo "  "
+	echo "  "
 fi

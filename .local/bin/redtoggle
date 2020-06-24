@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# If redshift is running, will ask to kill it, else will ask to start
+
+if pidof redshift >/dev/null ;
+then
+		[ "$(printf "No\\nYes" | dmenu -i -p "Turn off redshift?")" = "Yes" ] && killall redshift && notify-send "Redshift" "Redshift disabled."; pkill -RTMIN+20 dwmblocks
+elif
+		ifinstalled redshift;
+then
+		[ "$(printf "No\\nYes" | dmenu -i -p "Turn on redshift?")" = "Yes" ] && redshift && notify-send  "Redshift" "Redshift enabled."; pkill -RTMIN+20 dwmblocks
+else
+		exit
+fi

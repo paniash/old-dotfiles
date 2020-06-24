@@ -1,0 +1,5 @@
+#!/bin/sh
+
+notify-send "Doppler radar" "Loading.... please wait"
+
+mpv --loop-file=inf "https://mausam.imd.gov.in/Satellite/Converted/IR1.gif"

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # buku-dmenu - a bash script to open buku bookmarks using dmenu
 #
 # Copyright 2018 Ben Oliver
@@ -16,7 +18,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-#!/bin/bash
 version="v0.1.0"
 
 if [ "$1" == "--help" ] ; then

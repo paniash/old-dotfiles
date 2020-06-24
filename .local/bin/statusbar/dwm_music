@@ -2,7 +2,7 @@
 
 # Displays the current song being played on mpd
 
-pidof -x mpdup >/dev/null 2>&1 || mpdup &
+pidof -x mpdup >/dev/null 2>&1 || mpdup >/dev/null 2>&1 &
 
 ARTIST=$(mpc current -f %artist%)
 SONG=$(mpc current -f %title%)
