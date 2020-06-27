@@ -1,16 +1,40 @@
 ---SOFTWARE_UPDATES---
-https://www.shellscript.sh/rss.xml
 https://www.archlinux.org/feeds/news/
 https://artixlinux.org/feed.php
+https://guix.gnu.org/feeds/blog.atom
+https://www.shellscript.sh/rss.xml
 https://github.com/LukeSmithxyz/voidrice/commits/master.atom "~Luke's voidrice"
 https://github.com/LukeSmithxyz/dwm/commits/master.atom "~Luke's dwm"
 https://github.com/qiskit-community/qiskit-textbook/commits/master.atom "~Qiskit textbook"
+https://suckless.org/atom.xml "~Suckless"
+
+" "
+---TECH_NEWS---
+http://www.ghacks.net/feed/
+
 
 " "
 ---RESEARCH_BLOG---
 https://www.ibm.com/blogs/research/feed/atom/ 
 https://cloudblogs.microsoft.com/quantum?feed=rss2
 https://medium.com/feed/qiskit
+http://www.ox.ac.uk/news/science-blog/feed "~Oxford Science blog"
+
+" "
+---UNIVERSITY_BLOG---
+https://www.ethz.ch/en/news-und-veranstaltungen/eth-news/news/_jcr_content.feed.html "~ETH Zurich"
+http://www.ox.ac.uk/feeds/rss/news "~University of Oxford"
+https://www.cam.ac.uk/news/feed "~University of Cambridge"
+https://news.harvard.edu/gazette/feed/ "~Harvard University - Gazette news"
+https://iiserpunenews.wordpress.com/feed/ "~IISER Pune news"
+
+" "
+---SUBREDDITS---
+https://www.reddit.com/r/QuantumComputing.rss "~r/QuantumComputing"
+https://www.reddit.com/r/learnmachinelearning.rss "~r/learnmachinelearning"
+https://www.reddit.com/r/archlinux.rss "~r/archlinux"
+https://www.reddit.com/r/unixporn.rss "~r/unixporn"
+
 
 " "
 ---PEOPLE---
@@ -20,6 +44,7 @@ https://paniash.now.sh/posts/index.xml "~My blog"
 https://peterwittek.com/feeds/all.atom.xml
 https://nitter.net/Snowden/rss
 https://nitter.net/narendramodi/rss
+https://nitter.net/elonmusk/rss
 
 " "
 ---PHYSICS_NEWS---
@@ -32,6 +57,7 @@ https://phys.org/rss-feed/breaking/physics-news/materials/
 ---COMICS---
 https://www.noendcomic.com/rss.php
 https://xkcd.com/atom.xml
+https://www.smbc-comics.com/comic/rss
 
 " "
 ---YOUTUBE-EDUCATIONAL---
@@ -59,7 +85,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~L
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0vBXGSyV14uvJ4hECDOl0Q "~Techquickie"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkHN7h7CFeYL6Y1N5JcEZug "~Sun Knudsen"
-
 
 " "
 ---PODCASTS---

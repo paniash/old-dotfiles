@@ -5,15 +5,16 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # To eliminate verbosity
 alias \
-	cim="nvim ~/.config/nvim/init.vim" \
+	tmc="tremc" \
 	cw="fortune | cowsay | lolcat" \
 	mb="mbsync -a" \
 	uf="ufetch" \
 	corona="curl https://corona-stats.online/" \
 	bat="cat /sys/class/power_supply/BAT0/capacity" \
-	yt="youtube-dl -i --add-metadata -i" \
-	ytm="youtube-dl -i -x --add-metadata -f bestaudio" \
+	yt="youtube-dl -ic --add-metadata" \
+	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
+	str="straw-viewer --resolution=720p" \
 	gs="git status" \
 	untar="tar -xzvf" \
 	gnu="gnuplot" \
@@ -21,6 +22,10 @@ alias \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
 	nc="ncmpcpp" \
 	b="buku --suggest" \
+	yt7="yt -i --add-metadata -f 247+251" \
+	yt8="yt -i --add-metadata -f 248+251" \
+	cbs="checkbashisms" \
+	rd="redshift -P -O 4500"
 
 # Colorize commands when possible and increase verbosity
 alias \

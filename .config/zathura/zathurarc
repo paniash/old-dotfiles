@@ -10,8 +10,8 @@ set smooth-scroll           "true"
 set scroll-full-overlap     0.01
 set scroll-step             50
 set font                    "Ubuntu mono 11"
-map r reload
-map R rotate
+map R reload
+map r rotate
 map K zoom in
 map J zoom out
 map p print

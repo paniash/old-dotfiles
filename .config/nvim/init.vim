@@ -18,31 +18,45 @@ Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
-Plug 'vim-pandoc/vim-pandoc'
+Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-" Plug 'vimwiki/vimwiki'
-Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
-let g:sneak#label = 1
+" let g:sneak#label = 1
 
 set termguicolors
 
+set go=a
+set mouse=a
+set nohlsearch
+set clipboard+=unnamedplus
+
+" Some basics
+set nocompatible
+filetype plugin on
+syntax on
+set encoding=utf-8
+set number relativenumber
+
 "With a map leader it's possible to do extra key combinations
 "like <leader>w saves the current file
-let mapleader=","
+ let mapleader=","
 let maplocalleader=","
 
 "Fast saving
-nnoremap <leader>w :w!<cr>
+ nnoremap <leader>w :w!<cr>
 
 "Saving and (not) force quiting
 nnoremap <leader>x :x<cr>
+
+"Mapping for instant Goyo mode
+nnoremap <leader>g :Goyo<cr>
 
 "Settings for UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -54,20 +68,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 "Sets absolute path for UltiSnips to find user-defined snippets
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
-
-"Enables numbered lines on startup
-set number relativenumber
-
-"enable syntax highlighting
-syntax enable
-
-set nocompatible
-
-" enables syntax colours
-syntax on
-
-" enabling utf-8
-set encoding=utf-8
 
 " enables bold text
 let g:gruvbox_bold = 1
@@ -91,16 +91,16 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Ignore case when searching
 set ignorecase
 
-"Highlight search results
-:set hlsearch
+" Highlights regex expression when using the :substitute command
+set inccommand=nosplit
 
 "Add a bit extra margin to the left
 set foldcolumn=0
 
-set lazyredraw
+"Never show the status line
+set laststatus=0
 
-"Always show the status line
-set laststatus=2
+set lazyredraw
 
 "Gets rid of default mode display
 set noshowmode
@@ -110,10 +110,6 @@ let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
-" let g:vimtex_compiler_latexmk_engines = "xelatex"
-
-" set smarttab
-set tabstop=4
 
 "" Airline settings
 " Airline theme
@@ -130,19 +126,11 @@ let g:airline#extensions#default#layout = [
  			\ ['x', 'y', 'z']
  			\ ]
 
-
-" Goyo shortcut
-nmap <leader>g :Goyo<cr>
-
 " Disables arrows in normal mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-
-set timeoutlen=1000
-
-set ttimeoutlen=0
 
 "" Split settings for a more natural feel
 set splitbelow
@@ -153,11 +141,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" " split windows horizontally
-" nnoremap <C-S> <C-W><C-S>
-" " split windows vertically
-" nnoremap <C-V> <C-W><C-V>
 
 "" PEP 8 indentation for python
 au BufNewFile,BufRead .py
@@ -174,20 +157,6 @@ let python_highlight_all=1
 
 " opens link within the terminal using urlview
 :noremap <leader>u :w<Home>silent <End> !urlview<CR>
-
-" Adds parentheses around a word
-:map \p bi(<Esc>ea)<Esc>
-
-" Adds curly braces around a word
-:map \c bi{<Esc>ea}<Esc>
-
-" Adds italics in markdown files
-:map \i bi*<Esc>ea*<Esc>
-
-" Adds bold in markdown files
-:map \b bi**<Esc>ea**<Esc>
-
-" set wrapmargin=1
 
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
@@ -207,9 +176,15 @@ autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf; cp resume.pdf
 " Runs script to clean tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear %
 
+" Compiles documents be it LaTeX, markdown or groff
+map <leader>c :w! \| !compiler <c-r>%<CR>
+
 " " Automatically deletes all trailing whitespace and newlines at end of file on save.
 " autocmd BufWritePre * %s/\s\+$//e
 " autocmd BufWritepre * %s/\n\+\%$//e
 
-" " Replace ex mode with gq
-" map Q gq
+" Vim-pandoc settings
+let g:pandoc#modules#disabled = ["folding"]
+
+" Enables vim-pandoc syntax in vimwiki files
+au FileType vimwiki set syntax=markdown.pandoc
