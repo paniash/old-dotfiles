@@ -188,3 +188,6 @@ let g:pandoc#modules#disabled = ["folding"]
 
 " Enables vim-pandoc syntax in vimwiki files
 au FileType vimwiki set syntax=markdown.pandoc
+
+" Replace all is aliased to S
+nnoremap S :%s//g<Left><Left>
