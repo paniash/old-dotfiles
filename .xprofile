@@ -3,10 +3,10 @@
 # This file runs when a DM logs into a graphical session
 # If you use startx/xinit like a Chad, this file will also be source
 
+dwmblocks &	# statusbar
 mpd &		# starts music player daemon
 picom &		# starts compositor
 dunst &		# starts notification daemon
-dwmblocks &	# statusbar
 remaps &	# maps caplock to escape
 xwallpaper --zoom /home/ashish/.config/wall.png & 	# sets wallpaper
 nm-applet & 	# starts nm-applet

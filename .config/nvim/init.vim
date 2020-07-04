@@ -16,10 +16,11 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
+Plug 'iamcco/markdown-preview.nvim', {'do': {->mkdp#util#install()}, 'for':['markdown', 'vim-plug']}
 Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
@@ -27,8 +28,6 @@ Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
 call plug#end()
-
-" let g:sneak#label = 1
 
 set termguicolors
 
@@ -46,17 +45,19 @@ set number relativenumber
 
 "With a map leader it's possible to do extra key combinations
 "like <leader>w saves the current file
- let mapleader=","
+let mapleader=","
 let maplocalleader=","
 
 "Fast saving
- nnoremap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 "Saving and (not) force quiting
 nnoremap <leader>x :x<cr>
 
 "Mapping for instant Goyo mode
 nnoremap <leader>g :Goyo<cr>
+let g:goyo_width = "80%"
+let g:goyo_height = "80%"
 
 "Settings for UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -102,8 +103,8 @@ set laststatus=0
 
 set lazyredraw
 
-"Gets rid of default mode display
-set noshowmode
+""Gets rid of default mode display
+"set noshowmode
 
 let g:vimtex_view_method = "zathura"
 let g:tex_flavor = "latex"
@@ -183,11 +184,26 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 " autocmd BufWritePre * %s/\s\+$//e
 " autocmd BufWritepre * %s/\n\+\%$//e
 
+" Save file as sudo on files that require root permission
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+" Enable Goyo by default for mutt writing
+autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
+autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
+autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo\|x!<CR>
+autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
+
 " Vim-pandoc settings
 let g:pandoc#modules#disabled = ["folding"]
 
-" Enables vim-pandoc syntax in vimwiki files
+" Enables vim-pandoc syntax in *.md files
 au FileType vimwiki set syntax=markdown.pandoc
 
 " Replace all is aliased to S
 nnoremap S :%s//g<Left><Left>
+
+" Markdown-preview.nvim settings
+let g:mkdp_auto_start = 0
+let g:mkdp_refresh_slow = 0
+let g:mkdp_browser = 'firefox'
+nnoremap <leader>v :MarkdownPreview<cr>

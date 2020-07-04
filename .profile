@@ -19,7 +19,7 @@ export LESSHISTFILE="-"
 export WGETRC="$HOME/.config/wget/wgetrc"
 export INPUTRC="$HOME/.config/inputrc"
 export ZDOTDIR="$HOME/.config/zsh"
-export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+# export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -34,5 +34,4 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
-
-PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+export MOZ_USE_XINPUT2="1"		# Mozilla smmoth scrolling/touchpads

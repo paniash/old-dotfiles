@@ -1,0 +1,11 @@
+#!/bin/sh
+# Displays COVID-19 statistics in India
+
+var=$(curl -s https://corona-stats.online/india?minimal=true | awk '/India/ {print $8}')
+# total=$($var | awk '/India/ {print $6}')
+# td=$($var | awk '/India/ {print $11}')
+# newc=$($var | awk '/India/ {print $8}') # new cases
+# newd=$($var | awk '/India/ {print $13}') # new deaths
+
+# echo "  $newc '|'  $newd "
+echo "  $var "

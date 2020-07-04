@@ -5,11 +5,13 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # To eliminate verbosity
 alias \
+	cim="nvim ~/.config/nvim/init.vim" \
 	tmc="tremc" \
 	cw="fortune | cowsay | lolcat" \
 	mb="mbsync -a" \
+	nf="neofetch" \
 	uf="ufetch" \
-	corona="curl https://corona-stats.online/" \
+	covid="curl https://corona-stats.online/" \
 	bat="cat /sys/class/power_supply/BAT0/capacity" \
 	yt="youtube-dl -ic --add-metadata" \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
@@ -25,7 +27,8 @@ alias \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
 	cbs="checkbashisms" \
-	rd="redshift -P -O 4500"
+	rd="redshift -P -O 4500" \
+	sxiv="sxiv -b" \
 
 # Colorize commands when possible and increase verbosity
 alias \

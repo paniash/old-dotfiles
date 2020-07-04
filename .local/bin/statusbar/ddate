@@ -3,4 +3,5 @@
 # Outputs the date
 
 dat=$(date '+%d %b (%a) %Y')
+# dat=$(date '+%d %b (%a)')
 echo "  $dat "

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Shows the uptime of my laptop
+
+var=$(uptime | awk '{print $3 " min"}')
+
+echo "  $var "

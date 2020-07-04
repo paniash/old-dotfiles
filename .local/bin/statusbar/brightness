@@ -3,4 +3,6 @@
 # Script that shows the brightness level on the status bar
 BRI=$(($(cat /sys/class/backlight/intel_backlight/brightness) * 100 / $(cat /sys/class/backlight/intel_backlight/max_brightness) ))
 
-echo "  $BRI% "
+# echo "  $BRI% "
+echo "  $BRI% "
+# echo "  $BRI% "
