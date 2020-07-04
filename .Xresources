@@ -2,7 +2,7 @@ Sxiv.background: #151519
 Sxiv.foreground: #ebdbb2
 
 !! Transparency (0-1):
-*.alpha: 0.85
+*.alpha: 0.8
 
 /* name		dark	light */
 /* black	0	8 */
@@ -150,7 +150,3 @@ Sxiv.foreground: #ebdbb2
 /* *.color14:    #9AEDFE */
 /* *.color7:     #BFBFBF */
 /* *.color15:    #E6E6E6 */
-
-/* *.background: .color0 */
-/* *.color256: 0#1d2021 */
-/* *.color257: 15#ebdbb2 */
