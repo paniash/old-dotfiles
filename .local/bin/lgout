@@ -1,0 +1,5 @@
+#!/bin/sh
+# A dmenu wrapper to prompt if the user wishes to logout
+
+[ $(echo "No\nYes" | dmenu -i -p "Do you want to logout?") \
+	= "Yes" ] && pkill -u ashish
