@@ -2,26 +2,14 @@
 
 # Displays the current song being played on mpd
 
+pidof -x mpdup >/dev/null 2>&1 || mpdup >/dev/null 2>&1 &
+
 ARTIST=$(mpc current -f %artist%)
 SONG=$(mpc current -f %title%)
 STATUS=$(mpc status | awk '/^\[/ {print $1}')
-
-# if [ ! $SONG ]; then
-# 	echo ""
-# else
-#     if [ "$STATUS" = "[playing]" ]; then
-# 			ICON=""
-#     else
-# 			ICON=""
-#     fi
-
-# 	echo "$ICON $ARTIST - $SONG "
-# fi
 
 emoji() {
 	    [ "$STATUS" = "[playing]" ] && ICON="" || ICON=""
 }
 
 [ -n "$SONG" ] && { emoji && echo "$ICON $ARTIST - $SONG " ; }
-
-pidof -x mpdup >/dev/null 2>&1 || mpdup >/dev/null 2>&1 &

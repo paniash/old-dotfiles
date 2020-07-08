@@ -1,7 +1,5 @@
 #!/bin/sh
 
-export STATUSBAR="dwmblocks"
-
 . ~/.xprofile
 
 # Here we start dwm
