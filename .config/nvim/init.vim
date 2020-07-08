@@ -27,6 +27,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
+" Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 set termguicolors
@@ -165,8 +166,8 @@ autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
 
-" Make a copy of resume.pdf into website/ after updating it 
-autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf; cp resume.pdf ~/website/static/files/cv.pdf
+" " Make a copy of resume.pdf into website/ after updating it 
+" autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf; cp resume.pdf ~/website/static/files/cv.pdf
 
 " " Compiles R markdown files to pdf (Luke's script)
 " autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
@@ -186,12 +187,6 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-" Enable Goyo by default for mutt writing
-autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
-autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
-autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo\|x!<CR>
-autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
 
 " Vim-pandoc settings
 let g:pandoc#modules#disabled = ["folding"]
