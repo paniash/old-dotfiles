@@ -2,4 +2,4 @@
 
 # Outputs CPU temperature
 
-sensors | awk '/Core 0/ {print "", $3" "}'
+sensors | awk '/Core 0/ {print " ", $3" "}'

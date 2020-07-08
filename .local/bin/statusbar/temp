@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Displays temperature of current area
+
+temp=$(curl -s "wttr.in/?format=%t")
+
+# echo "  $temp "
+echo "  $temp "
