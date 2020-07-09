@@ -1,8 +1,8 @@
-#files: 926	version: 5.8
+#files: 896	version: 5.8
 
 _comps=(
 '-' '_precommand'
-'-*-' '_bootctl'
+'-*-' '_loginctl'
 '.' '_source'
 '5g' '_go'
 '5l' '_go'
@@ -87,18 +87,15 @@ _comps=(
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
-'beet' '_beet'
 'bg' '_jobs_bg'
 'bibtex' '_bibtex'
 'bindkey' '_bindkey'
 'bison' '_bison'
 'bitcoin-cli' '_bitcoin-cli'
-'bluetoothctl' '_bluetoothctl'
 'bmake' '_make'
 'bogofilter' '_bogofilter'
 'bogotune' '_bogofilter'
 'bogoutil' '_bogofilter'
-'bootctl' '_bootctl'
 'bower' '_bower'
 'bpython' '_bpython'
 'bpython2' '_bpython'
@@ -113,7 +110,6 @@ _comps=(
 'brctl' '_brctl'
 'bsdgrep' '_grep'
 'bsdtar' '_tar'
-'bspc' '_bspc'
 'btdownloadcurses' '_bittorrent'
 'btdownloadgui' '_bittorrent'
 'btdownloadheadless' '_bittorrent'
@@ -127,10 +123,10 @@ _comps=(
 'bttrack' '_bittorrent'
 'buildhash' '_ispell'
 'builtin' '_builtin'
+'buku' '_buku'
 'bundle' '_bundle'
 'bunzip2' '_bzip2'
 'burst' '_mh'
-'busctl' '_busctl'
 'bzcat' '_bzip2'
 'bzegrep' '_grep'
 'bzfgrep' '_grep'
@@ -216,12 +212,12 @@ _comps=(
 'configure' '_configure'
 'console' '_console'
 'convert' '_imagemagick'
-'coredumpctl' '_coredumpctl'
 'cowsay' '_cowsay'
 'cowthink' '_cowsay'
 'cp' '_cp'
 'cpio' '_cpio'
 'cplay' '_cplay'
+'cppcheck' '_cppcheck'
 'cpupower' '_cpupower'
 'createdb' '_pgsql_utils'
 'createuser' '_pgsql_utils'
@@ -341,6 +337,7 @@ _comps=(
 'extcheck' '_java'
 'extractres' '_psutils'
 'fab' '_fab'
+'fail2ban-client' '_fail2ban-client'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
 'fc' '_fc'
@@ -371,6 +368,7 @@ _comps=(
 'fixwpps' '_psutils'
 'fixwwps' '_psutils'
 'flac' '_flac'
+'flameshot' '_flameshot'
 'fleetctl' '_fleetctl'
 'flex' '_flex'
 'flex++' '_flex'
@@ -468,6 +466,7 @@ _comps=(
 'gitk' '_git'
 'git-pulls' '_git-pulls'
 'git-receive-pack' '_git'
+'git-revise' '_git-revise'
 'git-shell' '_git'
 'git-upload-archive' '_git'
 'git-upload-pack' '_git'
@@ -620,7 +619,6 @@ _comps=(
 'homestead' '_homestead'
 'host' '_host'
 'hostname' '_hostname'
-'hostnamectl' '_hostnamectl'
 'hotjava' '_webbrowser'
 'htop' '_htop'
 'http' '_httpie'
@@ -683,13 +681,11 @@ _comps=(
 'joe' '_joe'
 'join' '_join'
 'jonas' '_jonas'
-'journalctl' '_journalctl'
 'jq' '_jq'
 'jrnl' '_jrnl'
 'jupyter' '_jupyter'
 'kak' '_kak'
 'kdeconnect-cli' '_kdeconnect'
-'kernel-install' '_kernel-install'
 'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
@@ -732,7 +728,6 @@ _comps=(
 'loadkeys' '_loadkeys'
 'local' '_typeset'
 'locale' '_locale'
-'localectl' '_localectl'
 'localedef' '_localedef'
 'locate' '_locate'
 'log' '_nothing'
@@ -769,7 +764,6 @@ _comps=(
 'lzma' '_xz'
 'lzop' '_lzop'
 'mac2unix' '_dos2unix'
-'machinectl' '_machinectl'
 'magnum' '_openstack'
 'mail' '_mail'
 'Mail' '_mail'
@@ -784,6 +778,7 @@ _comps=(
 '-math-' '_math'
 'matlab' '_matlab'
 'mattrib' '_mtools'
+'mc' '_mc'
 'mcd' '_mtools'
 'mcopy' '_mtools'
 'md2' '_cksum'
@@ -887,12 +882,9 @@ _comps=(
 'nedit' '_nedit'
 'nedit-nc' '_nedit'
 'netcat' '_netcat'
-'netctl' '_netctl'
-'netctl-auto' '_netctl'
 'netrik' '_webbrowser'
 'netscape' '_netscape'
 'netstat' '_netstat'
-'networkctl' '_networkctl'
 'neutron' '_openstack'
 'new' '_mh'
 'newgrp' '_groups'
@@ -962,7 +954,6 @@ _comps=(
 'pdf2dsc' '_pdf'
 'pdf2ps' '_pdf'
 'pdffonts' '_pdf'
-'pdfgrep' '_pdfgrep'
 'pdfimages' '_pdf'
 'pdfinfo' '_pdf'
 'pdfjadetex' '_tex'
@@ -1028,8 +1019,6 @@ _comps=(
 'podtoc' '_perl_modules'
 'poff' '_pon'
 'policytool' '_java'
-'polybar' '_polybar'
-'polybar-msg' '_polybar_msg'
 'pon' '_pon'
 'popd' '_directory_stack'
 'port' '_port'
@@ -1043,6 +1032,7 @@ _comps=(
 'printenv' '_printenv'
 'printf' '_print'
 'prompt' '_prompt'
+'protoc' '_protoc'
 'prove' '_prove'
 'prs' '_sccs'
 'prt' '_sccs'
@@ -1122,11 +1112,9 @@ _comps=(
 'remsh' '_rlogin'
 'renice' '_renice'
 'repl' '_mh'
-'resolvectl' '_resolvectl'
 'restart' '_initctl'
 'retawq' '_webbrowser'
 'rfkill' '_rfkill'
-'rg' '_rg'
 'rgview' '_vim'
 'rgvim' '_vim'
 'ri' '_ri'
@@ -1212,7 +1200,7 @@ _comps=(
 'sha512sum' '_md5sum'
 'sha512t256' '_cksum'
 'shasum' '_shasum'
-'shell-script' '_bootctl'
+'shell-script' '_loginctl'
 'shift' '_arrays'
 'show' '_mh'
 'showchar' '_psutils'
@@ -1294,22 +1282,6 @@ _comps=(
 'swiftc' '_swift'
 'sync' '_nothing'
 'sysctl' '_sysctl'
-'systemctl' '_systemctl'
-'systemd-analyze' '_systemd-analyze'
-'systemd-ask-password' '_systemd'
-'systemd-cat' '_systemd'
-'systemd-cgls' '_systemd'
-'systemd-cgtop' '_systemd'
-'systemd-delta' '_systemd-delta'
-'systemd-detect-virt' '_systemd'
-'systemd-inhibit' '_systemd-inhibit'
-'systemd-machine-id-setup' '_systemd'
-'systemd-notify' '_systemd'
-'systemd-nspawn' '_systemd-nspawn'
-'systemd-resolve' '_resolvectl'
-'systemd-run' '_systemd-run'
-'systemd-tmpfiles' '_systemd-tmpfiles'
-'systemd-tty-ask-password-agent' '_systemd'
 'tac' '_tac'
 'tacker' '_openstack'
 'tail' '_tail'
@@ -1317,7 +1289,6 @@ _comps=(
 'tar' '_tar'
 'tardy' '_tardy'
 'tarsnap' '_tarsnap'
-'task' '_task'
 'tcpdump' '_tcpdump'
 'tcp_open' '_tcpsys'
 'tcptraceroute' '_tcptraceroute'
@@ -1340,7 +1311,6 @@ _comps=(
 'tig' '_git'
 '-tilde-' '_tilde'
 'time' '_precommand'
-'timedatectl' '_timedatectl'
 'timeout' '_timeout'
 'times' '_nothing'
 'tin' '_tin'
@@ -1365,7 +1335,6 @@ _comps=(
 'tracepath6' '_tracepath'
 'traceroute' '_hosts'
 'transmission-remote' '_transmission'
-'transmission-remote-cli' '_transmission-remote-cli'
 'trap' '_trap'
 'trash' '_trash-put'
 'trash-empty' '_trash-empty'
@@ -1390,10 +1359,6 @@ _comps=(
 'txt' '_hosts'
 'type' '_which'
 'typeset' '_typeset'
-'udevadm' '_udevadm'
-'udiskie' '_udiskie'
-'udiskie-mount' '_udiskie-mount'
-'udiskie-umount' '_udiskie-umount'
 'udisksctl' '_udisksctl'
 'ufw' '_ufw'
 'ulimit' '_ulimit'
@@ -1531,7 +1496,6 @@ _comps=(
 'whoami' '_nothing'
 'whois' '_whois'
 'whom' '_mh'
-'wifi-menu' '_netctl'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
 'wodim' '_cdrecord'
@@ -1730,7 +1694,9 @@ _postpatcomps=(
 '(texi(2*|ndex))' '_texi'
 '(tiff*|*2tiff|pal2rgb)' '_tiff'
 '-value-,CCACHE_*,-default-' '_ccache'
+'-value-,CGO*,-default-' '_golang'
 '-value-,(ftp|http(|s))_proxy,-default-' '_urls'
+'-value-,GO*,-default-' '_golang'
 '-value-,LC_*,-default-' '_locales'
 '-value-,*path,-default-' '_directories'
 '-value-,*PATH,-default-' '_dir_list'
@@ -1776,39 +1742,33 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _alacritty _android _archlinux-java _artisan \
-            _atach _beet _bitcoin-cli _bluetoothctl _bootctl \
-            _bower _bspc _bundle _busctl _caffeinate \
-            _cap _cask _ccache _cf _cheat \
-            _choc _chromium _cmake _coffee _composer \
-            _conan _concourse _console _coredumpctl _curl \
-            _dad _debuild _dget _dhcpcd _diana \
-            _docpad _drush _ecdsautil _email-notmuch _emulator \
-            _envdir _exportfs _fab _ffind _fleetctl \
-            _flutter _force _fwupdmgr _gas _ghc \
-            _gist _git-flow _git-journal _git-pulls _git-wtf \
-            _glances _golang _google _gtk-launch _hledger \
-            _homestead _hostnamectl _httpie _ibus _include-what-you-use \
-            _inxi _jmeter _jmeter-plugins _jonas _journalctl \
-            _jrnl _jupyter _kak _kernel-install _kitchen \
-            _knife _language_codes _libinput _localectl _loginctl \
-            _lunchy _machinectl _middleman _mina _mix \
+            _atach _bitcoin-cli _bower _buku _bundle \
+            _caffeinate _cap _cask _ccache _cf \
+            _cheat _choc _chromium _cmake _coffee \
+            _composer _conan _concourse _console _cppcheck \
+            _curl _dad _debuild _dget _dhcpcd \
+            _diana _docpad _drush _ecdsautil _email-notmuch \
+            _emulator _envdir _exportfs _fab _fail2ban-client \
+            _ffind _flameshot _fleetctl _flutter _force \
+            _fwupdmgr _gas _ghc _gist _git-flow \
+            _git-journal _git-pulls _git-revise _git-wtf _glances \
+            _golang _google _gtk-launch _hledger _homestead \
+            _httpie _ibus _include-what-you-use _inxi _jmeter \
+            _jmeter-plugins _jonas _jrnl _jupyter _kak \
+            _kitchen _knife _language_codes _libinput _loginctl \
+            _lunchy _mc _middleman _mina _mix \
             _mkinitcpio _mpv _mussh _mvn _nano \
-            _netctl _networkctl _nftables _node _notmuch \
-            _nvm _openssl _optirun _pacman _pass \
-            _patool _pdfgrep _perf _periscope _pgsql_utils \
-            _phing _pixz _pkcon _play _pm2 \
-            _polybar _polybar_msg _port _pulseaudio _pygmentize \
-            _rails _ralio _redis-cli _resolvectl _rfkill \
-            _rg _rkt _rslsync _rspec _rsvm \
-            _rubocop _sbt _scala _scrub _sdd \
-            _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _setcap \
+            _nftables _node _notmuch _nvm _openssl \
+            _optirun _pacman _pass _patool _perf \
+            _periscope _pgsql_utils _phing _pixz _pkcon \
+            _play _pm2 _port _protoc _pulseaudio \
+            _pygmentize _rails _ralio _redis-cli _rfkill \
+            _rkt _rslsync _rspec _rsvm _rubocop \
+            _sbt _scala _scrub _sdd _setcap \
             _setup.py _sfdx _showoff _srm _stack \
-            _subl _subliminal _supervisorctl _svm _systemctl \
-            _systemd _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn \
-            _systemd-run _systemd-tmpfiles _tarsnap _task _teamocil \
-            _thor _timedatectl _tmuxinator _tmuxp _tox \
-            _transmission-remote-cli _trash-empty _trash-list _trash-put _trash-restore \
-            _udevadm _udiskie _udiskie-mount _udiskie-umount _udisksctl \
+            _subl _subliminal _supervisorctl _svm _tarsnap \
+            _teamocil _thor _tmuxinator _tmuxp _tox \
+            _trash-empty _trash-list _trash-put _trash-restore _udisksctl \
             _ufw _vagrant _virtualbox _vnstat _wemux \
             _wg-quick _xinput _xsel _xwallpaper _yaourt \
             _yarn _yay _youtube-dl _zathura _zcash-cli \
