@@ -47,12 +47,6 @@ set number relativenumber
 let mapleader=","
 let maplocalleader=","
 
-"Fast saving
-nnoremap <leader>w :w!<cr>
-
-"Saving and (not) force quiting
-nnoremap <leader>x :x<cr>
-
 "Mapping for instant Goyo mode
 nnoremap <leader>g :Goyo<cr> :set laststatus=0<cr>
 let g:goyo_width = "80%"
