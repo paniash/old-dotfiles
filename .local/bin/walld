@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# POSIX sh written wallpaper downloader
+
+main() {
+	xargs -i curl -s '{}' < "$1"
+}
+
+main "$1"
