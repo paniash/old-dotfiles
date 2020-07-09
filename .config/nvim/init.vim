@@ -16,8 +16,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'iamcco/markdown-preview.nvim', {'do': {->mkdp#util#install()}, 'for':['markdown', 'vim-plug']}
@@ -27,7 +26,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
-" Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 set termguicolors
@@ -56,7 +54,7 @@ nnoremap <leader>w :w!<cr>
 nnoremap <leader>x :x<cr>
 
 "Mapping for instant Goyo mode
-nnoremap <leader>g :Goyo<cr>
+nnoremap <leader>g :Goyo<cr> :set laststatus=0<cr>
 let g:goyo_width = "80%"
 let g:goyo_height = "80%"
 
@@ -104,8 +102,8 @@ set laststatus=0
 
 set lazyredraw
 
-""Gets rid of default mode display
-"set noshowmode
+"Gets rid of default mode display
+set noshowmode
 
 let g:vimtex_view_method = "zathura"
 let g:tex_flavor = "latex"
@@ -117,16 +115,23 @@ let g:vimtex_compiler_method = "latexmk"
 " Airline theme
 let g:airline_theme='dark'
 
+" let g:airline_symbols_ascii = 1
 " let g:airline_powerline_fonts = 1
 let g:airline_detect_spell=0
 let g:airline_detect_spelllang=0
 let g:airline_disable_statusline=0
-let g:airline_extensions = ['vimtex', 'whitespace', 'keymap', 'netrw']
+let g:airline#extensions#wordcount#enabled = 1
+let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmarkdown', 'text']
+" let g:airline#extensions#wordcount#formatter = 'default'
+let g:airline#extensions#wordcount#formatter#default#fmt = '%s words'
+
+" let g:airline_extensions = ['vimtex', 'whitespace', 'keymap', 'netrw']
 
 let g:airline#extensions#default#layout = [
  			\ ['a', 'b', 'c'],
  			\ ['x', 'y', 'z']
  			\ ]
+
 
 " Disables arrows in normal mode
 noremap <Up> <Nop>
