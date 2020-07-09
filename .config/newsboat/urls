@@ -1,7 +1,8 @@
 ---SOFTWARE_UPDATES---
-https://www.archlinux.org/feeds/news/
-https://artixlinux.org/feed.php
+https://artixlinux.org/feed.php 
+https://www.archlinux.org/feeds/news/ "~Arch Linux News"
 http://blog.linuxmint.com/?feed=rss2
+https://voidlinux.org/atom.xml "~Void Linux News"
 https://github.com/LukeSmithxyz/voidrice/commits/master.atom "~Luke's voidrice"
 https://github.com/LukeSmithxyz/dwm/commits/master.atom "~Luke's dwm"
 https://github.com/qiskit-community/qiskit-textbook/commits/master.atom "~Qiskit textbook"
@@ -11,6 +12,11 @@ https://github.com/paniash.private.atom?token=AOF5ZETMUNRCCEHVTBL3SYV5AQKFI "~Gi
 ---TECH_NEWS---
 https://www.fsf.org/static/fsforg/rss/blogs.xml
 https://www.eff.org/rss/updates.xml "~EFF"
+https://news.ycombinator.com/rss "~Hacker News"
+https://fedoramagazine.org/feed/ "~Fedora Magazine"
+https://k1ss.org/blog/blog.xml "~K1ss blog"
+https://nitter.net/DuckDuckGo/rss 
+https://nitter.net/YourAnonCentral/rss
 
 " "
 ---RESEARCH_BLOG---
@@ -30,9 +36,12 @@ https://iiserpunenews.wordpress.com/feed/ "~IISER Pune news"
 " "
 ---SUBREDDITS---
 https://www.reddit.com/r/QuantumComputing.rss "~r/QuantumComputing"
+https://www.reddit.com/r/quantum.rss "~r/quantum"
 https://www.reddit.com/r/learnmachinelearning.rss "~r/learnmachinelearning"
 https://www.reddit.com/r/archlinux.rss "~r/archlinux"
 https://www.reddit.com/r/unixporn.rss "~r/unixporn"
+https://www.reddit.com/r/artixlinux.rss "~r/artixlinux"
+https://www.reddit.com/r/initfreedom.rss "~r/initfreedom"
 
 
 " "
@@ -73,7 +82,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~M
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distrotube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg "~Wolfgang's Channel"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCf93fPKwotph47H3_KDcRyg "~Kris Occhipinti"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~ThePrimeagen"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCMZxtiWIdrXUUbWMAe6D-Iw "~msjche"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0uTPqBCFIpZxlz_Lv1tk_g "~Protesilaos Stavrou"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "~Linus Tech Tips"
