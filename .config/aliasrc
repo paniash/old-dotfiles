@@ -48,7 +48,8 @@ alias \
 	vim="nvim" \
 	pu="sudo pacman -Syu --color always" \
 	pi="sudo pacman -S" \
-	prs="sudo pacman -Rs" \
+	prs="sudo pacman -Rns" \
 	sc="sc-im" \
+	irssi="irssi --config=/home/ashish/.config/irssi"
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
