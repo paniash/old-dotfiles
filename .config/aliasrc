@@ -29,6 +29,8 @@ alias \
 	cbs="checkbashisms" \
 	rd="redshift -P -O 4500" \
 	sxiv="sxiv -b" \
+	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server"\
+	hs="hugo server"\
 
 # Colorize commands when possible and increase verbosity
 alias \
