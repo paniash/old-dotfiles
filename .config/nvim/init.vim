@@ -24,7 +24,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
@@ -46,11 +45,6 @@ set number relativenumber
 "like <leader>w saves the current file
 let mapleader=","
 let maplocalleader=","
-
-"Mapping for instant Goyo mode
-nnoremap <leader>g :Goyo<cr> :set laststatus=0<cr>
-let g:goyo_width = "80%"
-let g:goyo_height = "80%"
 
 "Settings for UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
