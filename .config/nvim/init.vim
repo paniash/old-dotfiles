@@ -85,13 +85,13 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Ignore case when searching
 set ignorecase
 
-" Highlights regex expression when using the :substitute command
+" Highlights regex expression when using the :substitute command (only works in neovim)
 set inccommand=nosplit
 
 "Add a bit extra margin to the left
 set foldcolumn=0
 
-"Never show the status line
+"Never show the status line (2: for always)
 set laststatus=0
 
 set lazyredraw
@@ -126,13 +126,6 @@ let g:airline#extensions#default#layout = [
  			\ ['x', 'y', 'z']
  			\ ]
 
-
-" Disables arrows in normal mode
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 "" Split settings for a more natural feel
 set splitbelow
 set splitright
@@ -156,20 +149,17 @@ au BufNewFile,BufRead .py
 " makes .py files look pretty
 let python_highlight_all=1
 
-" opens link within the terminal using urlview
-:noremap <leader>u :w<Home>silent <End> !urlview<CR>
+" opens link within the terminal using urlscan
+nnoremap <leader>u :w<Home>silent <End> !urlscan<CR>
+
+" Open bibliography file in split
+map <leader>b :vsp<space>$BIB<CR>
 
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
 
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
-
-" " Compiles R markdown files to pdf (Luke's script)
-" autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-
-" " Compiles R markdown files to pdf using rmarkdown plugin
-" autocmd Filetype rmarkdown nnoremap <leader>c :RMarkdown pdf<cr>
 
 " Runs script to clean tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear %
@@ -180,9 +170,9 @@ map <leader>c :w! \| !compiler <c-r>%<CR><CR>
 " Opens corresponding .pdf/.html or preview
 map <leader>p :!opout <c-r>%<CR><CR>
 
-" " Automatically deletes all trailing whitespace and newlines at end of file on save.
-" autocmd BufWritePre * %s/\s\+$//e
-" autocmd BufWritepre * %s/\n\+\%$//e
+" Automatically deletes all trailing whitespace and newlines at end of file on save.
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
