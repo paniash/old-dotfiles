@@ -19,13 +19,13 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
-Plug 'iamcco/markdown-preview.nvim', {'do': {->mkdp#util#install()}, 'for':['markdown', 'vim-plug']}
 Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set termguicolors
@@ -115,7 +115,7 @@ let g:airline_detect_spell=0
 let g:airline_detect_spelllang=0
 let g:airline_disable_statusline=0
 let g:airline#extensions#wordcount#enabled = 1
-let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmarkdown', 'text']
+let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmd', 'text']
 " let g:airline#extensions#wordcount#formatter = 'default'
 let g:airline#extensions#wordcount#formatter#default#fmt = '%s words'
 
@@ -160,13 +160,10 @@ let python_highlight_all=1
 :noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 " Treats .rmd files as rmarkdown
-autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmarkdown
+autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
 
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
-
-" " Make a copy of resume.pdf into website/ after updating it 
-" autocmd BufWritePost resume.tex !rm ~/website/static/files/cv.pdf; cp resume.pdf ~/website/static/files/cv.pdf
 
 " " Compiles R markdown files to pdf (Luke's script)
 " autocmd Filetype rmd map <leader>c :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
@@ -178,7 +175,10 @@ autocmd BufWritePost .Xresources !xrdb .Xresources
 autocmd VimLeave *.tex !texclear %
 
 " Compiles documents be it LaTeX, markdown or groff
-map <leader>c :w! \| !compiler <c-r>%<CR>
+map <leader>c :w! \| !compiler <c-r>%<CR><CR>
+
+" Opens corresponding .pdf/.html or preview
+map <leader>p :!opout <c-r>%<CR><CR>
 
 " " Automatically deletes all trailing whitespace and newlines at end of file on save.
 " autocmd BufWritePre * %s/\s\+$//e
@@ -196,8 +196,5 @@ au FileType vimwiki set syntax=markdown.pandoc
 " Replace all is aliased to S
 nnoremap S :%s//g<Left><Left>
 
-" Markdown-preview.nvim settings
-let g:mkdp_auto_start = 0
-let g:mkdp_refresh_slow = 0
-let g:mkdp_browser = 'firefox'
-nnoremap <leader>v :MarkdownPreview<cr>
+" fzf bindings
+nnoremap <leader>f :Files /home/ashish/documents<CR>
