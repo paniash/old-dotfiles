@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/ashish/.config/nvim/plugged/markdown-preview.nvim/.git/objects/fa'
+let g:netrw_dirhist_5='/home/ashish/programs'
 let g:netrw_dirhist_4='/home/ashish/.config/newsboat'
 let g:netrw_dirhist_3='/home/ashish/.config/urlscan'
 let g:netrw_dirhist_2='/home/ashish/.local/share/applications'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_0='/home/ashish/Documents'
 let g:netrw_dirhist_9='/home/ashish/.password-store'
 let g:netrw_dirhist_8='/home/ashish/.config/sxiv/exec'
 let g:netrw_dirhist_7='/home/ashish/suckless/dwm/.git'
-let g:netrw_dirhist_6='/home/ashish/.config/autostart'
-let g:netrw_dirhist_5='/home/ashish/.config/polybar'

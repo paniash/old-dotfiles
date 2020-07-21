@@ -1,5 +1,5 @@
 ---SOFTWARE_UPDATES---
-https://artixlinux.org/feed.php 
+https://artixlinux.org/feed.php
 https://www.archlinux.org/feeds/news/ "~Arch Linux News"
 http://blog.linuxmint.com/?feed=rss2
 https://voidlinux.org/atom.xml "~Void Linux News"
@@ -9,20 +9,11 @@ https://github.com/qiskit-community/qiskit-textbook/commits/master.atom "~Qiskit
 https://github.com/paniash.private.atom?token=AOF5ZETMUNRCCEHVTBL3SYV5AQKFI "~Github News feed"
 
 " "
----TECH_NEWS---
-https://www.fsf.org/static/fsforg/rss/blogs.xml
-https://www.eff.org/rss/updates.xml "~EFF"
-https://news.ycombinator.com/rss "~Hacker News"
-https://fedoramagazine.org/feed/ "~Fedora Magazine"
-https://k1ss.org/blog/blog.xml "~K1ss blog"
-https://nitter.net/DuckDuckGo/rss 
-https://nitter.net/YourAnonCentral/rss
-
-" "
 ---RESEARCH_BLOG---
-https://www.ibm.com/blogs/research/feed/atom/ 
+https://www.ibm.com/blogs/research/feed/atom/
 https://cloudblogs.microsoft.com/quantum?feed=rss2
 https://medium.com/feed/qiskit
+https://nitter.net/qiskit/rss
 http://www.ox.ac.uk/news/science-blog/feed "~Oxford Science blog"
 
 " "
@@ -32,6 +23,7 @@ http://www.ox.ac.uk/feeds/rss/news "~University of Oxford"
 https://www.cam.ac.uk/news/feed "~University of Cambridge"
 https://news.harvard.edu/gazette/feed/ "~Harvard University - Gazette news"
 https://iiserpunenews.wordpress.com/feed/ "~IISER Pune news"
+http://qworld.lu.lv/index.php/feed/
 
 " "
 ---SUBREDDITS---
@@ -39,6 +31,7 @@ https://www.reddit.com/r/QuantumComputing.rss "~r/QuantumComputing"
 https://www.reddit.com/r/quantum.rss "~r/quantum"
 https://www.reddit.com/r/learnmachinelearning.rss "~r/learnmachinelearning"
 https://www.reddit.com/r/archlinux.rss "~r/archlinux"
+https://www.reddit.com/r/vim.rss "~r/vim"
 https://www.reddit.com/r/unixporn.rss "~r/unixporn"
 https://www.reddit.com/r/artixlinux.rss "~r/artixlinux"
 https://www.reddit.com/r/initfreedom.rss "~r/initfreedom"
@@ -48,6 +41,8 @@ https://www.reddit.com/r/initfreedom.rss "~r/initfreedom"
 ---PEOPLE---
 https://www.lukesmith.xyz/rss.xml
 https://peterwittek.com/feeds/all.atom.xml
+https://leimao.github.io/feed.xml
+https://11de784a.github.io/feed.xml
 
 " "
 ---PHYSICS_NEWS---
@@ -77,6 +72,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCvjgXvBlbQiydffZU7m1_aw "~T
 
 " "
 ---YOUTUBE-TECH---
+https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 "~Luke Smith (PeerTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distrotube"
@@ -93,3 +89,12 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCkHN7h7CFeYL6Y1N5JcEZug "~S
 " "
 ---PODCASTS---
 https://notrelated.xyz/rss "~Not Related!"
+
+" "
+---TECH_NEWS---
+https://protonmail.com/blog/feed/
+https://www.fsf.org/static/fsforg/rss/blogs.xml
+https://www.eff.org/rss/updates.xml "~EFF"
+https://news.ycombinator.com/rss "~Hacker News"
+https://fedoramagazine.org/feed/ "~Fedora Magazine"
+https://k1ss.org/blog/blog.xml "~K1ss blog"

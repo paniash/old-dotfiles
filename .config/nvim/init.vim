@@ -86,7 +86,7 @@ set inccommand=nosplit
 set foldcolumn=0
 
 "Never show the status line (2: for always)
-set laststatus=0
+set laststatus=2
 
 set lazyredraw
 
@@ -98,6 +98,7 @@ let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
+let g:vimtex_compiler_progname = 'nvr'
 
 "" Airline settings
 " Airline theme
@@ -145,6 +146,11 @@ let python_highlight_all=1
 
 " opens link within the terminal using urlscan
 nnoremap <leader>u :w<Home>silent <End> !urlscan<CR>
+
+" 4 spaces for tab
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Open bibliography file in split
 map <leader>b :vsp<space>$BIB<CR>

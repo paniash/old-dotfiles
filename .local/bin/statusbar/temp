@@ -3,6 +3,16 @@
 # Displays temperature of current area
 
 temp=$(curl -s "wttr.in/?format=%t")
+var=$(curl -s "wttr.in/?format=%t" | grep -i unknown)
 
-# echo "  $temp "
-echo "  $temp "
+if [ "$var" ]; then
+	echo "  none "
+else
+	echo "  $temp "
+fi
+
+# condi() {
+# 	[ "$var" ] && MSG="none" || MSG="$temp"
+# }
+
+# echo "  $MSG "

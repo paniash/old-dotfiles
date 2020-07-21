@@ -27,10 +27,11 @@ alias \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
 	cbs="checkbashisms" \
-	rd="redshift -P -O 4500" \
+	rd="redshift -P -O 4000" \
 	sxiv="sxiv -b" \
-	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server"\
-	hs="hugo server"\
+	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
+	hs="hugo server" \
+	R="R --silent" \
 
 # Colorize commands when possible and increase verbosity
 alias \

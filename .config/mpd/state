@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:My Pulse Output
 audio_device_state:1:toggle_visualizer
 state: play
-current: 2
-time: 4.013000
+current: 0
+time: 4.162000
 random: 0
 repeat: 1
 single: 0
@@ -12,47 +12,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Reverie/Ivan Torrent - The Axis of Love-8XqQ8jzhU3o.webm
-1:Reverie/Ivan Torrent - La Danse de la Lune-A4Lvn7_v-Sw.webm
-2:Reverie/Ivan Torrent - Underskin-5fWqDtQtfT0.webm
-3:Immortalys/Ivan Torrent - Afterlife (feat. Celica Soldream).webm
-4:Reverie/Ivan Torrent - TH3 AWAK3N1NG-fqh7N_4FZDw.webm
-5:Immortalys/Ivan Torrent - The Edge of Consciousness (feat. Lara Ausensi).webm
-6:Reverie/Ivan Torrent - Impossible (feat. Rangel Da Silva)-Bm5f_glnQ5M.webm
-7:Reverie/Release My Heart-QsM87FFBpeQ.webm
-8:Immortalys/Ivan Torrent - Beyond Love (feat. Lara Ausensi).webm
-9:Immortalys/Ivan Torrent - Masters Of Time (feat. Julie Elven & Ivan Torrent).m4a
-10:Immortalys/Ivan Torrent - Passage To Eden (feat. Lara Ausensi).webm
-11:Reverie/Ivan Torrent - Blessing the Rain-FdBc6JD75fE.webm
-12:Reverie/Starchild-pn-sLjOZVAo.webm
-13:Reverie/Ivan Torrent - The Light Crusaders-fmFd8q5rUgU.webm
-14:Immortalys/Ivan Torrent - Lux Imperia (feat. Celica Soldream).webm
-15:Immortalys/Ivan Torrent - Iron Angels (feat. Merethe Soltvedt).webm
-16:Reverie/Ivan Torrent - The Bounds of the Universe-CWV6tsVR5CY.webm
-17:Immortalys/Ivan Torrent - Immortalys (feat. Irene Rodríguez)-9zbR.webm
-18:Reverie/Ivan Torrent - Forbidden Love-lCB0ef3Y-rI.webm
-19:Reverie/Ivan Torrent - Supernova-qlpu3AgiHEI.webm
-20:Immortalys/Ivan Torrent - Vis Motrix (feat. Lara Ausensi & Ivan Torrent).webm
-21:Immortalys/Ivan Torrent - Skyborn (feat. Irene Rodríguez).webm
-22:Immortalys/Ivan Torrent - Infinium (feat. Alek Balzerak).webm
-23:Immortalys/Ivan Torrent - Moonriser.webm
-24:Reverie/Ivan Torrent - Before I Leave This World-1zlIPDbpX0I.webm
-25:Reverie/Ivan Torrent - In Aeternum-2paKHvj7QpU.webm
-26:Immortalys/Ivan Torrent - Inner Sanctum (feat. Lara Ausensi & Marta Merino).webm
-27:Immortalys/Ivan Torrent - Khae Momme (feat. Lara Ausensi).webm
-28:Reverie/Ivan Torrent - Crystalline (feat. Celica Soldream)-pnRLpJWXc0U.webm
-29:Reverie/Ivan Torrent - The Power of Will (feat. Gaby Koss)-KT6JpzKfh-w.webm
-30:Immortalys/Ivan Torrent - Facing Fears (feat. Celica Soldream).webm
-31:Reverie/Ivan Torrent - Human Legacy-9NzlDUeS1U4.webm
-32:Reverie/Ivan Torrent - Dandelion (Tribute to a Legend)-S010hhJw3bY.webm
-33:Reverie/Ivan Torrent - Architects of Life (feat. Celica Soldream)-bOHV9p_a16o.webm
-34:Reverie/Ivan Torrent - Remember Me (Feat. Roger Berruezo)-WR3E9VzPDnU.webm
-35:Reverie/Galactic Invasion-k043jMsONiY.webm
-36:Reverie/Ivan Torrent - Glimmer of Hope (feat. Aeralie Brighton)-ODgUlTAVMiU.webm
-37:Reverie/Ivan Torrent - The Dark One-ujRZ42mPfR4.webm
-38:Reverie/Ivan Torrent - Luminous Days-JYUAQH6z8Nw.webm
-39:Immortalys/Ivan Torrent - Neon Paradise.webm
-40:Immortalys/Ivan Torrent - Legends Never Die (feat. Lara Ausensi).webm
-41:Reverie/Ivan Torrent - Icarus (Feat. Julie Elven)-kTE9UibRhnA.webm
-42:Immortalys/Ivan Torrent - The Valley Of Stars (feat. Ivan Torrent).webm
+0:pop/sam-smith/Sam Smith - How Do You Sleep (Official Video)-PmYypVozQb4.opus
 playlist_end
