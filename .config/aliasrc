@@ -7,8 +7,6 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 alias \
 	cim="nvim ~/.config/nvim/init.vim" \
 	tmc="tremc" \
-	cw="fortune | cowsay | lolcat" \
-	mb="mbsync -a" \
 	nf="neofetch" \
 	uf="ufetch" \
 	covid="curl https://corona-stats.online/" \
@@ -17,7 +15,10 @@ alias \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
 	str="straw-viewer --resolution=720p" \
+    cs="config status" \
+    cog="config" \
 	gs="git status" \
+    gl="git log" \
 	untar="tar -xzvf" \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
@@ -32,6 +33,8 @@ alias \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
 	hs="hugo server" \
 	R="R --silent" \
+    jn="jupyter-notebook" \
+    nnn="nnn -d -e" \
 
 # Colorize commands when possible and increase verbosity
 alias \
@@ -53,6 +56,5 @@ alias \
 	pi="sudo pacman -S" \
 	prs="sudo pacman -Rns" \
 	sc="sc-im" \
-	irssi="irssi --config=/home/ashish/.config/irssi"
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}

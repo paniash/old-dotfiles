@@ -3,6 +3,7 @@
 # This file runs when a DM logs into a graphical session
 # If you use startx/xinit like a Chad, this file will also be source
 
+redshift -P -O 4000
 mpd &		# starts music player daemon
 picom &		# starts compositor
 dunst &		# starts notification daemon

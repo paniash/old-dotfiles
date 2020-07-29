@@ -25,6 +25,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf.vim'
+Plug 'szymonmaszke/vimpyter'
 call plug#end()
 
 set termguicolors

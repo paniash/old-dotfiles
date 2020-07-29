@@ -2,7 +2,7 @@
 set shell sh
 set previewer preview
 set color256 true
-set drawbox true
+# set drawbox true
 set ignorecase true
 
 set shellopts '-eu'
@@ -88,6 +88,9 @@ map b bulkrename
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+
+map e
+map d
 
 # File openers
 map ee $$EDITOR "$f"
