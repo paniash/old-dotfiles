@@ -11,6 +11,10 @@ else
 	echo "  $temp "
 fi
 
+if [ "$temp" = "" ]; then
+    echo ""
+fi
+
 # condi() {
 # 	[ "$var" ] && MSG="none" || MSG="$temp"
 # }
