@@ -3,7 +3,7 @@
 # dwmblocks mail module.
 # Displays number of unread mail and an loading icon if updating.
 
-unread="$(find ${XDG_DATA_HOME:-$HOME/.local/share}/mail/ashish/INBOX/new/* -type f | wc -l 2>/dev/null)"
+unread="$(find ${XDG_DATA_HOME:-$HOME/.local/share}/mail/*/INBOX/new/* -type f | wc -l 2>/dev/null)"
 
-[ "$unread" = "0" ] && [ "$icon" = "" ] || echo "  $unread "
-
+# [ "$unread" = "0" ] && [ "$icon" = "" ] || echo "  $unread "
+[ "$unread" = "0" ] && [ "$icon" = "" ] || echo "  $unread "

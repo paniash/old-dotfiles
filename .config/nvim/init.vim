@@ -24,8 +24,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf.vim'
-Plug 'szymonmaszke/vimpyter'
 call plug#end()
 
 set termguicolors
@@ -175,14 +173,10 @@ map <leader>p :!opout <c-r>%<CR><CR>
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
 
-" Save file as sudo on files that require root permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-" Vim-pandoc settings
-let g:pandoc#modules#disabled = ["folding"]
-
 " Enables vim-pandoc syntax in *.md files
-au FileType vimwiki set syntax=markdown.pandoc
+augroup pandoc_syntax
+    au! FileType vimwiki set syntax=markdown.pandoc
+augroup END
 
 " Replace all is aliased to S
 nnoremap S :%s//g<Left><Left>

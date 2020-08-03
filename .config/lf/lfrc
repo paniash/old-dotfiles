@@ -66,7 +66,7 @@ cmd bulkrename ${{
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
 map gh
-map g top
+map gg top
 map D delete
 map C copyto
 map M moveto
@@ -96,3 +96,13 @@ map d
 map ee $$EDITOR "$f"
 map es $sudo $EDITOR "$f"
 map z $$READER "$f"
+
+# Movement
+map gp cd ~/documents/books/physics
+map gq cd ~/documents/books/physics/quantum
+map gm cd ~/documents/books/mathematics
+map gc cd ~/documents/books/computation
+map gs cd ~/misc/suckless
+map gb cd ~/misc/blog-git
+map gr cd ~/documents/books/recreation
+map ga cd ~/video/anime
