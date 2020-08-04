@@ -32,13 +32,14 @@ case "$ext" in
 	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
 	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
 	tex) textype "$file" ;;
-	md)	if  command -v lowdown >/dev/null; then
-			lowdown -d nointem -e super "$file" -Tms | groff -mpdfmark -ms -kept > "$base".pdf
-		elif command -v groffdown >/dev/null; then
-			groffdown -i "$file" | groff > "$base.pdf"
-		else
-			pandoc "$file" --pdf-engine=xelatex -o "$base".pdf
-		fi ; ;;
+    md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	# md)	if  command -v lowdown >/dev/null; then
+	# 		lowdown -d nointem -e super "$file" -Tms | groff -mpdfmark -ms -kept > "$base".pdf
+	# 	elif command -v groffdown >/dev/null; then
+	# 		groffdown -i "$file" | groff > "$base.pdf"
+	# 	else
+	# 		pandoc "$file" --pdf-engine=xelatex -o "$base".pdf
+	# 	fi ; ;;
 	h) sudo make install ;;
 	c) cc "$file" -o "$base" && "$base" ;;
 	py) python "$file" ;;
