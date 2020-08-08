@@ -1,5 +1,5 @@
 # Basic settings
-set shell sh
+set shell bash
 set previewer preview
 set color256 true
 # set drawbox true
@@ -20,12 +20,18 @@ map O $mimeopen --ask $f
 # This command is called when current file is not a directory. You may want to
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
+
 # cmds/functions
 cmd open ${{
     case $(file --mime-type $f -b) in
+	image/vnd.djvu|application/pdf|application/octet-stream) zathura $fx >/dev/null 2>&1 ;;
         text/*) $EDITOR $fx;;
-		image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\)\(_large\)*$" | setsid sxiv -abio 2>/dev/null | lf-select & ;;
-        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+	image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\)\(_large\)*$" | sxiv -baio 2>/dev/null ;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*) mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
 }}
 
