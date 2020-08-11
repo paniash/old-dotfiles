@@ -19,8 +19,6 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
@@ -37,6 +35,8 @@ set clipboard+=unnamedplus
 " Some basics
 set encoding=utf-8
 set number relativenumber
+set noswapfile
+set noerrorbells
 
 "With a map leader it's possible to do extra key combinations
 "like <leader>w saves the current file
@@ -94,7 +94,7 @@ let g:airline_detect_spell=0
 let g:airline_detect_spelllang=0
 let g:airline_disable_statusline=0
 let g:airline#extensions#wordcount#enabled = 1
-let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmd', 'text']
+let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmd', 'markdown', 'text']
 " let g:airline#extensions#wordcount#formatter = 'default'
 let g:airline#extensions#wordcount#formatter#default#fmt = '%s words'
 
@@ -131,6 +131,7 @@ nnoremap <leader>u :w<Home>silent <End> !urlscan<CR>
 
 " 4 spaces for tab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -159,9 +160,9 @@ map <leader>s :setlocal spell! spelllang=en_us<CR>
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
 
-" Enables vim-pandoc syntax in *.md files
+" Enables vim-pandoc syntax in *.md and *.rmd files
 augroup pandoc_syntax
-    au! FileType vimwiki set syntax=markdown.pandoc
+    au! FileType markdown,Rmd set syntax=markdown.pandoc
 augroup END
 
 " Replace all is aliased to S
