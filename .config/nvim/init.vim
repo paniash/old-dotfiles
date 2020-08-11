@@ -152,6 +152,9 @@ map <leader>c :w! \| !compiler <c-r>%<CR><CR>
 " Opens corresponding .pdf/.html or preview
 map <leader>v :!opout <c-r>%<CR><CR>
 
+" Toggles inbuilt spellchecker
+map <leader>s :setlocal spell! spelllang=en_us<CR>
+
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
@@ -163,10 +166,3 @@ augroup END
 
 " Replace all is aliased to S
 nnoremap S :%s//g<Left><Left>
-
-" function SpellOn()
-"     set spell spelllang=en_us
-" endfunction
-
-" " Enable spellcheck for certain filetypes
-" au FileType tex,markdown,rmd,vimwiki :call SpellOn()
