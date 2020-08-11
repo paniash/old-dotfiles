@@ -17,8 +17,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-commentary'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
@@ -34,9 +35,6 @@ set nohlsearch
 set clipboard+=unnamedplus
 
 " Some basics
-set nocompatible
-filetype plugin on
-syntax on
 set encoding=utf-8
 set number relativenumber
 
@@ -59,19 +57,12 @@ let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 " enables bold text
 let g:gruvbox_bold = 1
 
-""enables italics
-"let g:gruvbox_italic = 1
-
 " changes dark mode contrast
 let g:gruvbox_contrast_dark = 'hard'
 
 set background=dark
-
 colorscheme gruvbox
 
-"Some basics:
-filetype plugin on
-filetype indent on
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -81,26 +72,20 @@ set ignorecase
 " Highlights regex expression when using the :substitute command (only works in neovim)
 set inccommand=nosplit
 
-"Add a bit extra margin to the left
-set foldcolumn=0
-
-"Never show the status line (2: for always)
-set laststatus=2
+"Never show the status line (2 for always)
+set laststatus=0
 
 set lazyredraw
 
 "Gets rid of default mode display
 set noshowmode
 
-let g:vimtex_view_method = "zathura"
 let g:tex_flavor = "latex"
+let g:vimtex_view_method = "zathura"
 let g:vimtex_quickfix_open_on_warning = 0
-let g:vimtex_quickfix_mode = 2
-let g:vimtex_compiler_method = "latexmk"
-let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_view_automatic = 0
 
 "" Airline settings
-" Airline theme
 let g:airline_theme='dark'
 
 " let g:airline_symbols_ascii = 1
@@ -112,8 +97,6 @@ let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes = 	['vimwiki', 'tex', 'rmd', 'text']
 " let g:airline#extensions#wordcount#formatter = 'default'
 let g:airline#extensions#wordcount#formatter#default#fmt = '%s words'
-
-" let g:airline_extensions = ['vimtex', 'whitespace', 'keymap', 'netrw']
 
 let g:airline#extensions#default#layout = [
  			\ ['a', 'b', 'c'],
@@ -130,7 +113,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"" PEP 8 indentation for python
+" PEP 8 indentation for python
 au BufNewFile,BufRead .py
  	\ set tabstop=4
  	\ set softtabstop=4
@@ -138,7 +121,7 @@ au BufNewFile,BufRead .py
  	\ set textwidth=79
  	\ set expandtab
  	\ set autoindent
-        \ set fileformat=unix
+    \ set fileformat=unix
 
 " makes .py files look pretty
 let python_highlight_all=1
@@ -167,7 +150,7 @@ autocmd VimLeave *.tex !texclear %
 map <leader>c :w! \| !compiler <c-r>%<CR><CR>
 
 " Opens corresponding .pdf/.html or preview
-map <leader>p :!opout <c-r>%<CR><CR>
+map <leader>v :!opout <c-r>%<CR><CR>
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
@@ -181,5 +164,9 @@ augroup END
 " Replace all is aliased to S
 nnoremap S :%s//g<Left><Left>
 
-" fzf bindings
-nnoremap <leader>f :Files /home/ashish/documents<CR>
+" function SpellOn()
+"     set spell spelllang=en_us
+" endfunction
+
+" " Enable spellcheck for certain filetypes
+" au FileType tex,markdown,rmd,vimwiki :call SpellOn()
