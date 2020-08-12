@@ -18,6 +18,7 @@ Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
+Plug 'JuliaEditorSupport/julia-vim'
 Plug 'tpope/vim-commentary'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
