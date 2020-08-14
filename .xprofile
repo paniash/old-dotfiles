@@ -12,3 +12,4 @@ xwallpaper --zoom /home/ashish/.config/wall.png & 	# sets wallpaper
 nm-applet & 	# starts nm-applet
 unclutter &	# removes mouse cursor when not in use
 sleep 5 && dwmblocks &	# statusbar
+xset -b &   # disables annoying beep sound
