@@ -142,6 +142,9 @@ map <leader>b :vsp<space>$BIB<CR>
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
 
+" Treats the following extensions as groff documents
+autocmd BufRead,BufNewFile,BufFilePre *.ms,*.me,*.mom,*.man set filetype=groff
+
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
 
