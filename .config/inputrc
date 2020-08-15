@@ -18,3 +18,5 @@ Control-l: clear-screen
 Control-a: beginning-of-line
 
 $endif
+
+set bell-style none
