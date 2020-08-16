@@ -14,7 +14,7 @@ alias \
 	yt="youtube-dl -ic --add-metadata" \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
-	str="straw-viewer --resolution=480p" \
+	str="straw-viewer --resolution=720p" \
     cs="config status" \
 	gs="git status" \
 	untar="tar -xzvf" \
@@ -38,7 +38,7 @@ alias \
 
 # Colorize commands when possible and increase verbosity
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls -hN --color=always --group-directories-first" \
 	la="ls -A" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
