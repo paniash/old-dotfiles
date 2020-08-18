@@ -11,7 +11,7 @@ endsnippet
 #begins a class in LaTeX
 snippet beg "begin{} / end{}" bA
 \begin{$1}
-	$0
+$0
 \end{$1}
 endsnippet
 
@@ -70,46 +70,34 @@ snippet item "Itemize" b
 \end{itemize}
 endsnippet
 
-snippet dv "Derivative" w
-\dv[${1:${VISUAL}}]{${2}}{${3}}
-endsnippet
-
-snippet pdv "Partial Derivative" w
-\pdv[${1:${VISUAL}}]{${2}}{${3}}
-endsnippet
-
-snippet SI "SI-Unit" w
-\SI{${1:${VISUAL}}}{${2}}
-endsnippet
-
 snippet s "Section" b
 \section{$1}
-	$0
+$0
 endsnippet
 
 snippet s1 "Section*" b
 \section*{$1}
-	$0
+$0
 endsnippet
 
 snippet ss "Subsection" b
 \subsection{$1}
-	$0
+$0
 endsnippet
 
 snippet ss1 "Subsection*" b
 \subsection*{$1}
-	$0
+$0
 endsnippet
 
 snippet sss "Subsubsection" b
 \subsubsection{$1}
-	$0
+$0
 endsnippet
 
 snippet sss1 "Subsubsection*" b
 \subsubsection*{$1}
-	$0
+$0
 endsnippet
 
 # renders bold text
@@ -167,4 +155,45 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
 		.replace('{', '(') \
 		.replace('}', ')') + ')')
 `
+endsnippet
+
+# \usepackage
+snippet usp "Usepackage" bA
+\usepackage{$1}
+endsnippet
+
+snippet dot "dot"
+\dot{$1} $0
+endsnippet
+
+snippet vec "vector"
+\vec{$1} $0
+endsnippet
+
+snippet ra "rightarrow"
+$\rightarrow$ $0
+endsnippet
+
+snippet lra "longrightarrow"
+$\longrightarrow$ $0
+endsnippet
+
+snippet lim "limit"
+\lim_{$1} {$2} $0
+endsnippet
+
+snippet () "paran"
+\left( $1 \right ) $0
+endsnippet
+
+snippet pdv "partial derivation"
+\frac{\partial $1}{\partial $2} $0
+endsnippet
+
+snippet dv "derivative"
+\frac{d $1}{d $2} $0
+endsnippet
+
+snippet sum "summation"
+\sum_{$1} $0
 endsnippet
