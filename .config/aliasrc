@@ -56,6 +56,6 @@ alias \
 	pi="sudo pacman -S" \
 	prs="sudo pacman -Rns" \
 	sc="sc-im" \
-    ytt="youtube-dl -ic --add-metadata --all-subs https://www.youtube.com/playlist?list=PLOFEBzvs-VvqPzAH4jwcHbV_rJz2_l9B6" \
+    svim="sudoedit nvim" \
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
