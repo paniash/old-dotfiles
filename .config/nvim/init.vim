@@ -84,7 +84,7 @@ set noshowmode
 let g:tex_flavor = "latex"
 let g:vimtex_view_method = "zathura"
 let g:vimtex_quickfix_open_on_warning = 0
-let g:vimtex_quickfix_enabled = 0 " disables quickfix menu in its entirety
+let g:vimtex_quickfix_enabled = 1 " disables quickfix menu in its entirety
 let g:vimtex_view_automatic = 0
 
 "" Airline settings
@@ -125,8 +125,15 @@ au BufNewFile,BufRead .py
  	\ set autoindent
     \ set fileformat=unix
 
-" makes .py files look pretty
-let python_highlight_all=1
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors = 0
+let g:python_highlight_builtins = 1
+let g:python_highlight_exceptions = 1
+let g:python_highlight_doctests = 1
+let g:python_highlight_operators = 1
+let g:python_highlight_class_vars = 1
+let g:python_highlight_func_calls = 1
+
 
 " opens link within the terminal using urlscan
 nnoremap <leader>u :w<Home>silent <End> !urlscan<CR>
@@ -136,6 +143,16 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+" Fast saving
+nnoremap <leader>w :w<CR>
+
+" Too lazy to indent
+nnoremap > >>
+nnoremap < <<
+
+" Instant UltiSnips edit
+map <leader>u :UltiSnipsEdit<CR>
 
 " Open bibliography file in split
 map <leader>b :vsp<space>$BIB<CR>
