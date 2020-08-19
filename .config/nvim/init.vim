@@ -125,8 +125,6 @@ au BufNewFile,BufRead .py
  	\ set autoindent
     \ set fileformat=unix
 
-let g:python_highlight_indent_errors = 0
-let g:python_highlight_space_errors = 0
 let g:python_highlight_builtins = 1
 let g:python_highlight_exceptions = 1
 let g:python_highlight_doctests = 1
