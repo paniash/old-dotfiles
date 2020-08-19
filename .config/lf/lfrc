@@ -101,7 +101,7 @@ map d
 
 # File openers
 map ee $$EDITOR "$f"
-map es $sudo $EDITOR "$f"
+map es $sudoedit $EDITOR "$f"
 map z $$READER "$f"
 
 # Movement
@@ -113,3 +113,4 @@ map gs cd ~/misc/suckless
 map gb cd ~/misc/blog-git
 map gr cd ~/documents/books/recreation
 map ga cd ~/video/anime
+map gu cd ~/documents/university/semester-5
