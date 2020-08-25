@@ -17,7 +17,6 @@ alias \
 	str="straw-viewer --resolution=720p" \
     cs="config status" \
 	gs="git status" \
-	untar="tar -xzvf" \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
 	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
@@ -30,7 +29,6 @@ alias \
 	sxiv="sxiv -b" \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
 	hs="hugo server" \
-	R="R --silent" \
     jn="jupyter-notebook" \
     nnn="nnn -d -e" \
     emc="nvim ~/.doom.d/init.el" \
