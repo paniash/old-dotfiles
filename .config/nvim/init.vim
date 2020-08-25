@@ -24,6 +24,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
+Plug 'overcache/NeoSolarized'
 call plug#end()
 
 set termguicolors
@@ -64,6 +65,7 @@ let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 colorscheme gruvbox
 
+
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -81,11 +83,18 @@ set lazyredraw
 "Gets rid of default mode display
 set noshowmode
 
+" LaTeX file settings
+au BufNewFile,BufRead .tex
+    \ set nocursorline |
+    \ let g:loaded_matchparen-1 |
+
 let g:tex_flavor = "latex"
 let g:vimtex_view_method = "zathura"
 let g:vimtex_quickfix_open_on_warning = 0
-let g:vimtex_quickfix_enabled = 1 " disables quickfix menu in its entirety
+let g:vimtex_quickfix_enabled = 0 " disables quickfix menu in its entirety
 let g:vimtex_view_automatic = 0
+
+" syn sync maxlines=200
 
 "" Airline settings
 let g:airline_theme='dark'
@@ -160,6 +169,9 @@ autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
 
 " Treats the following extensions as groff documents
 autocmd BufRead,BufNewFile,BufFilePre *.ms,*.me,*.mom,*.man set filetype=groff
+
+" Treats .Rprofile and .Renviron as R files
+autocmd BufRead,BufNewFile,BufFilePre .Rprofile,.Renviron set filetype=r
 
 " Runs xrdb after making changes to .Xresources file
 autocmd BufWritePost .Xresources !xrdb .Xresources
