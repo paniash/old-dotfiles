@@ -7,3 +7,6 @@ local({
     r <-getOption("repos");
     r["CRAN"] <- "https://mirror.niser.ac.in/cran/";
     options(repos=r)})
+
+## Sets working directory
+setwd("~/misc/R")
