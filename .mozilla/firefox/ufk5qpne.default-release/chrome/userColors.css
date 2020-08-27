@@ -52,25 +52,15 @@
 /*============== PRIVATE THEME ==============*/
 @media {
 :root[privatebrowsingmode=temporary] {
-	--base_color1: var(--dark_color1);
-	--base_color2: var(--dark_color2);
-	--base_color3: var(--dark_color3);
-	--base_color4: var(--dark_color4);
+	--base_color1: #291D4F;
+	--base_color2: #3C3376;
+	--base_color3: #4F499D;
+	--base_color4: #625FC4;
 
-	--outer_color1: var(--word_color1);
-	--outer_color2: var(--word_color2);
-	--outer_color3: var(--word_color3);
+	--outer_color1: #E571F0;
+	--outer_color2: #D9CAF1;
+	--outer_color3: #FFF5FF;
 
-	--orbit_color: var(--light_color3);
-	/* --base_color1: #291D4F; */
-	/* --base_color2: #3C3376; */
-	/* --base_color3: #4F499D; */
-	/* --base_color4: #625FC4; */
-
-	/* --outer_color1: #E571F0; */
-	/* --outer_color2: #D9CAF1; */
-	/* --outer_color3: #FFF5FF; */
-
-	/* --orbit_color: #B39FE3; */
+	--orbit_color: #B39FE3;
 }
 }

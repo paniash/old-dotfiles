@@ -1,10 +1,6 @@
 /*================ IMPORT COLORS ================*/
 @import "userColors.css";
 
-* {
-    font-family: "FiraCode Nerd Font"
-}
-
 /*================== MAIN HEADER ==================*/
 toolbox#navigator-toolbox  {
 	border: 0 !important;
@@ -12,7 +8,7 @@ toolbox#navigator-toolbox  {
 
 /*================== TABS BAR ==================*/
 #titlebar #TabsToolbar {
-	padding: 6px 0px 2px 6px !important;
+	padding: 0px 0px 0px 0px !important;
 	background: var(--base_color2) !important;
 }
 .titlebar-spacer[type="pre-tabs"] {
@@ -157,19 +153,19 @@ toolbarbutton.bookmark-item {
     list-style-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(1,0,0,1,-632,-255)"><path id="close_btn" d="M638.979,260.586L643.221,256.343L644.635,257.757L640.393,262L644.635,266.243L643.221,267.657L638.979,263.414L634.736,267.657L633.322,266.243L637.564,262L633.322,257.757L634.736,256.343L638.979,260.586Z" style="fill:rgb(191,97,106);"/></g></svg>');
 }
 
-/*================== NEW TAB BUTTON ==================*/
-toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active) > .toolbarbutton-icon,
-toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
-toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :active) > .toolbarbutton-icon {
-	transition: all 0.3s ease !important;
-	fill: var(--orbit_color) !important;
-	border-radius: 3px !important;
-	background-color: var(--base_color1) !important;
-}
+/*/*================== NEW TAB BUTTON ==================*/*/
+/*toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active) > .toolbarbutton-icon,*/
+/*toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,*/
+/*toolbar #tabs-newtab-button:not([disabled="true"]):-moz-any([open], [checked], :active) > .toolbarbutton-icon {*/
+/*	transition: all 0.3s ease !important;*/
+/*	fill: var(--orbit_color) !important;*/
+/*	border-radius: 3px !important;*/
+/*	background-color: var(--base_color1) !important;*/
+/*}*/
 
-toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon {
-	background-color: var(--base_color3) !important;
-}
+/*toolbar #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon {*/
+/*	background-color: var(--base_color3) !important;*/
+/*}*/
 
 
 /*================== NAV BAR ==================*/
