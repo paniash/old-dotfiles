@@ -21,7 +21,4 @@ stow *
 Log out and log back in. You should have the same setup.
 
 ## Issues
-If you have any issues, please create an issue in this repo. I will try my best to resolve it. 
-
-### Note to self
-This repository is a Git bare repository for the management of various config files. For more info refer this [website](https://www.atlassian.com/git/tutorials/dotfiles).
+If you have any issues, please create an issue in this repo. I will try my best to resolve it.
