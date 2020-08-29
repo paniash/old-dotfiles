@@ -12,7 +12,7 @@ git clone https://github.com/paniash/dotfiles
 ```
 
 On Arch-based distros,
-```shell
+```bash
 sudo pacman -S git stow
 cd dotfiles
 stow *
