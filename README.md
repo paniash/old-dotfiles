@@ -7,12 +7,12 @@ To get the same setup as I have, obviously you'll have to install the required p
 
 ### Installation
 Clone the repository into your home directory,
-```
+```shell
 git clone https://github.com/paniash/dotfiles
 ```
 
 On Arch-based distros,
-```bash
+```shell
 sudo pacman -S git stow
 cd dotfiles
 stow *
