@@ -1,0 +1,8 @@
+set autocalc
+set numeric
+set numeric_decimal=0
+set overlap
+color "type=HEADINGS bold=1 fg=BLACK bg=RED"
+color "type=CELL_SELECTION bold=1 fg=BLACK bg=WHITE"
+color "type=NUMB fg=YELLOW bg=DEFAULT_COLOR"
+color "type=ERROR_MSG fg=WHITE bg=DEFAULT_COLOR"
