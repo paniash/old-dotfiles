@@ -2,21 +2,10 @@
 
 # Displays temperature of current area
 
-temp=$(curl -s "wttr.in/?format=%t")
-var=$(curl -s "wttr.in/?format=%t" | grep -i unknown)
+[ "$(stat -c %y ~/.cache/temp | cut -d ':' -f1 | cut -d ' ' -f2)" != "$(date '+%H')" ] &&
+    curl -s "wttr.in/?format=%t" > ~/.cache/temp
 
-if [ "$var" ]; then
-	echo "  none "
-else
-	echo "  $temp "
-fi
+# temp=$(curl -s "wttr.in/?format=%t")
+temp=$(cat ~/.cache/temp)
 
-if [ "$temp" = "" ]; then
-    echo ""
-fi
-
-# condi() {
-# 	[ "$var" ] && MSG="none" || MSG="$temp"
-# }
-
-# echo "  $MSG "
+echo "  $temp "
