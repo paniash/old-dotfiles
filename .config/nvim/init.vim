@@ -11,10 +11,11 @@ Plug 'SirVer/ultisnips'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'tpope/vim-commentary'
+Plug 'itchyny/lightline.vim'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 set termguicolors
-
 set nohlsearch
 set clipboard+=unnamedplus
 
@@ -25,7 +26,11 @@ set number relativenumber
 
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
+
+"highlights regex epression when using :substitute (only works on neovim)
+set inccommand=nosplit
 
 let mapleader=","
 let maplocalleader=","
@@ -34,6 +39,7 @@ let maplocalleader=","
 let g:tex_flavor = "latex"
 let g:vimtex_view_method = "zathura"
 let g:vimtex_view_automatic = 0
+let g:vimtex_quickfix_open_on_warning = 0
 
 " UltiSnips settings
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -46,12 +52,26 @@ map <leader>u :UltiSnipsEdit<CR>
 " Gruvbox settings
 let g:gruvbox_bold = 1
 let g:gruvbox_contrast_dark = 'hard'
-
 set background=dark
 colorscheme gruvbox
 
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Python-syntax settings
+let g:python_highlight_builtins = 1
+let g:python_highlight_exceptions = 1
+let g:python_highlight_doctests = 1
+let g:python_highlight_operators = 1
+let g:python_highlight_class_vars = 1
+let g:python_highlight_func_calls = 1
+
+" Lightline settings
+let g:lightline = {
+        \ 'colorscheme': 'gruvbox',
+        \ }
+
+" Enables vim-pandoc syntax in markdown files
+augroup pandoc_syntax
+    au! FileType markdown set syntax=markdown.pandoc
+augroup END
 
 " Ignore case when searching
 set ignorecase
@@ -72,15 +92,22 @@ nnoremap <leader>w :w<CR>
 " Replace all aliased to S
 nnoremap S :%s//g/<Left><Left>
 
-" Never show status line
-set laststatus=0
+" Never show statusline (0) or always show statusline (2)
+set laststatus=2
 
-"" Automating some stuff
-" Deletes trailing whitespace on save
-autocmd BufWritePre * %s/\n\+\%$//e
+" Disable default mode indicator
+set noshowmode
 
+"" Autocommands
 " Runs script to clean tex build files
 autocmd VimLeave *.tex !texclear %
 
 " Treats .rmd files as rmarkdown
 autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
+
+" Disables automatic commenting on newline:
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Automatically deletes all trailing whitespace and newlines at end of file on save
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
