@@ -2,6 +2,22 @@
 This repository contains dotfiles for my Arch linux system. Important scripts are located in `.local/bin/`
 My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the `.local/bin/statusbar` folder.
 
+### System information
+- Window manager: [dwm](https://github.com/paniash/dwm)
+- System monitor: [dwmblocks](https://github.com/paniash/dwmblocks)
+- Application launcher: [dmenu](https://github.com/paniash/dmenu)
+- Notifications: [dunst](https://dunst-project.org/)
+- Editor: [neovim](https://neovim.io/)
+- Shell: [zsh](https://wiki.archlinux.org/index.php/Zsh)
+- Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/) with [buku](https://github.com/jarun/buku)
+- PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
+- File manager: [lf](https://github.com/gokcehan/lf)
+- Mail: [neomutt](https://neomutt.org/) with [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard)
+- RSS feed reader: [newsboat](https://newsboat.org/)
+- Music player: [ncmpcpp](https://wiki.archlinux.org/index.php/Ncmpcpp) with [mpd](https://wiki.archlinux.org/index.php/Music_Player_Daemon)
+- Video player: [mpv](https://mpv.io/)
+
+
 ## Using the setup
 To get the same setup as I have, obviously you'll have to install the required packages for which the dotfiles exist. On a freshly installed system, make sure to install `git` and `stow` (GNU Stow).
 
