@@ -1,5 +1,5 @@
 # Dotfiles
-This repository contains dotfiles for my Arch linux system. Important scripts are located in `.local/bin/`
+This repository contains dotfiles for my Artix rice. Important scripts are located in `.local/bin/`
 My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the `.local/bin/statusbar` folder.
 
 ### System information
