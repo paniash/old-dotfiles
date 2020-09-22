@@ -3,7 +3,8 @@ This repository contains dotfiles for my Artix rice. Important scripts are locat
 My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the `.local/bin/statusbar` folder.
 
 ### System information
-- Window manager: [dwm](https://github.com/paniash/dwm)
+- Window manager: [Suckless' dwm](https://github.com/paniash/dwm)
+- Terminal emulator: [st](https://github.com/paniash/st)
 - System monitor: [dwmblocks](https://github.com/paniash/dwmblocks)
 - Application launcher: [dmenu](https://github.com/paniash/dmenu)
 - Notifications: [dunst](https://dunst-project.org/)
