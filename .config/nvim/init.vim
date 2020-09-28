@@ -5,6 +5,7 @@ if !filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall
 endif
 
+" Plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
@@ -29,9 +30,10 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-"highlights regex epression when using :substitute (only works on neovim)
+" Highlights regex epression when using :substitute (only works on neovim)
 set inccommand=nosplit
 
+" Assigns leader and localleader keys
 let mapleader=","
 let maplocalleader=","
 
@@ -40,6 +42,13 @@ let g:tex_flavor = "latex"
 let g:vimtex_view_method = "zathura"
 let g:vimtex_view_automatic = 0
 let g:vimtex_quickfix_open_on_warning = 0
+
+augroup vimrc_tex
+    au!
+    au FileType tex nmap <buffer><silent> <localleader>c <plug>(vimtex-compile)
+    au FileType tex nmap <buffer><silent> <localleader>v <plug>(vimtex-view)
+    au FileType tex nmap <buffer><silent> <localleader>e <plug>(vimtex-errors)
+augroup END
 
 " UltiSnips settings
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -67,6 +76,17 @@ let g:python_highlight_func_calls = 1
 let g:lightline = {
         \ 'colorscheme': 'gruvbox',
         \ }
+
+" Netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 20
+let g:netrw_browse_split = 4
+
+augroup netrw_mapping
+    au!
+    au FileType * nmap <leader>e :Lex<CR>
+augroup END
 
 " Enables vim-pandoc syntax in markdown files
 augroup pandoc_syntax
