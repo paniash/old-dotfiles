@@ -72,6 +72,11 @@ let g:python_highlight_operators = 1
 let g:python_highlight_class_vars = 1
 let g:python_highlight_func_calls = 1
 
+augroup python_execute
+    au!
+    au FileType python nmap <leader>c :!python %<CR>
+augroup END
+
 " Lightline settings
 let g:lightline = {
         \ 'colorscheme': 'gruvbox',
@@ -85,7 +90,7 @@ let g:netrw_browse_split = 4
 
 augroup netrw_mapping
     au!
-    au FileType * nmap <leader>e :Lex<CR>
+    au FileType * nmap <buffer><silent> <leader>e :Lex<CR>
 augroup END
 
 " Enables vim-pandoc syntax in markdown files
