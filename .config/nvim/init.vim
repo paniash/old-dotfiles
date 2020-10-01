@@ -47,7 +47,8 @@ augroup vimrc_tex
     au!
     au FileType tex nmap <buffer><silent> <localleader>c <plug>(vimtex-compile)
     au FileType tex nmap <buffer><silent> <localleader>v <plug>(vimtex-view)
-    au FileType tex nmap <buffer><silent> <localleader>e <plug>(vimtex-errors)
+    au FileType tex nmap <buffer><silent> <localleader>b <plug>(vimtex-errors)
+    au FileType tex nmap <buffer><silent> <localleader>g :VimtexCountWord<CR>
 augroup END
 
 " UltiSnips settings
@@ -74,7 +75,7 @@ let g:python_highlight_func_calls = 1
 
 augroup python_execute
     au!
-    au FileType python nmap <leader>c :!python %<CR>
+    au FileType python nmap <leader>c :w! \| :!python %<CR>
 augroup END
 
 " Lightline settings
@@ -115,7 +116,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>w :w<CR>
 
 " Replace all aliased to S
-nnoremap S :%s//g/<Left><Left>
+nnoremap S :%s//g<Left><Left>
 
 " Never show statusline (0) or always show statusline (2)
 set laststatus=2
