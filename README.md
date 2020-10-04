@@ -1,6 +1,7 @@
 # Dotfiles
 This repository contains dotfiles for my Artix rice. Important scripts are located in `.local/bin/`
 My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the `.local/bin/statusbar` folder.
+
 Check out `.config/nvim/init.vim` if you're interested in my vim config ;).
 
 ### System information
