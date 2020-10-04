@@ -1,7 +1,11 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
+## Luke's prompt
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. >)%b "
+## Custom prompt
+# PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. >)%b "
+## Custom prompt without inbuilt `pwd`
+PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
 setopt autocd	# automatically cd into typed directory
 stty stop undef	# disable ctrl-s to freeze terminal
 
