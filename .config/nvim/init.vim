@@ -124,6 +124,9 @@ set laststatus=2
 " Disable default mode indicator
 set noshowmode
 
+" Disables pipe cursor in insert mode
+set guicursor=
+
 "" Autocommands
 " Runs script to clean tex build files
 autocmd VimLeave *.tex !texclear %
