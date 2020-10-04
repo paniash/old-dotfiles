@@ -11,6 +11,7 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
+        X: undo
         at: tab-clone
         d: scroll-page 0 0.5
         e: scroll-page 0 -0.5

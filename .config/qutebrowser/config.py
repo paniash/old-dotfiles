@@ -172,4 +172,4 @@ c.fonts.web.size.minimum = 15
 
 c.tabs.show = "multiple"
 
-c.colors.tabs.bar.bg = "#777777"
+c.colors.tabs.bar.bg = "darkgrey"
