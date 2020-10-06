@@ -173,3 +173,11 @@ c.fonts.web.size.minimum = 15
 c.tabs.show = "multiple"
 
 c.colors.tabs.bar.bg = "darkgrey"
+
+c.colors.tabs.even.bg = "darkgrey"
+
+c.colors.tabs.odd.bg = "darkgrey"
+
+c.colors.tabs.even.fg = "#000000"
+
+c.colors.tabs.odd.fg = "#000000"
