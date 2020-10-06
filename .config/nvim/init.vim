@@ -12,6 +12,7 @@ Plug 'SirVer/ultisnips'
 Plug 'morhetz/gruvbox'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
@@ -62,6 +63,7 @@ map <leader>u :UltiSnipsEdit<CR>
 " Gruvbox settings
 let g:gruvbox_bold = 1
 let g:gruvbox_contrast_dark = 'hard'
+
 set background=dark
 colorscheme gruvbox
 
@@ -76,6 +78,12 @@ let g:python_highlight_func_calls = 1
 augroup python_execute
     au!
     au FileType python nmap <leader>c :w! \| :!python %<CR>
+augroup END
+
+" C settings
+augroup c_execute
+    au!
+    au FileType c nmap <leader>c :w! \| :!gcc % && ./a.out<CR>
 augroup END
 
 " Lightline settings
@@ -124,7 +132,7 @@ set laststatus=2
 " Disable default mode indicator
 set noshowmode
 
-" Disables pipe cursor in insert mode
+" Disables pipe cursor when in insert mode (vim like)
 set guicursor=
 
 "" Autocommands
