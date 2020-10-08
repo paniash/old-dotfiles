@@ -10,7 +10,7 @@ alias \
 	nf="neofetch" \
 	uf="ufetch" \
 	covid="curl https://corona-stats.online/" \
-	bat="cat /sys/class/power_supply/BAT0/capacity" \
+	bat0="cat /sys/class/power_supply/BAT0/capacity" \
 	yt="youtube-dl -ic --add-metadata" \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
@@ -28,19 +28,27 @@ alias \
 	rd="redshift -P -O 4000" \
 	sxiv="sxiv -b" \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
+    R="R --silent" \
 	hs="hugo server" \
     jn="jupyter-notebook" \
+    ipy="ipython" \
+    pty="ptipython" \
+    bpy="bpython" \
     nnn="nnn -d -e" \
     emc="nvim ~/.doom.d/init.el" \
     ds="~/.emacs.d/bin/doom sync" \
+    ka="killall" \
+    py="python" \
 
 # Colorize commands when possible and increase verbosity
 alias \
 	ls="ls -hN --color=always --group-directories-first" \
 	la="ls -A" \
+    ll="ls -l" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
+    cat="bat" \
 	mv="mv -vi" \
 	rm="rm -vI" \
 	cp="cp -v" \
