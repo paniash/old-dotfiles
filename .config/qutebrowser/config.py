@@ -153,6 +153,8 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Dark mode
 config.set("colors.webpage.darkmode.enabled", True)
+c.colors.webpage.bg = "black"
+c.colors.webpage.darkmode.policy.images = "smart"
 
 # Load autoconfig.yml
 config.load_autoconfig()
@@ -181,3 +183,7 @@ c.colors.tabs.odd.bg = "darkgrey"
 c.colors.tabs.even.fg = "#000000"
 
 c.colors.tabs.odd.fg = "#000000"
+
+c.scrolling.bar = "never"
+
+c.downloads.location.directory = "~/downloads"
