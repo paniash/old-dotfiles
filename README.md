@@ -12,7 +12,7 @@ Check out `.config/nvim/init.vim` if you're interested in my vim config ;).
 - Notifications: [dunst](https://dunst-project.org/)
 - Editor: [neovim](https://neovim.io/)
 - Shell: [zsh](https://wiki.archlinux.org/index.php/Zsh)
-- Browser: [qutebrowser](https://qutebrowser.org) with [buku](https://github.com/jarun/buku)
+- Browser: firefox with [buku](https://github.com/jarun/buku)
 - PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
 - File manager: [lf](https://github.com/gokcehan/lf)
 - Mail: [neomutt](https://neomutt.org/) with [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard)
