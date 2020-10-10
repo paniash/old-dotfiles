@@ -15,7 +15,7 @@ Check out `.config/nvim/init.vim` if you're interested in my vim config ;).
 - Browser: firefox with [buku](https://github.com/jarun/buku)
 - PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
 - File manager: [lf](https://github.com/gokcehan/lf)
-- Mail: [neomutt](https://neomutt.org/) with [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard)
+- Mail: [neomutt](https://neomutt.org/) with [isync](https://github.com/gburd/isync)
 - RSS feed reader: [newsboat](https://newsboat.org/)
 - Music player: [ncmpcpp](https://wiki.archlinux.org/index.php/Ncmpcpp) with [mpd](https://wiki.archlinux.org/index.php/Music_Player_Daemon)
 - Video player: [mpv](https://mpv.io/)
