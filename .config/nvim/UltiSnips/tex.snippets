@@ -1,3 +1,102 @@
+##################################################
+################# TEMPLATES ######################
+##################################################
+
+# Report template
+snippet dreport "Double report" b
+\documentclass[twocolumn]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage[none]{hyphenat}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{amsmath}
+\restylefloat{table}
+\setlength{\parskip}{6mm}
+\setlength{\parindent}{0mm}
+\begin{document}
+\title{$1}
+\author{Ashish Panigrahi (1811039)}
+\affiliation{National Institute of Science Education and Research, Bhubaneswar}
+\email{ashish.panigrahi@niser.ac.in}
+\date{\today}
+\begin{abstract}
+$2
+\end{abstract}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+# an article template
+snippet article "Article template" b
+\documentclass[11pt]{article}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[none]{hyphenat}
+\usepackage[margin=1.25in]{geometry}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+
+\renewcommand{\maketitle}{
+	\begin{center}
+	{	\huge \bfseries
+			\thetitle}
+		\vspace{.75em}
+
+	{	\Large \bfseries
+			\theauthor}
+		\vspace{.25em}
+
+
+	\end{center}
+}
+
+\begin{document}
+\title{$1}
+\author{Ashish Panigrahi}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+# Homework template
+snippet homework "Homework" b
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{microstype}
+\usepackage{siunitx}
+\usepackage[a4paper, total={16cm, 25cm}]{geometry}
+\usepackage[none]{hyphenat}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm}
+\usepackage{hyperref}
+
+\title{$1 \\ $2}
+\author{Ashish Panigrahi $|$ Roll: 1811039}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+$0
+\end{document}
+endsnippet
+
+##################################################
+################# SNIPPETS ######################
+##################################################
+
 #begins a class in LaTeX
 snippet beg "begin{} / end{}" bA
 \begin{$1}
@@ -6,8 +105,12 @@ $0
 endsnippet
 
 #fractions
-snippet // "Fraction" iA
+snippet // "Fraction" i
 \\frac{$1}{$2} $0
+endsnippet
+
+snippet / "Fraction"
+\frac{$1}{$2} $0
 endsnippet
 
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wr
@@ -29,27 +132,13 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
 endsnippet
 
-snippet / "Fraction" iA
-\\frac{${VISUAL}}{$1}$0
-endsnippet
-
 priority 10
-snippet "bar" "bar" riA
-\overline{$1}$0
+snippet "hat" "hat" ri
+\hat{$1} $0
 endsnippet
 
 priority 100
-snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
-endsnippet
-
-priority 10
-snippet "hat" "hat" riA
-\hat{$1}$0
-endsnippet
-
-priority 100
-snippet "([a-zA-Z])hat" "hat" riA
+snippet "([a-zA-Z])hat" "hat" ri
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
@@ -99,13 +188,17 @@ endsnippet
 
 # inline math mode
 snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-    snip.rv = ' '
-else:
-    snip.rv = ''
-`$2
+$$1$ $0
 endsnippet
+
+# snippet mk "Math" wA
+# $${1}$`!p
+# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+#     snip.rv = ' '
+# else:
+#     snip.rv = ''
+# `$2
+# endsnippet
 
 #display math mode
 snippet dm "Math" wA
@@ -236,7 +329,7 @@ snippet ra "rightarrow"
 \rightarrow $0
 endsnippet
 
-snippet lra "longrightarrow"
+snippet lra "longrightarrow" A
 \longrightarrow $0
 endsnippet
 
@@ -245,10 +338,10 @@ snippet lim "limit"
 endsnippet
 
 snippet () "paran"
-\left( $1 \right ) $0
+\left( $1 \right) $0
 endsnippet
 
-snippet pdv "partial derivation"
+snippet pdv "partial derivation" A
 \frac{\partial $1}{\partial $2} $0
 endsnippet
 
@@ -273,19 +366,15 @@ snippet tld "tilde"
 endsnippet
 
 snippet [] "paran"
-\left[ $1 \right ] $0
+\left[ $1 \right] $0
 endsnippet
 
-snippet ddt "ddt"
+snippet ddt "ddt" A
 \frac{d}{dt} $1 $0
 endsnippet
 
-snippet ppdv "partial derivation"
+snippet ppdv "partial derivation" A
 \frac{\partial^2 $1}{\partial $2 \partial $3} $0
-endsnippet
-
-snippet hat "hat"
-\hat{$1} $0
 endsnippet
 
 snippet \x "cross product"
@@ -300,15 +389,21 @@ snippet int "integral"
 \int_{$1}^{$2} $3 \: d$4 $5
 endsnippet
 
-snippet ddx "ddx"
+snippet ddx "ddx" A
 \frac{d}{dx} $0
 endsnippet
 
-snippet => "implies"
-\implies $0
+snippet imp "implies" bA
+$ \implies $
+$0
 endsnippet
 
-snippet mc "mathcal"
+snippet therefore "therefore" bA
+$ \therefore $
+$0
+endsnippet
+
+snippet mc "mathcal" A
 \mathcal{$1} $0
 endsnippet
 
@@ -318,4 +413,16 @@ endsnippet
 
 snippet > "rangle"
 \rangle $0
+endsnippet
+
+snippet up "uparrow"
+\uparrow $0
+endsnippet
+
+snippet down "uparrow"
+\downarrow $0
+endsnippet
+
+snippet ... "ellipsis" A
+\ldots $0
 endsnippet
