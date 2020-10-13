@@ -1,3 +1,8 @@
+" Vim configuration
+"
+" Author: Ashish Panigrahi
+
+
 if !filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
 	silent !mkdir -p ~/.config/nvim/autoload/
@@ -84,6 +89,8 @@ augroup END
 augroup c_execute
     au!
     au FileType c nmap <leader>c :w! \| :!gcc % && ./a.out<CR>
+    au FileType c nmap <leader>g :w! \| :!gcc -v %<CR><CR>
+    au FileType c nmap <leader>l :w! \| :!splint %<CR>
 augroup END
 
 " Lightline settings
