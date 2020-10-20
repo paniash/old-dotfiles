@@ -2,26 +2,26 @@
 "
 " Author: Ashish Panigrahi
 
-
-if !filereadable(expand('~/.config/nvim/autoload/plug.vim'))
-	echo "Downloading junegunn/vim-plug to manage plugins..."
-	silent !mkdir -p ~/.config/nvim/autoload/
-	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master.plug.vim" > ~/.config/nvim/autoload/plug.vim
-	autocmd VimEnter * PlugInstall
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'lervag/vimtex'
-Plug 'SirVer/ultisnips'
-Plug 'morhetz/gruvbox'
+Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'SirVer/ultisnips', { 'for': 'tex' }
 Plug 'vim-python/python-syntax', { 'for': 'python' }
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
-Plug 'itchyny/lightline.vim'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'morhetz/gruvbox'
+Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
+" Some basic stuff
 set termguicolors
 set nohlsearch
 set clipboard+=unnamedplus
@@ -35,9 +35,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-
-" Highlights regex epression when using :substitute (only works on neovim)
-set inccommand=nosplit
 
 " Assigns leader and localleader keys
 let mapleader=","
@@ -65,11 +62,23 @@ let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips']
 map <leader>u :UltiSnipsEdit<CR>
 
-" Gruvbox settings
+" Colorscheme settings with personal modifications
 let g:gruvbox_bold = 1
 let g:gruvbox_contrast_dark = 'hard'
 
 set background=dark
+
+function! AdjustGruvbox()
+    highlight! EndOfBuffer gui=bold guibg=bg guifg=#7c6f64
+    highlight! CursorLineNr guibg=bg
+    highlight! SpecialKey guifg=#A9B4B2
+endfunction
+
+augroup gruvbox_colors
+    autocmd!
+    autocmd ColorScheme gruvbox call AdjustGruvbox()
+augroup END
+
 colorscheme gruvbox
 
 " Python-syntax settings
@@ -80,36 +89,13 @@ let g:python_highlight_operators = 1
 let g:python_highlight_class_vars = 1
 let g:python_highlight_func_calls = 1
 
-augroup python_execute
-    au!
-    au FileType python nmap <leader>c :w! \| :!python %<CR>
-augroup END
-
 " C settings
 augroup c_execute
     au!
     au FileType c nmap <leader>c :w! \| :!gcc % && ./a.out<CR>
-    au FileType c nmap <leader>g :w! \| :!gcc -v %<CR><CR>
+    au FileType c nmap <leader>g :w! \| :!gcc -O -Wall -W -pedantic %<CR>
     au FileType c nmap <leader>l :w! \| :!splint %<CR>
 augroup END
-
-" Lightline settings
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'wordcount' ] ]
-      \ },
-      \ 'component_function': {
-      \   'wordcount': 'LightlineWordCount'
-      \ },
-      \ }
-
-function! LightlineWordCount() abort
-    return &filetype =~# '\v(tex|markdown)' ? wordcount().words . ' words' : ''
-endfunction
-
 
 " Netrw settings
 let g:netrw_banner = 0
@@ -121,7 +107,7 @@ let g:netrw_preview = 1
 
 augroup netrw_mapping
     au!
-    au FileType * nmap <buffer><silent> <leader>e :Lex<CR>
+    au FileType * nmap <buffer><silent> <C-x> :Lex<CR>
 augroup END
 
 " Enables vim-pandoc syntax in markdown files
@@ -149,10 +135,7 @@ nnoremap <leader>w :w<CR>
 nnoremap S :%s//g<Left><Left>
 
 " Never show statusline (0) or always show statusline (2)
-set laststatus=2
-
-" Disable default mode indicator
-set noshowmode
+set laststatus=0
 
 " Disables pipe cursor when in insert mode (vim like)
 set guicursor=
@@ -160,9 +143,6 @@ set guicursor=
 "" Autocommands
 " Runs script to clean tex build files
 autocmd VimLeave *.tex !texclear %
-
-" Treats .rmd files as rmarkdown
-autocmd BufNewFile,BufFilePre,BufRead *.rmd set filetype=rmd
 
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
