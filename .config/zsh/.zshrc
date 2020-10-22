@@ -33,16 +33,17 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-	    tmp="$(mktemp)"
-	        lf -last-dir-path="$tmp" "$@"
-	    if [ -f "$tmp" ]; then
-	            dir="$(cat "$tmp")"
-	            rm -f "$tmp"
-	            [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-	        fi
-	}
-bindkey -s '^o' 'lfcd\n'
+vicd()
+{
+    local dst="$(command vifm --choose-dir - "$@")"
+    if [ -z "$dst" ]; then
+        echo "Directory picking cancelled/failed"
+        return 1
+    fi
+    cd "$dst"
+}
+
+bindkey -s '^o' 'vicd\n'
 
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
