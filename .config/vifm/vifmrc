@@ -396,8 +396,8 @@ filextype */
 
 " What should be saved automatically between vifm sessions.  Drop "savedirs"
 " value if you don't want vifm to remember last visited directories for you.
-set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
-    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+" set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+"    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
 " ------------------------------------------------------------------------------
 
@@ -459,7 +459,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+nnoremap ,t :!st &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
@@ -485,8 +485,27 @@ nnoremap <a-o> :sync %c<cr>
 " Swap panes
 nnoremap <c-u> <c-w>x
 
-" Only view one pane
-only
+"" Only view one pane
+" only
+
+" Quick navigation bindings
+nnoremap gu :cd ~/documents/university/semester-5<CR>
+nnoremap gp :cd ~/documents/books/physics<CR>
+nnoremap gq :cd ~/documents/books/physics/quantum<CR>
+nnoremap gm :cd ~/documents/books/mathematics<CR>
+nnoremap gc :cd ~/documents/books/computation<CR>
+nnoremap gs :cd ~/misc/suckless<CR>
+nnoremap gb :cd ~/misc/git-repos/blog<CR>
+nnoremap gr :cd ~/documents/books/recreation<CR>
+nnoremap ga :cd ~/video/anime<CR>
+nnoremap gt :cd ~/documents/personal<CR>
+
+command! FZFlocate :set noquickview | :execute 'goto' fnameescape(term('locate $HOME | fzf --height 10 2>/dev/tty'))
+
+command! FZFfind :set noquickview | :execute 'goto' fnameescape(term('find | fzf --height 10 2>/dev/tty'))
+
+nnoremap <c-g> :FZFlocate<cr>
+nnoremap <c-f> :FZFfind<cr>
 
 " ------------------------------------------------------------------------------
 
