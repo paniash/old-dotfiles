@@ -1,0 +1,12 @@
+session_name: ipython
+start_directory: '~/misc/git-repos/progs/python/'
+windows:
+    - layout: main-horizontal
+      options:
+          main-pane-height: 35
+      panes:
+          - shell_command:
+              - vim demo.py
+          - shell_command:
+              - ipython
+      window_name: session
