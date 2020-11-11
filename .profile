@@ -9,7 +9,7 @@ export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="lf"
-export BIB="~/documents/uni.bib"
+export BIB="~/.config/latex/references.bib"
 
 # ~/ Clean-up:
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
@@ -49,3 +49,6 @@ export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 export MOZ_USE_XINPUT2="1"		# Mozilla smmoth scrolling/touchpads
+
+export ELINKS_CONFDIR="$HOME/.config/elinks/"
+export TMUXP_CONFIG_DIR="$HOME/.config/tmuxp/"
