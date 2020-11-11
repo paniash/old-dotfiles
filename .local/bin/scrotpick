@@ -6,8 +6,8 @@
 
 case "$(printf "a selected area\\ncurrent window\\nfull screen\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)" | dmenu -l 6 -i -p "Screenshot which area?")" in
 	"a selected area") scrot -s pic-selected-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Screenshot taken." ;;
-	"current window") scrot -i "$(xdotool getactivewindow)" pic-window-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"full screen") scrot -d 5 pic-full-"$(date '+%y%m%d-%H%M-%S').png" ;;
+	"current window") scrot -i "$(xdotool getactivewindow)" pic-window-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Current window taken" ;;
+	"full screen") scrot -d 2 pic-full-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Full screenshot taken." ;;
 	"a selected area (copy)") scrot -s | xclip -selection clipboard -t image/png ;;
 	"current window (copy)") scrot -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
 	"full screen (copy)") scrot | xclip -selection clipboard -t image/png ;;
