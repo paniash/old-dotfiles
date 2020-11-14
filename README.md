@@ -37,5 +37,7 @@ stow *
 
 Log out and log back in. You should have the same setup.
 
-## Issues
-If you have any issues, please create an issue in this repo. I will try my best to resolve it.
+**NOTE:** I personally don't use `stow` so I cannot guarantee that this will work. If something breaks, feel free to open an issue in the issue tracker.
+
+## Issues & Contributions
+If you have any issues, please create an issue in this repo. I will try my best to resolve it. Feel free to contribute to this repo. I am learning more about the UNIX system as well so any feedback will be appreciated. ;)
