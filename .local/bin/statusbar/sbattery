@@ -1,0 +1,15 @@
+#!/bin/sh
+# Script to provide battery information to dwm statusbar
+
+dwm_battery() {
+	CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
+	STATUS=$(cat /sys/class/power_supply/BAT0/status)
+
+	if [ "$STATUS" = "Charging" ]; then
+	      	echo " CHR: $CHARGE% "
+    elif [ "$STATUS" = "Discharging" ]; then
+            echo " BAT: $CHARGE% "
+    fi
+}
+
+dwm_battery

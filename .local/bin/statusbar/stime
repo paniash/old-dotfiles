@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Outputs the time
+
+tim=$(date '+%H:%M')
+echo " $tim "

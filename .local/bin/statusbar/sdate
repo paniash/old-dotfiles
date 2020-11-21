@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Outputs the date
+
+dat=$(date '+%d %b (%a) %Y')
+echo " $dat "
