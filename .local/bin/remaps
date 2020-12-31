@@ -6,3 +6,7 @@
 setxkbmap -option caps:swapescape
 # # but when it is pressed only once, treat it as escape
 # killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
+
+
+# setxkbmap -option ctrl:nocaps
+# xcape &
