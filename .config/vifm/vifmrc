@@ -176,6 +176,8 @@ command! reload :write | restart full
 filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c
 fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
 
+filextype {*.epub},<application/epub> zathura %c %i &, apvlv %c, xpdf %c
+
 " PostScript
 filextype {*.ps,*.eps,*.ps.gz},<application/postscript>
         \ {View in zathura}
@@ -221,6 +223,8 @@ fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 
 " Web
 filextype {*.html,*.htm},<text/html>
+        \ {Open in vim}
+        \ vicmd %f &,
         \ {Open with dwb}
         \ dwb %f %i &,
         \ {Open with firefox}
@@ -496,9 +500,12 @@ nnoremap gm :cd ~/documents/books/mathematics<CR>
 nnoremap gc :cd ~/documents/books/computation<CR>
 nnoremap gs :cd ~/misc/suckless<CR>
 nnoremap gb :cd ~/misc/git-repos/blog<CR>
+nnoremap gw :cd ~/misc/git-repos/franklin/basic<CR>
 nnoremap gr :cd ~/documents/books/recreation<CR>
 nnoremap ga :cd ~/video/anime<CR>
 nnoremap gt :cd ~/documents/personal<CR>
+nnoremap gv :cd ~/misc/git-repos<CR>
+nnoremap cq :cd ~/misc/git-repos/progs/qiskit<CR>
 
 command! FZFlocate :set noquickview | :execute 'goto' fnameescape(term('locate $HOME | fzf --height 10 2>/dev/tty'))
 
