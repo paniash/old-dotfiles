@@ -6,12 +6,14 @@ autoload -U colors && colors
 # PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. >)%b "
 ## Custom prompt without inbuilt `pwd`
 PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
+# PS1="%B%{$fg[yellow]%}%~%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
 setopt autocd	# automatically cd into typed directory
 stty stop undef	# disable ctrl-s to freeze terminal
+setopt interactive_comments
 
 # History in cache directory:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete:
@@ -20,6 +22,9 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
+
+# Disable auditory bells
+setopt nobeep
 
 # vi mode
 bindkey -v
@@ -54,17 +59,7 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-# ## Add colors to man pages
- # man() {
- #     LESS_TERMCAP_md=$'\e[01;31m' \
- #     LESS_TERMCAP_me=$'\e[0m' \
- #     LESS_TERMCAP_se=$'\e[0m' \
- #     LESS_TERMCAP_so=$'\e[01;44;33m' \
- #     LESS_TERMCAP_ue=$'\e[0m' \
- #     LESS_TERMCAP_us=$'\e[01;32m' \
- #     command man "$@"
- # }
-
+# Custom function to extract files
 ex ()
 {
     if [ -f $1 ]; then
