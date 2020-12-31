@@ -160,7 +160,8 @@ c.colors.webpage.darkmode.policy.images = "smart"
 config.load_autoconfig()
 
 # User defined settings
-c.fonts.default_family = "xos4 Terminus"
+# c.fonts.default_family = "xos4 Terminus"
+c.fonts.default_family = "Iosevka"
 
 c.fonts.web.family.serif = "IBM Plex Sans"
 
