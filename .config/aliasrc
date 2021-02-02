@@ -15,34 +15,39 @@ alias \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
 	str="pipe-viewer --resolution=720p" \
-    cs="config status" \
-	gs="git status" \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
-	htspt="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
-	nc="ncmpcpp" \
+	hotspot="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
 	b="buku --suggest" \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
 	cbs="checkbashisms" \
-	rd="redshift -P -O 4000" \
 	sxiv="sxiv -b" \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
     R="R --silent" \
     r="radian" \
 	hs="hugo server" \
+    jd="julia -ie 'using Franklin; serve()'" \
     jn="jupyter-notebook" \
     ipy="ipython" \
-    pty="ptipython" \
-    bpy="bpython" \
-    nnn="nnn -d" \
-    emc="nvim ~/.doom.d/init.el" \
-    ds="~/.emacs.d/bin/doom sync" \
     ka="killall" \
     py="python" \
+    jl="julia" \
     tmux="tmux -f ~/.config/tmux/tmux.conf" \
     smc="sudo make clean install" \
+
+# Git aliases
+alias \
     lg="lazygit" \
+	gs="git status" \
+    ga="git add" \
+    gc="git commit" \
+    cs="config status" \
+    gd="git diff" \
+    gb="git branch" \
+    gf="git fetch" \
+    gm="git merge" \
+    gp="git push" \
 
 # Colorize commands when possible and increase verbosity
 alias \
@@ -55,6 +60,7 @@ alias \
     cat="bat" \
 	mv="mv -vi" \
 	rm="rm -vI" \
+    rmdir="rmdir -v" \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
@@ -68,5 +74,7 @@ alias \
 	sc="sc-im" \
     svim="sudoedit nvim" \
     qtm="tmuxp load ~/.config/tmuxp/mysession.yaml" \
+    stm="tmuxp load ~/.config/tmuxp/qiskit-sessions.yaml" \
+    cq="cd ~/misc/git-repos/progs/qiskit/ && . ./venv/bin/activate" \
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
