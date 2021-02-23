@@ -15,12 +15,15 @@ alias \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
 	str="pipe-viewer --resolution=720p" \
+    ytf="ytfzf" \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
 	hotspot="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
 	b="buku --suggest" \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
+    tv7="mpv --ytdl-format=22" \
+    tv8="mpv --ytdl-format=248+251" \
 	cbs="checkbashisms" \
 	sxiv="sxiv -b" \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
@@ -51,8 +54,8 @@ alias \
 
 # Colorize commands when possible and increase verbosity
 alias \
-	ls="ls -hN --color=always --group-directories-first" \
-	la="ls -A" \
+    ls="exa --group-directories-first" \
+	la="ls -a" \
     ll="ls -l" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
@@ -64,6 +67,7 @@ alias \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
+	# ls="ls -hN --color=always --group-directories-first" \
 
 # Common commands to abbreviate
 alias \
