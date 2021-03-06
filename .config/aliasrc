@@ -15,7 +15,7 @@ alias \
 	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
 	ytr="youtube-dl --rm-cache-dir" \
 	str="pipe-viewer --resolution=720p" \
-    ytf="ytfzf" \
+    ytf="ytfzf -t" \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
 	hotspot="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
@@ -60,7 +60,6 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-    cat="bat" \
 	mv="mv -vi" \
 	rm="rm -vI" \
     rmdir="rmdir -v" \
@@ -80,5 +79,6 @@ alias \
     qtm="tmuxp load ~/.config/tmuxp/mysession.yaml" \
     stm="tmuxp load ~/.config/tmuxp/qiskit-sessions.yaml" \
     cq="cd ~/misc/git-repos/progs/qiskit/ && . ./venv/bin/activate" \
+    qblogin="ssh -L 3000:localhost:3000 ubuntu@ec2-52-65-167-232.ap-southeast-2.compute.amazonaws.com" \
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
