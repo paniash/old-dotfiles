@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Script to use dmenu to invoke search results in ytfzf
+arg=$(echo "$1" | dmenu -i -p 'Search YouTube: ')
+alacritty -e ytfzf -t $arg
