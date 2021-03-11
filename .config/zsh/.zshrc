@@ -88,6 +88,10 @@ ex ()
     fi
 }
 
+fcd() {
+    cd "$(find -type d \( ! -iname ".*" \) | fzf)"
+}
+
 # Disable globing on zsh (useful when downloading using youtube-dl)
 setopt NO_NOMATCH
 
