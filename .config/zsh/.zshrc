@@ -60,7 +60,7 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # `bat` as MANPAGER
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Custom function to extract files
 ex ()
@@ -88,15 +88,15 @@ ex ()
     fi
 }
 
-fcd() {
-    cd "$(find -type d \( ! -iname ".*" \) | fzf)"
+fa() {
+    cd "$(fd -t d | fzf)"
 }
 
 # Disable globing on zsh (useful when downloading using youtube-dl)
 setopt NO_NOMATCH
 
 # Git bare repository
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # minimal nvim
 alias vi='nvim --cmd "let vim_minimal=1" '
