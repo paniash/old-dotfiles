@@ -1,12 +1,6 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
-## Luke's prompt
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-## Custom prompt
-# PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. >)%b "
-## Custom prompt without inbuilt `pwd`
-PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
-# PS1="%B%{$fg[yellow]%}%~%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
+PS1="%B%:%{$fg[magenta]%}%~%{$fg[blue]%}:%{$fg[yellow]%}%(!.#. $)%b "
 setopt autocd	# automatically cd into typed directory
 stty stop undef	# disable ctrl-s to freeze terminal
 setopt interactive_comments
@@ -106,3 +100,15 @@ setopt nohup  # don't kill things on logging out
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+
+##################################################
+############# EXAMPLE PROMPTS ####################
+## Luke's prompt
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+## Custom prompt
+# PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. $)%b "
+## Custom prompt without inbuilt `pwd`
+# PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
+# PS1="%B%{$fg[yellow]%}%~%{$fg[red]%}:%{$fg[magenta]%}%(!.#.$)%b "
+##################################################
