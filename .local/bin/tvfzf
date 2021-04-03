@@ -2,10 +2,10 @@
 
 # Script to use dmenu to invoke search results in ytfzf (wrapper around it).
 
-arg=$(echo $1 | dmenu -i -p 'Search YouTube: ')
+arg=$(echo "$1" | dmenu -i -p 'Search YouTube: ')
 
-if [ ! $arg ]; then
+if [ ! "$arg" ]; then
     exit
 fi
 
-alacritty -e ytfzf -t $arg
+alacritty -e ytfzf -t "$arg"
