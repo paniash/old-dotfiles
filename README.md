@@ -10,9 +10,9 @@ My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the
 - Notifications: [dunst](https://dunst-project.org/)
 - Editor: [neovim](https://neovim.io/)
 - Shell: [zsh](https://wiki.archlinux.org/index.php/Zsh)
-- Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) with [buku](https://github.com/jarun/buku)
+- Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/)
 - PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
-- File manager: [lf](https://github.com/gokcehan/lf)
+- File manager: `cd` with `fzf`, `ls`, `pwd`
 - Mail: [neomutt](https://neomutt.org/) with [isync](https://github.com/gburd/isync)
 - RSS feed reader: [newsboat](https://newsboat.org/)
 - Music player: [ncmpcpp](https://wiki.archlinux.org/index.php/Ncmpcpp) with [mpd](https://wiki.archlinux.org/index.php/Music_Player_Daemon)
@@ -40,4 +40,4 @@ Log out and log back in. You should have the same setup.
 **NOTE:** I personally don't use `stow` so I cannot guarantee that this will work. If something breaks, feel free to open an issue in the issue tracker.
 
 ## Issues & Contributions
-If you have any issues, please create an issue in this repo. I will try my best to resolve it. Feel free to contribute to this repo. I am learning more about the UNIX system as well so any feedback will be appreciated. ;)
+If you have any issues, please create an issue in this repo. I will try my best to resolve it. Feel free to contribute to this repo. I am learning more about the UNIX system as well so any feedback will be appreciated. ;-)

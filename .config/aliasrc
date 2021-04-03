@@ -45,7 +45,7 @@ alias \
 	gs="git status" \
     ga="git add" \
     gc="git commit" \
-    cs="config status" \
+    cs="cfg status" \
     gd="git diff" \
     gb="git branch" \
     gf="git fetch" \
@@ -54,7 +54,7 @@ alias \
 
 # Colorize commands when possible and increase verbosity
 alias \
-    ls="exa --group-directories-first" \
+    ls="ls --group-directories-first --color=always" \
 	la="ls -a" \
     ll="ls -l" \
 	grep="grep --color=auto" \

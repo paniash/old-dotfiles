@@ -54,3 +54,4 @@ export MOZ_USE_XINPUT2="1"		# Mozilla smmoth scrolling/touchpads
 
 export ELINKS_CONFDIR="$HOME/.config/elinks/"
 export TMUXP_CONFIG_DIR="$HOME/.config/tmuxp/"
+export PYTHONPATH=$PYTHONPATH:$HOME/.xacc
