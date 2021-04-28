@@ -34,6 +34,7 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export VIT_DIR="$HOME/.config/vit"
 export WEECHAT_HOME="$HOME/.config/weechat/"
 export WEECHAT_EXTRA_LIBDIR="$HOME/.config/weechat/"
+export NOTMUCH_CONFIG="$HOME/.config/notmuch/notmuch-config"
 # export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 # gpg2 --homedir "XDG_DATA_HOME/gnupg"
@@ -54,4 +55,4 @@ export MOZ_USE_XINPUT2="1"		# Mozilla smmoth scrolling/touchpads
 
 export ELINKS_CONFDIR="$HOME/.config/elinks/"
 export TMUXP_CONFIG_DIR="$HOME/.config/tmuxp/"
-export PYTHONPATH=$PYTHONPATH:$HOME/.xacc
+export PYTHONPATH="$PYTHONPATH:$HOME/.xacc/"
