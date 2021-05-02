@@ -1,14 +1,19 @@
 [database]
 path=/home/ashish/.local/share/mail
+
 [user]
 name=Ashish Panigrahi
 primary_email=ashish.panigrahi@niser.ac.in
+
 [new]
 tags=unread;inbox;
 ignore=.mbsyncstate;.uidvalidity
+
 [search]
 exclude_tags=deleted;spam;
+
 [maildir]
 synchronize_flags=true
+
 [crypto]
 gpg_path=gpg
