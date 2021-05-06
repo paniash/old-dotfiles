@@ -1,10 +1,17 @@
 #!/bin/sh
 # Script to play music from youtube in the background using dmenu, mpv and ytfzf.
 
-SELECT_OPTION="$(printf "Search\nKill mpv" | dmenu -i -p "Music: ")"
-
-if [ "$SELECT_OPTION" = "Kill mpv" ]; then
-    pkill mpv && notify-send "mpv" "Music killed."
-else
+if [ ! "$(pgrep mpv)" ]; then   # checks if mpv is already running
     mpv --no-video "$(ytfzf -DL)" &
+
+else
+    SELECT_OPTION="$(printf "Search\nKill mpv" | dmenu -i -p "Music: ")"
+
+    if [ "$SELECT_OPTION" = "Kill mpv" ]; then
+        pkill mpv && notify-send "mpv" "Music killed."
+
+    else
+        mpv --no-video "$(ytfzf -DL)" &
+
+    fi
 fi
