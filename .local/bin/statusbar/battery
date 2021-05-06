@@ -5,19 +5,25 @@ dwm_battery() {
 	CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
 	STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
+    if [ "$CHARGE" -le 20 ]; then
+        if [ ! "$STATUS" = "Charging" ]; then
+            notify-send "Battery low" "Please charge!!!" && sleep 60
+        fi
+    fi
+
 	if [ "$STATUS" = "Charging" ]; then
 	      	echo "  $CHARGE% "
-	elif [ $CHARGE -gt 90 ]; then
+	elif [ "$CHARGE" -gt 90 ]; then
 		echo "  $CHARGE% "
-	elif [ $CHARGE -gt 65 ]; then
+	elif [ "$CHARGE" -gt 65 ]; then
        	        echo "  $CHARGE% "
-    	elif [ $CHARGE -gt 35 ]; then
-                echo "  $CHARGE% "
-    	elif [ $CHARGE -gt 15 ]; then
-                echo "  $CHARGE% ";
-        else
-                echo "  $CHARGE% "; notify-send "Battery low" "Please charge!!!"
-        fi
+    elif [ "$CHARGE" -gt 35 ]; then
+            echo "  $CHARGE% "
+    elif [ "$CHARGE" -gt 15 ]; then
+            echo "  $CHARGE% "
+    else
+            echo "  $CHARGE% "
+    fi
 }
 
 dwm_battery
