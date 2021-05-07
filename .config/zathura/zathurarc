@@ -1,9 +1,9 @@
 set recolor                 "true"
 set continuous-hist-save    "true"
 set default-fg              '#ebdbb2'
-set default-bg              '#1d2021'
+set default-bg              '#1c1c1c'
 set recolor-darkcolor       '#ebdbb2'
-set recolor-lightcolor      '#1d2021'
+set recolor-lightcolor      '#1c1c1c'
 set guioptions				''
 set scroll-page-aware       "true"
 set smooth-scroll           "true"
