@@ -4,15 +4,15 @@ My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the
 
 ### System information
 - Window manager: [suckless' dwm](https://github.com/paniash/dwm)
-- Terminal emulator: [st](https://github.com/paniash/st)
+- Terminal emulator: [st](https://github.com/paniash/st-1)
 - System monitor: [dwmblocks](https://github.com/paniash/dwmblocks)
 - Application launcher: [dmenu](https://github.com/paniash/dmenu)
 - Notifications: [dunst](https://dunst-project.org/)
 - Editor: [neovim](https://neovim.io/)
 - Shell: [zsh](https://wiki.archlinux.org/index.php/Zsh)
-- Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/)
+- Browser: [brave](https://github.com/brave/brave-browser/) with [bmks](https://github.com/paniash/dotfiles/blob/master/.local/bin/bmks)
 - PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
-- File manager: `cd` with `fzf`, `ls`, `pwd`
+- File manager: `cd` with `fzf`, `ls`, `pwd` (sometimes vifm)
 - Mail: [neomutt](https://neomutt.org/) with [isync](https://github.com/gburd/isync)
 - RSS feed reader: [newsboat](https://newsboat.org/)
 - Music player: [ncmpcpp](https://wiki.archlinux.org/index.php/Ncmpcpp) with [mpd](https://wiki.archlinux.org/index.php/Music_Player_Daemon)
