@@ -38,7 +38,9 @@ alias \
     jl="julia" \
     tmux="tmux -f ~/.config/tmux/tmux.conf" \
     smc="sudo make clean install" \
-    o="xdg-open" \
+    o="open" \
+    shc="shellcheck" \
+    chb="checkbashisms" \
 
 # Git aliases
 alias \
