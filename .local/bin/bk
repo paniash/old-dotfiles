@@ -1,0 +1,13 @@
+#!/bin/sh
+## Short utility to quickly add bookmarks to access via bmks
+
+if [ -z "$1" ]; then
+    printf "Error: provide a URL\n" && exit 0
+else
+    if [ -z "$2" ]; then
+        printf "Error: provide a description!\n" && exit 0
+    else
+        echo "$2" - "$1" >> $HOME/.config/bmks/urls
+        echo "Bookmark added!"
+    fi
+fi
