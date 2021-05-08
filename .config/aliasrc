@@ -41,6 +41,7 @@ alias \
     o="open" \
     shc="shellcheck" \
     chb="checkbashisms" \
+    url="vim ~/.config/bmks/urls" \
 
 # Git aliases
 alias \
