@@ -1,8 +1,6 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
 PS1="%B%:%{$fg[magenta]%}%1~%{$fg[blue]%}:%{$fg[yellow]%}%(!.#. $)%b "
-# PS1='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
-# PS1="%B%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M:%{$fg[magenta]%}%~%{$fg[red]%}%(!.#. $)%b "
 setopt autocd	# automatically cd into typed directory
 stty stop undef	# disable ctrl-s to freeze terminal
 setopt interactive_comments
@@ -46,7 +44,16 @@ vicd()
 
 bindkey -s '^o' 'vicd\n'
 
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+open()
+{
+    case "$1" in
+        *.png|*.jpg|*.jpeg) sxiv -b $1 ;;
+        *.pdf|*.djvu|*.epub) zathura $1 ;;
+        *.mkv|*.webm|*.mp4|*.mp3|*.opus) mpv $1 ;;
+        *.odt) localc $1 ;;
+        *) xdg-open $1 ;;
+    esac
+}
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
