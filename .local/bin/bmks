@@ -37,12 +37,12 @@ bmks_ls() {
 
 bmks_del() {
 	bmks_check
-		sed -i "$(sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -l "$LIST_LIMIT")/d" "$URL_FILE_PATH"/"$URL_FILE_NAME"
+		sed -i "$(sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT")/d" "$URL_FILE_PATH"/"$URL_FILE_NAME"
 }
 
 bmks_display() {
     bmks_check
-    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -l "$LIST_LIMIT" | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
+    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT" | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
 }
 
 bmks_check() {
