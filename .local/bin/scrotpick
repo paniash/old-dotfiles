@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SELECT_OPTION="$(printf "a selected area\\ncurrent window\\nfull screen\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)" | dmenu -F -l 6 -i -p "Screenshot which area?")"
+
+case "$SELECT_OPTION" in
+	"a selected area") scrot -s pic-selected-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Screenshot taken." ;;
+	"current window") scrot -d 1 -u pic-window-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Current window taken" ;;
+	"full screen") scrot -d 2 pic-full-"$(date '+%y%m%d-%H%M-%S').png" && notify-send "Full screenshot taken." ;;
+	"a selected area (copy)") scrot -s | xclip -selection clipboard -t image/png && notify-send "Area copied." ;;
+	"current window (copy)") scrot -d 1 -u | xclip -selection clipboard -t image/png && notify-send "Window copied." ;;
+	"full screen (copy)") scrot | xclip -selection clipboard -t image/png && notify-send "Screenshot copied." ;;
+esac
