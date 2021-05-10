@@ -2,7 +2,7 @@
 
 # Script to use dmenu to invoke search results in ytfzf (wrapper around it).
 
-arg=$(printf "$1" | dmenu -i -p 'Search YouTube: ')
+arg=$(printf "%s" "$1" | dmenu -i -p 'Search YouTube: ')
 
 if [ ! "$arg" ]; then
     exit
