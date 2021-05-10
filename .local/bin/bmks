@@ -3,7 +3,7 @@
 # set path where urls will be stored
 URL_FILE_PATH="$HOME"/.config/bmks/
 # name of file urls will be stored in
-URL_FILE_NAME=urls
+URL_FILE_NAME=urls.txt
 
 show_usage() {
     while IFS= read -r LINE; do
@@ -19,7 +19,6 @@ Usage: bmks [OPTIONS...];
 EOF
 }
 
-BROWSER="brave"
 LIST_LIMIT=20
 
 bmks_add() {
@@ -28,6 +27,7 @@ bmks_add() {
 	read -r description
 	[ -z "$description" ] && echo "$url" >> "$URL_FILE_PATH"/"$URL_FILE_NAME"
 	[ -n "$description" ] && echo "$description - $url" >> "$URL_FILE_PATH"/"$URL_FILE_NAME"
+    echo "Bookmark added!"
 }
 
 bmks_ls() {
@@ -37,12 +37,13 @@ bmks_ls() {
 
 bmks_del() {
 	bmks_check
-		sed -i "$(sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT")/d" "$URL_FILE_PATH"/"$URL_FILE_NAME"
+    PATTERN=$(sort < $URL_FILE_PATH/$URL_FILE_NAME | dmenu -F -i -l $LIST_LIMIT)
+    sed -i "/$PATTERN/d" $URL_FILE_PATH/$URL_FILE_NAME && echo "Bookmark removed."
 }
 
 bmks_display() {
     bmks_check
-    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT" | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
+    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT" -p "Open link: " | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
 }
 
 bmks_check() {
