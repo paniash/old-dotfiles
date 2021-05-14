@@ -1,0 +1,12 @@
+#!/bin/sh
+# Script to always ensure that the volume is at a multiple % of 5
+
+volstat="$(pactl list sinks)"
+vol="$(echo "$volstat" | grep '[0-9]\+%' | sed "s,.* \([0-9]\+\)%.*,\1,;1q")"
+remainder=$(( $vol % 5 ))
+divisor=$(( $vol / 5 ))
+finalvolume=$(( $divisor * 5 ))
+
+if [ "$remainder" -ne 0 ]; then
+    pactl set-sink-volume @DEFAULT_SINK@ $finalvolume%
+fi
