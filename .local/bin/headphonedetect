@@ -1,0 +1,15 @@
+#!/bin/sh
+# Script to detect if headphones are plugged in or not and pauses music if unplugged
+
+# https://askubuntu.com/questions/879139/using-acpi-listen-command-in-a-shell-script
+acpi_listen | while IFS= read -r line;
+do
+    if [ "$line" = "jack/headphone HEADPHONE plug" ]; then
+        pkill -RTMIN+10 dwmblocks && notify-send "Headphones" "Connected"
+        sleep 1.5
+    elif [ "$line" = "jack/headphone HEADPHONE unplug" ]; then
+        pkill -RTMIN+10 dwmblocks && notify-send "Headphones" "Disconnected"
+        mpc pause
+        sleep 1.5
+    fi
+done
