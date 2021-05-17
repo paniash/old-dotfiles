@@ -9,7 +9,7 @@ do
         sleep 1.5
     elif [ "$line" = "jack/headphone HEADPHONE unplug" ]; then
         pkill -RTMIN+10 dwmblocks && notify-send "Headphones" "Disconnected"
-        mpc pause
+        mpc pause >/dev/null
         sleep 1.5
     fi
 done
