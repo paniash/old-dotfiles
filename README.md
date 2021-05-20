@@ -10,10 +10,10 @@ My [dwmblocks](https://github.com/paniash/dwmblocks) build uses scripts from the
 - Notifications: [dunst](https://dunst-project.org/)
 - Editor: [neovim](https://neovim.io/)
 - Shell: [zsh](https://wiki.archlinux.org/index.php/Zsh)
-- Browser: [brave](https://github.com/brave/brave-browser/) with [bmks](https://github.com/paniash/dotfiles/blob/master/.local/bin/bmks)
+- Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) with [bmks](https://github.com/paniash/dotfiles/blob/master/.local/bin/bmks)
 - PDF Reader: [zathura](https://pwmt.org/projects/zathura/)
 - File manager: `cd` with `fzf`, `ls`, `pwd` (sometimes vifm)
-- Mail: [neomutt](https://neomutt.org/) with [isync](https://github.com/gburd/isync)
+- Mail: [neomutt](https://neomutt.org/) with [isync](https://github.com/gburd/isync), msmtp and notmuch
 - RSS feed reader: [newsboat](https://newsboat.org/)
 - Music player: [ncmpcpp](https://wiki.archlinux.org/index.php/Ncmpcpp) with [mpd](https://wiki.archlinux.org/index.php/Music_Player_Daemon)
 - Video player: [mpv](https://mpv.io/)
