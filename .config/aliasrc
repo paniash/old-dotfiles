@@ -8,6 +8,7 @@ alias \
 	cim="nvim ~/.config/nvim/init.vim" \
 	tmc="tremc" \
 	nf="neofetch" \
+    sl="ls" \
 	uf="uptime -p" \
 	covid="curl https://corona-stats.online/" \
 	bat0="cat /sys/class/power_supply/BAT0/capacity" \
@@ -19,7 +20,6 @@ alias \
 	gnu="gnuplot" \
 	scr="cd ~/.local/bin; ls ./" \
 	hotspot="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
-	b="buku --suggest" \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
     tv7="mpv --ytdl-format=22" \
@@ -41,7 +41,7 @@ alias \
     o="open" \
     shc="shellcheck" \
     chb="checkbashisms" \
-    url="vim ~/.config/bmks/urls" \
+    bk="bmks" \
 
 # Git aliases
 alias \
@@ -61,6 +61,8 @@ alias \
     ls="ls --group-directories-first --color=always" \
 	la="ls -a" \
     ll="ls -l" \
+    lt="ls -t" \
+    tl="lt" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
@@ -84,5 +86,19 @@ alias \
     stm="tmuxp load ~/.config/tmuxp/qiskit-sessions.yaml" \
     cq="cd ~/misc/git-repos/progs/qiskit/ && . ./venv/bin/activate" \
     qblogin="ssh -L 3000:localhost:3000 ubuntu@ec2-52-65-167-232.ap-southeast-2.compute.amazonaws.com" \
+    netcheck="ping -c 3 www.google.com" \
+
+# Move quickly through directories
+alias \
+    gta="cd ~/video/anime" \
+    gtp="cd ~/documents/books/physics" \
+    gtq="cd ~/documents/books/physics/quantum" \
+    gtr="cd ~/documents/books/recreation" \
+    gtc="cd ~/documents/books/computation" \
+    gtm="cd ~/documents/books/mathematics" \
+    gts="cd ~/misc/suckless" \
+    gtt="cd ~/documents/personal" \
+    gtw="cd ~/misc/git-repos/franklin/basic" \
+
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
