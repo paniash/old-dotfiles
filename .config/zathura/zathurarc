@@ -6,7 +6,6 @@ set recolor-darkcolor       '#ebdbb2'
 set recolor-lightcolor      '#1c1c1c'
 set guioptions				''
 set scroll-page-aware       "true"
-set smooth-scroll           "true"
 set scroll-full-overlap     0.01
 set scroll-step             60
 set font                    "Iosevka 11"
@@ -15,7 +14,6 @@ map r rotate
 map K zoom in
 map J zoom out
 map p print
-map s write(!)
 map e scroll half-up
 map u scroll half-up
 map d scroll half-down
