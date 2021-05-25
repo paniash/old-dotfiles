@@ -7,5 +7,12 @@
 
 [core]
     editor = "nvim"
+
 [init]
 	defaultBranch = main
+
+[merge]
+	tool = vimdiff
+
+[mergetool "vimdiff"]
+    cmd = nvim -d

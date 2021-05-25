@@ -1,0 +1,13 @@
+#!/bin/sh
+# Changes default browser and corresponding key-bindings using dmenu
+
+option="$(echo "firefox\nbrave" | dmenu -i -p "Switch browser: ")"
+MIME="$HOME/.config/mimeapps.list"
+DWMCONF="$HOME/misc/suckless/dwm/config.h"
+DWM="$HOME/misc/suckless/dwm/"
+PROF="$HOME/.profile"
+
+case "$option" in
+    "firefox") sed -i 's/brave-browser/firefox/g' "$MIME" && sed -i 's/brave/firefox/g' "$PROF" && sed -i 's/brave/firefox/g' "$DWMCONF" && cd "$DWM" && sudo make install ;;
+    "brave") sed -i 's/firefox/brave-browser/g' "$MIME" && sed -i 's/firefox/brave/g' "$PROF" && sed -i 's/firefox/brave/g' "$DWMCONF" && cd "$DWM" && sudo make install ;;
+esac
