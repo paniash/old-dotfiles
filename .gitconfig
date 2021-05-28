@@ -9,7 +9,7 @@
     editor = "nvim"
 
 [init]
-	defaultBranch = main
+	defaultBranch = master
 
 [merge]
 	tool = vimdiff
