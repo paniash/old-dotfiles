@@ -6,8 +6,9 @@ MIME="$HOME/.config/mimeapps.list"
 DWMCONF="$HOME/misc/suckless/dwm/config.h"
 DWM="$HOME/misc/suckless/dwm/"
 PROF="$HOME/.profile"
+README="$HOME/README.md"
 
 case "$option" in
-    "firefox") sed -i 's/brave-browser/firefox/g' "$MIME" && sed -i 's/brave/firefox/g' "$PROF" && sed -i 's/brave/firefox/g' "$DWMCONF" && cd "$DWM" && sudo make install ;;
-    "brave") sed -i 's/firefox/brave-browser/g' "$MIME" && sed -i 's/firefox/brave/g' "$PROF" && sed -i 's/firefox/brave/g' "$DWMCONF" && cd "$DWM" && sudo make install ;;
+    "firefox") sed -i 's/brave-browser/firefox/g' "$MIME" && sed -i 's/brave/firefox/g' "$PROF" && sed -i 's/brave/firefox/g' "$DWMCONF" && cd "$DWM" && sudo make install && sed -i 's/brave/firefox/' "$README" ;;
+    "brave") sed -i 's/firefox/brave-browser/g' "$MIME" && sed -i 's/firefox/brave/g' "$PROF" && sed -i 's/firefox/brave/g' "$DWMCONF" && cd "$DWM" && sudo make install && sed -i 's/firefox/brave/' "$README" ;;
 esac

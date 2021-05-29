@@ -6,9 +6,9 @@ stty stop undef	# disable ctrl-s to freeze terminal
 setopt interactive_comments
 
 # History in cache directory:
+HISTFILE=~/.cache/zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -47,10 +47,11 @@ bindkey -s '^o' 'vicd\n'
 open()
 {
     case "$1" in
-        *.png|*.jpg|*.jpeg) sxiv -b $1 ;;
+        *.png|*.jpg|*.jpeg|*.webp) sxiv -b $1 ;;
         *.pdf|*.djvu|*.epub) zathura $1 ;;
         *.mkv|*.webm|*.mp4|*.mp3|*.opus) mpv $1 ;;
         *.odt) localc $1 ;;
+        *.ipynb) jupyter-notebook $1 ;;
         *) xdg-open $1 ;;
     esac
 }
@@ -100,9 +101,6 @@ setopt NO_NOMATCH
 
 # Git bare repository
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# minimal nvim
-alias vi='nvim --cmd "let vim_minimal=1" '
 
 setopt nohup  # don't kill things on logging out
 # setopt print_exit_value     # spits out some error if things go wrong
