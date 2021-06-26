@@ -2,9 +2,6 @@
 	email = ashish.panigrahi@protonmail.com
 	name = Ashish Panigrahi
 
-; [credential]
-; 	helper = cache --timeout=86400
-
 [core]
     editor = "nvim"
 
@@ -16,3 +13,6 @@
 
 [mergetool "vimdiff"]
     cmd = nvim -d
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
