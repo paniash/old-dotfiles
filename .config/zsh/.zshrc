@@ -7,8 +7,16 @@ setopt interactive_comments
 
 # History in cache directory:
 HISTFILE=~/.cache/zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=5000
+SAVEHIST=5000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -47,11 +55,12 @@ bindkey -s '^o' 'vicd\n'
 open()
 {
     case "$1" in
-        *.png|*.jpg|*.jpeg|*.webp) sxiv -b $1 ;;
-        *.pdf|*.djvu|*.epub) zathura $1 ;;
+        *.png|*.jpg|*.jpeg|*.webp|*.tif) sxiv -b $1 ;;
+        *.pdf|*.djvu|*.epub|*.cbz) zathura $1 ;;
         *.mkv|*.webm|*.mp4|*.mp3|*.opus) mpv $1 ;;
         *.odt) localc $1 ;;
         *.ipynb) jupyter-notebook $1 ;;
+        *.svg) firefox $1 ;;
         *) xdg-open $1 ;;
     esac
 }
@@ -94,6 +103,10 @@ ex ()
 
 fa() {
     cd "$(fd -t d | fzf)"
+}
+
+doi2bib() {
+    curl -s "https://api.crossref.org/works/$1/transform/application/x-bibtex";
 }
 
 # Disable globing on zsh (useful when downloading using youtube-dl)
