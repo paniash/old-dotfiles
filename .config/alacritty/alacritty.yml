@@ -179,7 +179,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#151519'
+    background: '#1C1C1C'
     foreground: '#ebdbb2'
 
     # Bright and dim foreground colors
