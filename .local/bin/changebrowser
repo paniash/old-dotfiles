@@ -1,4 +1,5 @@
 #!/bin/sh
+# I find myself frequently changing my default browser. This script helps automate the process
 # Changes default browser and corresponding key-bindings using dmenu
 
 option="$(echo "firefox\nbrave" | dmenu -i -p "Switch browser: ")"

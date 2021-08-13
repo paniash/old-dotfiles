@@ -22,4 +22,4 @@ set statusbar-basename true
 set selection-clipboard clipboard
 
 set synctex true
-set synctex-editor-command "nvim  --remote-silent %f -c %l"
+set synctex-editor-command "/home/ashish/.local/bin/backward.py %{line} %{input}"

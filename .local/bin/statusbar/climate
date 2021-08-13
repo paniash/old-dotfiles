@@ -1,0 +1,10 @@
+#!/bin/sh
+
+url="http://wttr.in/?format=j1"
+json="$(curl -s "$url")"
+
+temp="$(echo $json | jq -r ."current_condition[0]|.temp_C)"
+humidity="$(echo $json | jq -r ."current_condition[0]|.humidity)"
+description="$(echo $json | jq -r ."current_condition[0]|(.weatherDesc[0].value)")"
+
+echo $temp

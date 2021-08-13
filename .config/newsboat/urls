@@ -1,32 +1,33 @@
----SOFTWARE_UPDATES---
 https://artixlinux.org/feed.php
 https://www.archlinux.org/feeds/news/ "~Arch Linux News"
 https://github.com/qiskit-community/qiskit-textbook/commits/master.atom "~Qiskit textbook"
 https://github.com/paniash.private.atom?token=AOF5ZETMUNRCCEHVTBL3SYV5AQKFI "~Github News feed"
 https://github.com/torrinfail/dwmblocks/commits/master.atom "~dwmblocks (torrinfail)"
-
-" "
----RESEARCH_BLOG---
+https://github.com/neovim/neovim/tags.atom
+https://fortran-lang.org/news.xml
+https://www.latex-project.org/feed.xml
 https://www.ibm.com/blogs/research/feed/atom/
 https://cloudblogs.microsoft.com/quantum?feed=rss2
 https://medium.com/feed/qiskit
 https://nitter.net/qiskit/rss
 https://nitter.net/QWorld19/rss
 https://api.quantamagazine.org/feed/
-
-" "
----SUBREDDITS---
+http://feeds.nature.com/nature/rss/current?format=usm "~Nature Feeds"
+https://julialang.org/feed.xml
+https://aapt.scitation.org/feed/ajp/most-cited
 https://old.reddit.com/message/inbox/.rss?feed=150ce71193cbbcaf5fbf0300185d7f17f786a97a&user=kn0xchad "~Reddit feeds"
 https://www.reddit.com/r/QuantumComputing.rss "~r/QuantumComputing"
 https://www.reddit.com/r/vim.rss "~r/vim"
+https://www.reddit.com/r/neovim.rss "~r/neovim"
 https://www.reddit.com/r/C_programming.rss "~r/C_programming"
+https://www.reddit.com/r/cpp.rss "~r/cpp"
 https://www.reddit.com/r/bash.rss "~r/bash"
 https://www.reddit.com/r/LaTeX.rss "~r/LaTeX"
-
-" "
----PEOPLE---
+https://www.reddit.com/r/julia.rss "~r/julia"
+https://landchad.net/rss.xml
 https://www.lukesmith.xyz/rss.xml
 https://peterwittek.com/feeds/all.atom.xml
+https://mikeinnes.github.io/feed.xml
 https://leimao.github.io/feed.xml
 https://11de784a.github.io/feed.xml
 https://joren.ga/blog/feed.xml
@@ -34,35 +35,27 @@ https://protesilaos.com/codelog.xml
 https://www.romanzolotarev.com/rss.xml
 https://vimtricks.com/feed/
 https://nullprogram.com/feed/
-https://ashishpanigrahi.me/feed.xml
+https://ashishpanigrahi.me/feed.xml "~Ashish's musings"
 https://www.unixsheikh.com/feed.rss
-https://www.youtube.com/redirect?event=playlist_description&redir_token=QUFFLUhqbVVXRXpaSVh2a3k0bDFKdmdrdFhQamozZXZ2d3xBQ3Jtc0tubVVXcXRHVFVBSENRM2hrbWI1Q1dhRFEyUjVScDl1Qmlpbl9XbXdaaTh4bWN6Ml9XMU9kajZ5d1A5QUxsN25YM2I3MGdVckdtalkyazd2amxpWEdYUzRzOUY4RjFSMnVBLUxGTFg4TEFnODVjSTZFQQ&q=https%3A%2F%2Flexfridman.com%2Ffeed%2Fpodcast%2F "~Lex Fridman Podcasts"
-
-" "
----PHYSICS_NEWS---
+https://jvns.ca/atom.xml
+http://100r.co/links/rss.xml
+https://anchor.fm/s/c761a04/podcast/rss
+https://algassert.com/feed.xml
+http://ebin.city/~werwolf/index.xml
 https://www.physicsforums.com/insights/feed/
 https://phys.org/rss-feed/breaking/physics-news/quantum-physics/
 https://phys.org/rss-feed/breaking/physics-news/physics/
 https://phys.org/rss-feed/breaking/physics-news/materials/
-
-" "
----COMICS---
 https://www.noendcomic.com/rss.php
 https://xkcd.com/atom.xml
 https://www.smbc-comics.com/comic/rss
 https://www.commitstrip.com/en/feed/
-
-" "
----YOUTUBE-EDUCATIONAL---
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA "~Veritasium"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvBqzzvUBLCs8Y7Axb-jZew "~Sixty Symbols"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A "~Numberphile"
 https://www.youtube.com/feeds/videos.xml?channel_id=UClBNq7mCMf5xm8baE_VMl3A "~Qiskit"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-2knDbf4kzT3uzWo7iTJyw "~Quantum Intuition"
-
-" "
----YOUTUBE-TECH---
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distrotube"
@@ -76,7 +69,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC0uTPqBCFIpZxlz_Lv1tk_g "~P
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkHN7h7CFeYL6Y1N5JcEZug "~Sun Knudsen"
 https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 "~Luke Smith (PeerTube)"
-
-" "
----TECH_NEWS---
 https://fedoramagazine.org/feed/ "~Fedora Magazine"

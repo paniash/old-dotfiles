@@ -1,8 +1,9 @@
 #!/bin/sh
+# The unix bookmark manager that sucks less.
 
-# set path where urls will be stored
+# Set path where urls will be stored
 URL_FILE_PATH="$HOME"/.config/bmks/
-# name of file urls will be stored in
+# Name of file urls will be stored in
 URL_FILE_NAME=urls.txt
 
 show_usage() {
@@ -19,7 +20,8 @@ Usage: bmks [OPTIONS...];
 EOF
 }
 
-LIST_LIMIT=20
+# Sets limit for dmenu prompt list
+LIST_LIMIT=10
 
 bmks_add() {
 	[ -z "$url" ] && printf "Error: url must be provided\n\n" && show_usage && exit 0
@@ -43,7 +45,7 @@ bmks_del() {
 
 bmks_display() {
     bmks_check
-    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT" -p "Open link: " | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
+    sort < "$URL_FILE_PATH"/"$URL_FILE_NAME" | dmenu -F -i -l "$LIST_LIMIT" -p "Bookmarks: " | awk '{print $(NF)}' | xargs -I '{}' "$BROWSER" {}
 }
 
 bmks_check() {

@@ -1,2 +1,10 @@
 #!/bin/sh
-man -k . | dmenu -i -p 'Search manpages: ' -l 20 | xargs -r man -Tpdf | zathura -
+# Script to convert man pages into pdf and display using zathura
+
+arg=$(man -k . | dmenu -i -p 'Search manpages: ' -l 20)
+
+if [ ! "$arg" ]; then
+    exit
+fi
+
+"$arg" | xargs -r man -Tpdf | zathura -

@@ -2,36 +2,5 @@
 
 # Outputs the date
 
-# dat=$(date '+%d %b (%a) %Y')
-# echo " $dat "
-
-datenum="$(date '+%d')"
-firstdigit="$( echo "$datenum" | head -c 1 )"
-lastdigit="$( echo "$datenum" | tail -c 2 )"
-# lastdigit="${datenum:(-1)}"
-
-if [ "$firstdigit" = 1 ]; then
-    dat="$(date '+%A, %dth %b')"
-else
-    if [ "$lastdigit" = 1 ]; then
-        dat="$(date '+%A, %dst %b')"
-    elif [ "$lastdigit" = 2 ]; then
-        dat="$(date '+%A, %dnd %b')"
-    elif [ "$lastdigit" = 3 ]; then
-        dat="$(date '+%A, %drd %b')"
-    else
-        dat="$(date '+%A, %dth %b')"
-    fi
-fi
-
-# if [ digit = 1 ]; then
-#     dat="$(date '+%A, %dst %b')"
-# elif [ digit = 2 ]; then
-#     dat="$(date '+%A, %dnd %b')"
-# elif [ digit = 3 ]; then
-#     dat="$(date '+%A, %drd %b')"
-# else
-#     dat="$(date '+%A, %dth %b')"
-# fi
-
-echo " $dat "
+cmd="$(date '+%A, %d %B %Y')"
+printf ' %s ' "$cmd"

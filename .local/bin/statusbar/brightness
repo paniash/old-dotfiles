@@ -6,4 +6,4 @@ BRI=$(($(cat /sys/class/backlight/intel_backlight/brightness) * 100 / $(cat /sys
 # echo "  $BRI% "
 # echo "  $BRI% "
 # echo "  $BRI% "
-echo " BL: $BRI% "
+echo " L: $BRI% "

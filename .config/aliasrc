@@ -9,6 +9,7 @@ alias \
 	tmc="tremc" \
 	nf="neofetch" \
     sl="ls" \
+    dc="cd" \
 	uf="uptime -p" \
 	covid="curl https://corona-stats.online/" \
 	bat0="cat /sys/class/power_supply/BAT0/capacity" \
@@ -30,7 +31,8 @@ alias \
     R="R --silent" \
     r="radian" \
 	hs="hugo server" \
-    jd="julia -ie 'using Franklin; serve()'" \
+    jd="julia -ie 'using Franklin; serve(single=true); exit()'" \
+    js="julia -ie 'using Franklin; serve()'" \
     jn="jupyter-notebook" \
     ipy="ipython" \
     ka="killall" \
@@ -42,10 +44,13 @@ alias \
     shc="shellcheck" \
     chb="checkbashisms" \
     bk="bmks" \
+    ani="anime dl -xd \"{aria2}\"" \
+    nmake="make CMAKE_BUILD_TYPE=Release" \
+    colp="colorpicker" \
+
 
 # Git aliases
 alias \
-    lg="lazygit" \
 	gs="git status" \
     ga="git add" \
     gc="git commit" \
@@ -61,7 +66,7 @@ alias \
     ls="ls --group-directories-first --color=always" \
 	la="ls -a" \
     ll="ls -l" \
-    lt="ls -t" \
+    lt="ls -t | head -n 20" \
     tl="lt" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
@@ -76,7 +81,6 @@ alias \
 
 # Common commands to abbreviate
 alias \
-	vim="nvim" \
 	pu="sudo pacman -Syu --color always" \
 	pi="sudo pacman -S" \
 	prs="sudo pacman -Rns" \
@@ -98,7 +102,7 @@ alias \
     gtm="cd ~/documents/books/mathematics" \
     gts="cd ~/misc/suckless" \
     gtt="cd ~/documents/personal" \
-    gtw="cd ~/misc/git-repos/franklin/basic" \
+    thesis="cd ~/documents/sixth-sem/project/bscthesis" \
 
 
 se(){ du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}

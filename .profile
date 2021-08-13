@@ -59,3 +59,6 @@ export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads
 
 export ELINKS_CONFDIR="$HOME/.config/elinks/"
 export TMUXP_CONFIG_DIR="$HOME/.config/tmuxp/"
+
+# Julia settings
+export JULIA_NUM_THREADS=4

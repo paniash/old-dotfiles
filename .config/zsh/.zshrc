@@ -7,8 +7,8 @@ setopt interactive_comments
 
 # History in cache directory:
 HISTFILE=~/.cache/zsh_history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
@@ -57,7 +57,7 @@ open()
     case "$1" in
         *.png|*.jpg|*.jpeg|*.webp|*.tif) sxiv -b $1 ;;
         *.pdf|*.djvu|*.epub|*.cbz) zathura $1 ;;
-        *.mkv|*.webm|*.mp4|*.mp3|*.opus) mpv $1 ;;
+        *.mkv|*.webm|*.mp4|*.mp3|*.opus|*.gif) mpv $1 ;;
         *.odt) localc $1 ;;
         *.ipynb) jupyter-notebook $1 ;;
         *.svg) firefox $1 ;;
@@ -88,7 +88,7 @@ ex ()
             *.tar) tar xvf $1 ;;
             *.tbz2) tar xvjf $1 ;;
             *.tgz) tar xvzf $1 ;;
-            *.zip) unzip $1 ;;
+            *.zip|*.ZIP) unzip $1 ;;
             *.Z) uncompress $1 ;;
             *.7z) 7z x $1 ;;
             *.deb) ar x $1 ;;
