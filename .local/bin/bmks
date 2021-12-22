@@ -16,6 +16,7 @@ Usage: bmks [OPTIONS...];
     add                               Add a new bookmark;
     del                               Remove a bookmark;
     ls                                Show all bookmarks;
+    edit                              Edit bookmarks file;
 
 EOF
 }
@@ -35,6 +36,11 @@ bmks_add() {
 bmks_ls() {
 	bmks_check
     sort < "$URL_FILE_PATH"/"$URL_FILE_NAME"
+}
+
+bmks_edit() {
+    bmks_check
+    $EDITOR "$URL_FILE_PATH"/"$URL_FILE_NAME"
 }
 
 bmks_del() {
@@ -66,6 +72,7 @@ case "$1" in
 	"add") url=$2; bmks_add ;;
 	"del") bmks_del ;;
 	"ls") bmks_ls ;;
+    "edit") bmks_edit ;;
 	"") bmks_display ;;
     *) bmks_error ;;
 esac
