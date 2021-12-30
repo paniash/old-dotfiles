@@ -8,7 +8,7 @@ set guioptions				''
 set scroll-page-aware       "true"
 set scroll-full-overlap     0.01
 set scroll-step             60
-set font                    "Iosevka 11"
+set font                    "Hack 10"
 map R reload
 map r rotate
 map K zoom in

@@ -40,6 +40,7 @@ export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/mbsyncrc"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export LATEXMKRCSYS="$XDG_CONFIG_HOME/latex/latexmkrc"
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 # gpg2 --homedir "XDG_DATA_HOME/gnupg"
 

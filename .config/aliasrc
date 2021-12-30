@@ -1,4 +1,4 @@
-#!/bin/sh
+#/bin/sh
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
@@ -19,8 +19,9 @@ alias \
 	str="pipe-viewer --resolution=720p" \
     ytf="ytfzf -t" \
 	gnu="gnuplot" \
+    gnp="gnuplot -p -c" \
 	scr="cd ~/.local/bin; ls ./" \
-	hotspot="sudo create_ap wlo1 eno1 heisenberg420 yellpassword" \
+	hotspot="sudo create_ap wlan0 eth0 suzumiya_haruhi yellpassword" \
 	yt7="yt -i --add-metadata -f 247+251" \
 	yt8="yt -i --add-metadata -f 248+251" \
     tv7="mpv --ytdl-format=22" \
@@ -40,13 +41,15 @@ alias \
     jl="julia" \
     tmux="tmux -f ~/.config/tmux/tmux.conf" \
     smc="sudo make clean install" \
-    o="open" \
+    o="openfunc" \
     shc="shellcheck" \
     chb="checkbashisms" \
     bk="bmks" \
-    ani="anime dl -xd \"{aria2}\"" \
     nmake="make CMAKE_BUILD_TYPE=Release" \
-    colp="colorpicker" \
+    ebk="vim ~/.config/bmks/urls.txt" \
+    dct="deactivate" \
+    ani="ani-cli" \
+    # ani="anime dl -xd \"{aria2}\"" \
 
 
 # Git aliases
@@ -77,6 +80,7 @@ alias \
 	cp="cp -v" \
 	..="cd .." \
 	:q="exit" \
+    pois="1DPoiCmd" \
 	# ls="ls -hN --color=always --group-directories-first" \
 
 # Common commands to abbreviate
@@ -85,7 +89,7 @@ alias \
 	pi="sudo pacman -S" \
 	prs="sudo pacman -Rns" \
 	sc="sc-im" \
-    svim="sudoedit nvim" \
+    svim="sudoedit" \
     qtm="tmuxp load ~/.config/tmuxp/mysession.yaml" \
     stm="tmuxp load ~/.config/tmuxp/qiskit-sessions.yaml" \
     cq="cd ~/misc/git-repos/progs/qiskit/ && . ./venv/bin/activate" \

@@ -52,19 +52,6 @@ vicd()
 
 bindkey -s '^o' 'vicd\n'
 
-open()
-{
-    case "$1" in
-        *.png|*.jpg|*.jpeg|*.webp|*.tif) sxiv -b $1 ;;
-        *.pdf|*.djvu|*.epub|*.cbz) zathura $1 ;;
-        *.mkv|*.webm|*.mp4|*.mp3|*.opus|*.gif) mpv $1 ;;
-        *.odt) localc $1 ;;
-        *.ipynb) jupyter-notebook $1 ;;
-        *.svg) firefox $1 ;;
-        *) xdg-open $1 ;;
-    esac
-}
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line

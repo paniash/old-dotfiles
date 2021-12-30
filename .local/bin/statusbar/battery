@@ -11,11 +11,11 @@ dwm_battery() {
         fi
     fi
 
-    if [ "$CHARGE" -gt 90 ]; then
-        if [ "$STATUS" = "Charging" ]; then
-            notify-send "Overcharge" "Stop charging." && sleep 60
-        fi
-    fi
+    # if [ "$CHARGE" -gt 90 ]; then
+    #     if [ "$STATUS" = "Charging" ]; then
+    #         notify-send "Overcharge" "Stop charging." && sleep 60
+    #     fi
+    # fi
 
 	if [ "$STATUS" = "Charging" ]; then
 	      	echo "  $CHARGE% "

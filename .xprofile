@@ -5,6 +5,9 @@
 
 redshift -P -O 4000
 mpd &		# starts music player daemon
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/pipewire-media-session &
 picom &		# starts compositor
 dunst &		# starts notification daemon
 remaps &	# maps caplock to escape

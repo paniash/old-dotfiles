@@ -24,6 +24,7 @@ https://www.reddit.com/r/cpp.rss "~r/cpp"
 https://www.reddit.com/r/bash.rss "~r/bash"
 https://www.reddit.com/r/LaTeX.rss "~r/LaTeX"
 https://www.reddit.com/r/julia.rss "~r/julia"
+https://www.reddit.com/r/fortran.rss "~r/fortran"
 https://landchad.net/rss.xml
 https://www.lukesmith.xyz/rss.xml
 https://peterwittek.com/feeds/all.atom.xml
@@ -43,9 +44,17 @@ https://anchor.fm/s/c761a04/podcast/rss
 https://algassert.com/feed.xml
 http://ebin.city/~werwolf/index.xml
 https://www.physicsforums.com/insights/feed/
+https://phdcomics.com/gradfeed.php
 https://phys.org/rss-feed/breaking/physics-news/quantum-physics/
 https://phys.org/rss-feed/breaking/physics-news/physics/
 https://phys.org/rss-feed/breaking/physics-news/materials/
+http://feeds.aps.org/rss/recent/prlsuggestions.xml
+http://feeds.aps.org/rss/prasuggestions.xml
+http://feeds.aps.org/rss/prbsuggestions.xml
+http://feeds.aps.org/rss/recent/prxquantum.xml
+http://feeds.aps.org/rss/recent/prl.xml
+http://feeds.aps.org/rss/recent/pra.xml
+http://feeds.aps.org/rss/recent/prb.xml
 https://www.noendcomic.com/rss.php
 https://xkcd.com/atom.xml
 https://www.smbc-comics.com/comic/rss
