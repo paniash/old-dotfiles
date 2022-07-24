@@ -1,0 +1,6 @@
+#!/bin/sh
+# Displays volume on dwmblocks using pamixer (when using pipewire)
+
+vol="$(pamixer --get-volume-human)"
+
+echo " V: $vol "
