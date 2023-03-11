@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xrandr --auto && notify-send "External Monitor Connected!"

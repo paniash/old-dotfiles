@@ -1,0 +1,11 @@
+#!/bin/sh
+# A simple POSIX script to compile markdown/groff documents using pandoc
+
+file=$(readlink -f "$1")
+dir=${file%/*}
+base="${file%.*}"
+ext="${file##*.}"
+
+cd "$dir" || exit
+
+pandoc "$file" -t beamer -o "$base".pdf

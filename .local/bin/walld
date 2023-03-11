@@ -1,0 +1,82 @@
+#!/bin/sh
+# Download wallpapers from reddit at 1920x1080
+
+# Check if dependencies are is installed
+for prog in jq curl wget; do
+    [ ! "$(which $prog)" ] && echo "Please install "$prog"!" && exit 1
+done
+
+show_usage() {
+    echo "walld: wallpaper download the suckless way"
+}
+
+notifier="notify-send"
+
+min_height=1920
+min_width=1080
+
+# If no argument is passed
+if [ -z "$1" ]; then
+	# Ask the user to enter a subreddit
+    printf "Enter subreddit: " && read -r subreddit
+    printf "Enter sort method (hot/top): " && read -r sortmethod
+
+	# If no subreddit was chosen, exit
+	[ -z "$subreddit" ] && exit 1
+
+# Otherwise assign the first argument to the
+# subreddit variable
+else
+	subreddit="$1"
+    print "Enter sort method (hot/top): " && read -r sortmethod
+fi
+
+# Sort by "hot" or "top"
+case "$sortmethod" in
+    "hot") sorted="https://www.reddit.com/r/$subreddit/hot.json?limit=$limit" ;;
+    "top") sorted="https://www.reddit.com/r/$subreddit/top.json?limit=$limit" ;;
+    *) echo "Invalid option!" && show_usage && exit 0 ;;
+esac
+
+# Specify maximum number of limits
+printf "Enter max no. of requests: " && read -r limit
+
+# Default directory used to store the feed file and fetched images
+dir="$HOME/pictures/reddit/$subreddit"
+
+# If dir does not exist, create it
+if [ ! -d "$dir" ]; then
+	echo "$dir does not exist, creating..."
+	mkdir -p "$dir"
+fi
+
+# Send a notification
+$notifier "Reddit" "Downloading your pics"
+
+curl -H "User-agent: 'your bot 0.1'" "$sorted" > "$dir/tmp.json"
+
+
+
+# Create a list of images
+imgs="$(jq '.data.children[].data.url_overridden_by_dest' < "$dir/tmp.json" | sort -u | cut -d\" -f2)"
+
+# Check to see if resolution is 1920x1080
+width="$(jq '.data.children[].data.preview.images[].source.width' < "$dir/tmp.json")"
+height="$(jq '.data.children[].data.preview.images[].source.height' < "$dir/tmp.json")"
+
+# if [ $width -ge $min_width ] || [ $height -ge $min_height ]; then
+
+
+
+
+# If there are no images, exit
+[ -z "$imgs" ] && $notifier "Redyt" "sadly, there are no images for subreddit $subreddit, please try again later!" && exit 1
+
+# Download images to $dir
+wget -P "$dir" "$imgs"
+
+# Send a notification
+$notifier  "Reddit" "Download finished!!!"
+
+# Remove json file
+rm "${dir:?}"/tmp.json

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Script to play lofi study music (live) using mpv in the background
+# Dependencies: mpv
+
+notify-send "Lofi Girl" "Fetching feed..."
+
+url="https://www.youtube.com/watch?v=5qap5aO4i9A"
+mpv --no-video "$url" &

@@ -1,0 +1,25 @@
+#!/bin/sh
+# A simple POSIX script to compile markdown/groff documents using pandoc
+
+file=$(readlink -f "$1")
+dir=${file%/*}
+base="${file%.*}"
+ext="${file##*.}"
+
+cd "$dir" || exit
+
+case "$ext" in
+    md) pandoc "$file" -o "$base".pdf ;;
+	md)	if  command -v lowdown >/dev/null; then
+			lowdown -d nointem -e super "$file" -Tms | groff -mpdfmark -ms -kept > "$base".pdf
+		elif command -v groffdown >/dev/null; then
+			groffdown -i "$file" | groff > "$base.pdf"
+		else
+			pandoc "$file" -o "$base".pdf
+		fi ;;
+	ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
+	mom) preconv "$file" | refer -PS -e | groff -mom -kept -T pdf > "$base".pdf ;;
+	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
+	[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
+	*) sed 1q "$file" | grep "^#!/" | sed "s/^#!//" | xargs -r -I % "$file" ;;
+esac
