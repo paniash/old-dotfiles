@@ -89,11 +89,15 @@ ex ()
 }
 
 fa() {
-    cd "$(fd -t d | fzf)"
+    cd "$(fd -I -t d | fzf)"
 }
 
 doi2bib() {
     curl -s "https://api.crossref.org/works/$1/transform/application/x-bibtex";
+}
+
+backup-hdd() {
+    sudo rsync -aAXv --delete --dry-run --exclude="downloads/*" --exclude="misc/*" --exclude=".*" /home/ashish/ /mnt/wd-elements/
 }
 
 # Disable globing on zsh (useful when downloading using youtube-dl)

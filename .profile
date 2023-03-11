@@ -63,3 +63,6 @@ export TMUXP_CONFIG_DIR="$HOME/.config/tmuxp/"
 
 # Julia settings
 export JULIA_NUM_THREADS=4
+
+# Change timezone to UK
+TZ='Europe/London'; export TZ

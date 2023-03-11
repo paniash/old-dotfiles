@@ -11,11 +11,12 @@ alias \
     sl="ls" \
     dc="cd" \
 	uf="uptime -p" \
+    ff="firefox" \
 	covid="curl https://corona-stats.online/" \
 	bat0="cat /sys/class/power_supply/BAT0/capacity" \
-	yt="youtube-dl -ic --add-metadata" \
-	ytm="youtube-dl -i -x -c --add-metadata -f bestaudio" \
-	ytr="youtube-dl --rm-cache-dir" \
+	yt="yt-dlp -ic --add-metadata" \
+	ytm="yt-dlp -i -x -c --add-metadata -f bestaudio" \
+	ytr="yt-dlp --rm-cache-dir" \
 	str="pipe-viewer --resolution=720p" \
     ytf="ytfzf -t" \
 	gnu="gnuplot" \
@@ -29,11 +30,12 @@ alias \
 	cbs="checkbashisms" \
 	sxiv="sxiv -b" \
 	bsv="Rscript -e \"blogdown::serve_site()\" ; hugo server" \
-    R="R --silent" \
+    R="R --no-save" \
     r="radian" \
 	hs="hugo server" \
     jd="julia -ie 'using Franklin; serve(single=true); exit()'" \
     js="julia -ie 'using Franklin; serve()'" \
+    jc="julia -ie 'using Franklin; serve(clear=true)'" \
     jn="jupyter-notebook" \
     ipy="ipython" \
     ka="killall" \
@@ -49,6 +51,7 @@ alias \
     ebk="vim ~/.config/bmks/urls.txt" \
     dct="deactivate" \
     ani="ani-cli" \
+    young="mpv --sub-file=A\ Brilliant\ Young\ Mind-English.srt -sub-font-size=30 A.Brilliant.Young.Mind.2014.1080p.BluRay.x264.YIFY.mp4" \
     # ani="anime dl -xd \"{aria2}\"" \
 
 
@@ -68,8 +71,8 @@ alias \
 alias \
     ls="ls --group-directories-first --color=always" \
 	la="ls -a" \
-    ll="ls -l" \
-    lt="ls -t | head -n 20" \
+    ll="ls -lh" \
+    lt="ls -t | head -n 30" \
     tl="lt" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
@@ -81,6 +84,7 @@ alias \
 	..="cd .." \
 	:q="exit" \
     pois="1DPoiCmd" \
+    med="mpv --no-video --loop https://www.youtube.com/watch?v=Gqfk5sr9fpw" \
 	# ls="ls -hN --color=always --group-directories-first" \
 
 # Common commands to abbreviate

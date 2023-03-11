@@ -9,7 +9,7 @@ SONG=$(mpc current -f %title%)
 STATUS=$(mpc status | awk '/^\[/ {print $1}')
 
 emoji() {
-	    [ "$STATUS" = "[playing]" ] && ICON=">" || ICON="⏸"
+	    [ "$STATUS" = "[playing]" ] && ICON=" " || ICON=""
 }
 
 text_emoji() {

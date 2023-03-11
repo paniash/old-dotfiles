@@ -17,3 +17,7 @@
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[safe]
+	directory = /home/ashish/misc/neovim-nightly
+[protocol "file"]
+	allow = always
